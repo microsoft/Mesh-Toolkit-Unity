@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Mesh.VisualScripting.Playmode</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Mesh.VisualScripting.AotPreBuilderControl">
+            disable AotPreBuilder (build-time code generation for ahead-of-time builds):
+            - irrelevant within MeshBrowser because visual scripts are not known at build time
+            - irrelevant when building scenes before upload because no C# code can be uploaded
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.PlaymodeSceneValidator">
+            disallows access to Playmode framework parts of the scene
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,27 @@
+# Packaging pipeline for the com.microsoft.mesh.toolkit.control.samples package
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - Mesh101/Packages/com.microsoft.mesh.toolkit.control.samples/package.json
+
+pool:
+  vmImage: ubuntu-latest
+  
+
+steps:
+- checkout: self
+  lfs: true
+  
+- task: Npm@1
+  displayName: Publish to Mesh/mesh.unity
+  inputs:
+    command: 'publish'
+    verbose: true
+    workingDir: 'Mesh101/Packages/com.microsoft.mesh.toolkit.control.samples/'
+    publishRegistry: 'useFeed'
+    publishFeed: 'Mesh/mesh.unity'
+
