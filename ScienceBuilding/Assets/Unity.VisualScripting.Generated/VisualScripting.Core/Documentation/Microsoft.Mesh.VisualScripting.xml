@@ -1,0 +1,1322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Mesh.VisualScripting</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackObjectStateUnit">
+            injected node to track state changes to object properties and by instance methods
+            - hooked into the data flow towards the tracked node's target object
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISessionInfo">
+            observable information about the current session
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ISessionInfo.IsConnected">
+            is the scene connected to shared state?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ISessionInfo.SharedTime">
+            synchronized time across all clients
+            - guaranteed positive (start time in the past, but otherwise not defined)
+            - not guaranteed to be monotonous (usually adjusts at session start)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.CombinedDataSanitizer">
+            combines the responses of several sanitizers
+            - first sanitizer to return non-null determines the result
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISharedSceneRoot">
+            marks the root of the transform subtree that can be shared across clients
+            - only components in the transform branch below this marker can be shared
+            - child transform branches can be made local using the LocalSceneScope component
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ISharedSceneRoot.IsCloudScripting">
+            show the "Allow cloud scripts to write to this local subtree" option in LocalSceneScope?
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ObjectVariableChangedSignal">
+            signal that indicates that a visual script variable has changed
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.DialogActionUnit">
+            <summary>
+            Displays a message dialog box with one or several buttons.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TransformObserver">
+            added at runtime to a transform to receive transform hierarchy change notifications
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TransformObserver.ITransformEvents">
+            callbacks sent by this listener
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TransformObserver.ITransformEvents.OnTransformChildrenChanged(UnityEngine.Transform)">
+            called when the list of children of the transform changed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TransformObserver.ITransformEvents.OnTransformParentChanged(UnityEngine.Transform)">
+            called when any direct or indirect parent of the transform changed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TransformObserver.EnsureListener(UnityEngine.Transform,Microsoft.Mesh.VisualScripting.TransformObserver.ITransformEvents,System.Boolean)">
+            registers or unregisters the given listener for transform hierarchy notifications
+            - every listener can be registered only once
+            - creates or deletes this component on the target GameObject if necessary
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TransformObserver.OnTransformChildrenChanged">
+            notifies listeners when the list of children of the transform changed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TransformObserver.OnTransformParentChanged">
+            notifies listeners when any direct or indirect parent of the transform changed
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.MethodSignature">
+            method signatures: e.g. LookAt(UnityEngine.Transform, float, float, float)
+            - only method name and parameter types, no parameter names
+            - parameter types must be namespace-qualified
+            - standard types can use their aliases: e.g. bool, int, float, string, etc.
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MethodSignature.Of(System.Reflection.MethodBase)">
+            construct the normalized method signature for the given method
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MethodSignature.Normalize(System.String)">
+            normalize the given method signature (no syntax or runtime validation)
+            - exactly one space after each comma, otherwise all whitespace stripped
+            - standard types represented by their aliases: e.g. bool, int, float, string, etc.
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ScriptRegistration.RegisterModifiableSharedState(Unity.VisualScripting.ScriptMachine,Microsoft.Mesh.VisualScripting.ISharedSceneState,Microsoft.Mesh.VisualScripting.ISceneValidator,System.Collections.Generic.HashSet{Microsoft.Mesh.VisualScripting.PropertyRef})">
+            registers all shared component instances and property paths that might be modified by a script
+            - if target components can be predicted, registers exactly those component instances
+            - otherwise registers all viable component instances in transform children and transform parents
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IDataSanitizer">
+            sanitizes data flowing through visual scripts at runtime
+            - applied to any data sent as input for visual script units
+            - currently used to filter out internal parts of the scene
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IDataSanitizer.CanSanitize(System.Type)">
+            does this implementation know how to sanitize this type?
+            - allows injecting sanitizer units only where actually needed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IDataSanitizer.TrySanitize(System.Object,System.Object@)">
+            produce safe version of the input data
+            - return true if input data is safe and returned as-is
+            - return false if input data is not safe and output data is different
+            - return null if this implementation cannot handle the input data
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedSceneState">
+            shared scene state base implementation
+            - invoke ReceivedBaseState after initial state has been established
+            - implement ShareSetProperties to send properties to other clients
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedSceneState`1">
+            shared scene state base implementation
+            - invoke ReceivedBaseState() after initial state has been established
+            - implement ShareSetProperties() to send properties to other clients
+            - extend TSharedSceneComponent to store additional per-component metadata
+        </member>
+        <member name="E:Microsoft.Mesh.VisualScripting.SharedSceneState`1.BaseStateReceivedListeners">
+            called when initial base state has been received for all registered components
+            - no individual property change listeners are called before BaseStateReceivedListeners
+            - subclasses must call ReceivedBaseState() to instigate this state change
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedSceneState`1.LocalClientId">
+            unique identifier of the local client
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedSceneState`1.InvalidClientId">
+            sentinel value for invalid client identifier
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedSceneState`1.LocalClientSequence">
+            sequentially incremented sequence number for sent property updates
+            - scoped to local client
+            - no relationship between property sequences of different clients
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedSceneState`1.GetSharedComponentId">
+            create an identifier to uniquely address the same component on all clients
+            - called when the first property is registered for the component instance
+            - corresponding component instances must produce the same identifier across clients
+            - different component instances must produce different identifiers
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedSceneState`1.AssumeGuaranteedRoundtrip">
+            can the implementation assume that every update sent out is also received back?
+            - not possible if the server can consolidate or skip updates (use false if in doubt)
+            - if true, local predictions override incoming changes until confirmed by server
+            - if false, local predictions may also be preempted by updates from other client
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.DefaultGetSharedComponentId(UnityEngine.Component)">
+            create an identifier to uniquely address the same component on all clients
+            - default implementation for the GetSharedComponentId delegate
+            - returns a dot-separated path of...
+              - the scene root GameObject sibling index
+              - the Transform sibling index for each Transform on the path to the GameObject
+              - the namespace-qualified runtime type name of the Component
+              - the Component sibling index of components with the same runtime type on this GameObject
+            - guaranteed stable and unique as long as the scene is not structurally modified
+            - basis for custom implementations that satisfy additional environment requirements
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.DefaultGetSharedComponentId(UnityEngine.Component,System.Func{UnityEngine.Transform,System.String})">
+            like above but supports custom root identifiers along the Transform path
+            - if getRootId() returns non-null, this identifier is prepended and path walking stops
+            - example custom roots:
+              - root Transform of artifact loaded at scene runtime (use artifact identifier as rootId)
+              - root Transform of GameObject cloned at runtime (use clone identifier as rootId)
+            - basis for custom implementations that satisfy additional environment requirements
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedSceneState`1.ComponentStates">
+            registered components with shared properties
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedSceneState`1.MessageBufferWriterPool">
+            pooled message buffer writers
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.CreateComponentState(System.String)">
+            create shared component state object
+            - component instance is initially null
+            - called when shared properties are registered locally for the given component
+            - called when shared property updates are received before component is registered locally
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.GetOrCreateComponentState(UnityEngine.Component)">
+            get or create shared component metadata object
+            - used when shared properties are registered locally for the given component
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.GetOrCreateComponentState(System.String)">
+            get or create shared component state object
+            - used when shared property updates are received before component is registered locally
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedSceneState`1.supportedPropertyTypes">
+            supported property types (for efficient lookup)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.CanRegisterProperty(UnityEngine.Component,System.String,System.Type)">
+            override in subclasses to determine if this property can be registered
+            - property type passed to this method is actual property type or further restricted
+            - subclass should at least determine if it is capable of sending this type over network
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedSceneState`1.invokeRegisteredPropertyChangeListeners">
+            invoke property change listeners for registered properties
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.ReceivedBaseState">
+            call from subclass when base state has been established
+            - invokes BaseStateReceivedListeners
+            - property change listeners will be called for future shared state updates
+            - shares properties that were set before the connection was established
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.ShareSetProperties(`0,Microsoft.Mesh.VisualScripting.SharedPropertyBundle)">
+            send shared properties to other clients
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedSceneState`1.ReceiveSetProperties(System.String,Microsoft.Mesh.VisualScripting.SharedPropertyBundle)">
+            invoke from subclass when shared properties are received from other client
+            - introduces received properties into local representation of shared state
+            - invokes state change listeners
+            - updates local component state to received shared properties
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IMessageDialog">
+            message dialog with one or several buttons
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IMessageDialog.Button">
+            available button options
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.IMessageDialog.AllButtons">
+            all button values in display order
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IMessageDialog.Open(System.String,Microsoft.Mesh.VisualScripting.IMessageDialog.Button,Microsoft.Mesh.VisualScripting.IMessageDialog.Button,System.Action{Microsoft.Mesh.VisualScripting.IMessageDialog.Button})">
+            open a message dialog with given text and button choices
+            - the onClose callback is called when the user selects a button to dismiss the dialog
+            - if the dialog is canceled by the system, onClose is called with the defaultButton
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TransformPropertyObserver">
+            property observer that uses engine events to detect transform hierarchy updates
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.TransformPropertyObserver.RequiresPolling">
+            does the observed property require constant polling to detect updates?
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.AllowlistReflection">
+            reflection-based insights about an Allowlist
+            - CAUTION: querying the properties in this class (for the first time) is slow
+            - CAUTION: lots of uncollectable GC allocations that slow down GC until VM stops
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllAllowedAssemblies">
+            all assemblies that are currently loaded and that contain allowed types
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllAllowedTypes">
+            all allowed types that are currently loaded
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistReflection.GetAllowedProperties(System.Type)">
+            get information about all allowed properties (and fields) of the given type
+            - returns an empty enumerable if the type is not allowlisted
+            - results not enumerated in any specific order, but are sortable
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail">
+            reflected information about an allowed property (or field)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.MemberInfo">
+            PropertyInfo or FieldInfo of the allowed property (or field)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.CanWrite">
+            is writing this property (or field) possible and allowed?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.CanShare">
+            is sharing this property (or field) across clients possible and allowed?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.Name">
+            name of this property (or field)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.Type">
+            reflected type of this property (or field)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.IsInherited">
+            is this property (or field) defined in a base type?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.InheritanceBaseDepth">
+            number of type hierarchy levels to the property (or field) definition
+            - if this property (or field) is not inherited, returns zero
+            - otherwise, add +1 for each base type from this type to the defining type
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.InheritanceBaseType">
+            type in which this property (or field) is defined
+            - if this property (or field) is not inherited, returns the reflected type itself
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.op_Implicit(Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail@)~System.Reflection.MemberInfo">
+            implicit conversion to MemberInfo
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail.CompareTo(Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedPropertyDetail)">
+            natural sorting order for reflected property (or field) information
+            - inheritance depth (defined here first, followed by defined in ancestors)
+            - then case-insensitive alphanumeric order of property (or field) names
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistReflection.GetAllowedMethods(System.Type)">
+            get information about all allowed methods of the given type
+            - returns an empty enumerable if the type is not allowlisted
+            - results not enumerated in any specific order, but are sortable
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail">
+            reflected information about an allowed method (or constructor)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.MethodBase">
+            MethodInfo of the allowed method (or constructor)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.Name">
+            canonical name of this method (or constructor)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.Signature">
+            canonical signature of this method (or constructor)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.Type">
+            return type of this method (or constructor)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.IsInherited">
+            is this method defined in a base type?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.InheritanceBaseDepth">
+            number of type hierarchy levels to the method definition
+            - if this method is defined in the reflected type itself, returns zero
+            - otherwise, add +1 for each base type from this type to the defining type
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.InheritanceBaseType">
+            type in which this method (or constructor) is defined
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.op_Implicit(Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail@)~System.Reflection.MethodBase">
+            implicit conversion to MethodBase
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail.CompareTo(Microsoft.Mesh.VisualScripting.AllowlistReflection.AllowedMethodDetail)">
+            natural sorting order for reflected method information
+            - constructors before methods
+            - inheritance depth (defined here first, followed by defined in ancestors)
+            - then case-insensitive alphanumeric order of method names
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.PropertyObserver">
+            abstract base class for property observers
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.Pool">
+            observer pool this PropertyObserver is part of
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.PropertyRef">
+            observed property reference
+            - supports instance properties
+            - supports static properties (container is Type)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.PropertyValue">
+            most recently observed value of that property
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.PropertyContainerGameObject">
+            container GameObject of the observed property
+            - null if the container is neither GameObject nor Component
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.PropertyContainerComponent">
+            container Component of the observed property
+            - null if the container is no Component
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.LastPropertyChangeTime">
+            last time the observed value of the property changed
+            - based on Time.timeAsDouble (not updated when the Editor is paused)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.HasAnyListeners">
+            does this property observer have any active listeners?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.RequiresPolling">
+            does the observed property require constant polling to detect updates?
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.PropertyObserver.ListenerDelegate">
+            callback when the observed property changes its value
+            - called only when the property actually changes its value
+            - isShared is true if the changed property value is shared across clients
+        </member>
+        <member name="E:Microsoft.Mesh.VisualScripting.PropertyObserver.OnChange">
+            register or unregister callback on any observed property change
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.HasChangeListeners">
+            does this observer have any change listeners?
+        </member>
+        <member name="E:Microsoft.Mesh.VisualScripting.PropertyObserver.OnDirectChange">
+            register or unregister callback on direct observed property change
+            - only invoked if the observed property is directly observed to change
+            - ignores changes observed on related properties with change dependencies
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserver.HasDirectChangeListeners">
+            does this observer have any direct change listeners?
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.GetGameObjectFor(System.Object)">
+            get the GameObject represented by or associated with the given container
+            - returns null if the container is neither GameObject nor Component
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.GetComponentFor(System.Object)">
+            get the Component represented by the given container
+            - returns null if the container is no Component
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.Create(Microsoft.Mesh.VisualScripting.PropertyObserverPool,Microsoft.Mesh.VisualScripting.PropertyRef)">
+            create a property observer suitable for the given property
+            - TransformPropertyObserver if engine transform hierarchy notifications are sufficient
+            - ExternalPropertyObserver if the property path spans multiple reference objects
+            - ListeningPropertyObserver if the property can be observed via callbacks
+            - PollingPropertyObserver otherwise
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.Release">
+            release all resources held by this property observer
+            - clears all listeners (public and internal)
+            - releases any resources held by this observer
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.RefreshCaches">
+            called when scene state has changed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.RefreshChangeListeners">
+            called when OnChange or OnDirectChange listeners have changed
+            - refresh state that depends on the presence or absence of these listeners
+            - must not hold on to any resources if the observer has no active listeners
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.InvokeChangeListeners(System.Object,System.Boolean,System.Boolean,System.Boolean)">
+            invoke all change listeners registered to this property observer in the value changed
+            - checks property value equality by using its Equals(object) implementation
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.OnDependingPropertyChanged(Microsoft.Mesh.VisualScripting.PropertyRef,System.Object,System.Boolean,System.Boolean)">
+            called if this property observer was registered with EnsureDependentPropertyObserver()
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserver.EnsureDependentPropertyObserver(Microsoft.Mesh.VisualScripting.PropertyObserver,System.Boolean,System.Boolean)">
+            register the given property observer for OnDependingPropertyChanged() callbacks
+            - same functionality as OnChange and OnDirectChange delegates
+            - more efficient for internal communication than using the OnChange and OnDirectChange delegates
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISceneValidator">
+            determines which parts of the scene can be accessed by visual scripts
+            - implementations are specific to the execution environment
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedSceneScope.Scope.Invalid">
+            component is outside of explicit shared scene root
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedSceneScope.Scope.Local">
+            component properties remain local to this client
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedSceneScope.Scope.Shared">
+            component properties can be shared across clients
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.NullDataSanitizer">
+            filters out all data (safe default)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist">
+            maintains list of allowed types, properties, and methods
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.ResourcePath">
+            default allowlist loads resources in this path
+            - JSON format (regardless of file extension)
+            - JSON data structure: AllowlistDeclaration (see below)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.Default">
+            singleton instance of the allowlist across all scenes
+            - defaults to an allowlist that combines all allowlist assets
+            - set this property to null to refresh the default allowlist
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.Sources">
+            sources loaded into this allowlist
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.AllowlistDeclaration">
+            declares an allowlist
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.AllowlistDeclaration.types">
+            allowed types
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.TypeDeclaration">
+            declares an allowed type, properties, and methods
+            - allowing the type in and of itself makes its inherited members available
+            - inheritable members must be declared on the type that defines them
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.TypeDeclaration.type">
+            namespace-qualified type: e.g. UnityEngine.Transform
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.TypeDeclaration.properties">
+            allowed fields and properties defined for this type
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.TypeDeclaration.methods">
+            allowed methods defined for this type
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.PropertyDeclaration">
+            declares an allowed property
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyDeclaration.property">
+            property name
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyDeclaration.write">
+            property runtime write support
+            - if readonly: null
+            - if writable but not shareable: "local"
+            - if writable and shareable over network: "shared"
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyDeclaration.volatile">
+            [optional] can this property change its value without notice?
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyDeclaration.depends">
+            [optional] space-separated list of properties the value of this property depends on
+            - make sure there are no dependency loops!
+            - can include property paths that reference properties in other components
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.MethodDeclaration">
+            declares an allowed method declared by the type
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.MethodDeclaration.method">
+            method signature: e.g. LookAt(UnityEngine.Transform, UnityEngine.Vector3)
+            - only method name and parameter types, no parameter names
+            - parameter types must be namespace-qualified
+            - standard types can use their aliases: e.g. bool, int, float, string, etc.
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.MethodDeclaration.affects">
+            [optional] space-separated list of properties affected by this method call
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.TypeData">
+            runtime information about an allowed type
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.TypeData.Properties">
+            allowed PropertyData
+            - index lookup by name
+            - index lookup by FieldInfo
+            - index lookup by PropertyInfo
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.TypeData.Methods">
+            allowed MethodData
+            - index lookup by signature (see MethodSignature)
+            - index lookup by MethodBase
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.PropertyAccess">
+            runtime property access modes
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyAccess.Readonly">
+            property can only be read
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyAccess.Local">
+            property can be read and written to
+            but is not shared with other clients over network
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.PropertyAccess.Shared">
+            property can be read and written to
+            and can be shared with other clients over network
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.PropertyData">
+            runtime information about an allowed property
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.PropertyData.Access">
+            allowed property access
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.PropertyData.IsVolatile">
+            can this property change its value without notice?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.PropertyData.Depends">
+            property value is dependent on these other property paths
+            - make sure there are no dependency loops!
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.PropertyData.Relations">
+            [calculated] properties that change together with this one
+            - not including this property itself
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.Allowlist.MethodData">
+            runtime information about an allowed method
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.MethodData.Affects">
+            calling this method affects these properties
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.MethodData.Relations">
+            [calculated] properties that change when this method is called
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.Types">
+            allowed TypeData
+            - index lookup by signature (see TypeSignature)
+            - index lookup by Type
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.IsAllowedType(System.Type)">
+            is this type allowed?
+            - allows exact types listed in allowlist (no derived types)
+            - allows T[] and List{T} of any allowed type
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.IsAllowedProperty(System.Reflection.MemberInfo,System.Boolean)">
+            is this reflected field or property allowed?
+            - if write is true, also checks if writing to the property is allowed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.FindProperty(System.Reflection.MemberInfo)">
+            finds PropertyData for the given reflected field or property
+            - searches the reflected type and all of its base types
+            - returns null if not allowed or not a reflected field or property
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.FindProperty(System.Type,System.String)">
+            finds PropertyData for the given type and property name
+            - searches the given type and all of its base types
+            - returns null if not allowed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.FindProperty(System.Reflection.FieldInfo)">
+            finds PropertyData for the given reflected field
+            - searches the reflected type and all of its base types
+            - returns null if not allowed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.FindProperty(System.Reflection.PropertyInfo)">
+            finds PropertyData for the given reflected property
+            - searches the reflected type and all of its base types
+            - returns null if not allowed
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.FindMethod(System.Reflection.MethodBase)">
+            finds MethodData for the given reflected method
+            - searches the reflected type and all of its base types
+            - returns null if not allowed
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.AllAllowlistAssets">
+            returns all allowlist resource assets in the project
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.Allowlist.Lookup`2.Microsoft#Mesh#VisualScripting#Allowlist#ILookupStorage{TKey,TValue}#Storage">
+            protected storage access for Allowlist class
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.Allowlist.splitOnWhitespace">
+            pass to string.Split() to split on whitespace
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.Allowlist.Load(System.String,System.String)">
+            loads an allowlist in JSON format into this allowlist
+            - loaded data is meaningfully merged with already present data where applicable
+            - logs errors for invalid data but continues reading valid data
+            - optional source descriptor can be passed to improve log diagnostics
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackStateListeners">
+            allows first-party components to get callbacks on state changes in visual scripts
+            - register listener factories in MeshVisualScripting.TrackStateListeners.Factory
+            - listeners get called back before any property is set or method is called in visual scripts
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackStateListeners.FactoryDelegate">
+            tracker factory that can create a state tracker for the given MemberInfo
+            - return null if no tracker is created
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackStateListeners.TrackerDelegate">
+            state tracker callback called just before property change or method invocation
+            - container is null if property or method is static
+            - memberInfo can be FieldInfo, PropertyInfo, or MethodInfo
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.TrackStateListeners.factories">
+            registered tracker delegate factories
+            - array instead of multicast delegate to be able to capture all return values
+        </member>
+        <member name="E:Microsoft.Mesh.VisualScripting.TrackStateListeners.Factories">
+            registered tracker factories
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.TrackStateListeners.trackersByMemberInfo">
+            registered tracker delegates for each MemberInfo
+            - array instead of multicast delegate to avoid GC allocation on dispatch
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TrackStateListeners.Invoke(System.Object,System.Reflection.MemberInfo)">
+            invoke state trackers for an upcoming state change
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TrackStateListeners.Invoke(System.Object,System.Reflection.MemberInfo,Microsoft.Mesh.VisualScripting.TrackStateListeners.Cache@)">
+            invoke state trackers for an upcoming state change
+            - uses cache of tracker callbacks to optimize recurring calls for the same MemberInfo
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackStateListeners.Cache">
+            tracker callback cache to optimize recurring calls for the same MemberInfo
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.LogExtensions">
+            unambiguous LogGroup logging overloads taking these arguments:
+            - [optional] {TSource} [or] Type source
+            - [optional] Exception exception [only Error()]
+            - [optional] UnityEngine.Object context
+            - either FormattableString or plain string message
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ISharedSceneState.SupportedPropertyTypes">
+            supported shared property types
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ISharedSceneState.RegisterProperty(UnityEngine.Component,System.String,System.Type)">
+            register permission to set a specific property on a specific component instance
+            - the property type (if specified) imposes an additional restriction on acceptable values
+            - if several property type restrictions are registered for the same property, all must match
+            - return true if the property was registered successfully, or false otherwise
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ISharedSceneState.IsRegisteredProperty(UnityEngine.Component,System.String,System.Type)">
+            is the specified property registered for the given component?
+            - if the property type is passed, it is checked against registered type restrictions
+            - return true if the property was registered, or false otherwise
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISharedSceneState.SharingMode">
+            specifies how and when property changes take effect
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ISharedSceneState.SharingMode.Local">
+            properties are set in local scene state in the same frame
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ISharedSceneState.SharingMode.Shared">
+            properties are set on all clients after going through server
+            including the sending client (but incurs network latency)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ISharedSceneState.SetProperties(UnityEngine.Component,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},Microsoft.Mesh.VisualScripting.ISharedSceneState.SharingMode)">
+            change one or several properties on a component
+            - the component must have been previously registered on all clients
+            - the affected property paths must have been previously registered on all clients
+            - each call to this function operates atomically (with respect to other calls)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISharedSceneState.BaseStateReceivedListenerDelegate">
+            base state received listener
+        </member>
+        <member name="E:Microsoft.Mesh.VisualScripting.ISharedSceneState.BaseStateReceivedListeners">
+            listeners notified just after base state was received
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISharedSceneState.PropertyChangeListenerDelegate">
+            property change listener
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ISharedSceneState.AddPropertyChangeListener(UnityEngine.Component,System.String,Microsoft.Mesh.VisualScripting.ISharedSceneState.PropertyChangeListenerDelegate)">
+            register listener to be notified of property changes
+            - called back soon after any property matching the prefix is updated in scene state
+            - not called back for property changes caused by receiving the base state
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ISharedSceneState.RemovePropertyChangeListener(Microsoft.Mesh.VisualScripting.ISharedSceneState.PropertyChangeListenerDelegate)">
+            remove all references to the given listener
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SceneDataSanitizer">
+            restricts visual script access to allowed parts of the scene
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.PropertyObserverPool">
+            maintains multi-client property observer instances for one scene
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PropertyObserverPool.Manager">
+            MeshVisualScripting manager associated with this pool
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.#ctor(Microsoft.Mesh.VisualScripting.MeshVisualScripting)">
+            create a property observer pool
+            - at runtime, the given manager is used to register property change callbacks
+            - at scene editing time, manager can be null
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PropertyObserverPool.propertyObservers">
+            active property observer instances
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PropertyObserverPool.propertyObserversByContainer">
+            active property observer instances by container identity
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PropertyObserverPool.nullContainer">
+            stand-in container identity for null containers (invalid as Dictionary key)
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PropertyObserverPool.pollingPropertyObservers">
+            active property observer instances that require polling
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.GetOrCreateFor(System.Object,System.String)">
+            obtain a property observer for the given property of the given container
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.GetOrCreateFor(Microsoft.Mesh.VisualScripting.PropertyRef)">
+            obtain a property observer for the given property reference
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.ReleaseAllForContainer(System.Object)">
+            release all property observers that are observing the given container
+            - use this for transient containers to free up memory
+            - not necessary to use this to clean up the pool in general
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.PollPropertiesIfNecessary">
+            polls all observers that require polling
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.RefreshAllCaches">
+            refreshes cached information on whether observed properties are local or shared
+            - call this after new shared properties have been registered
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.RefreshContainerCaches(System.Object)">
+            refreshes cached information on whether observed properties are local or shared
+            - only affects observed properties of the given container
+            - call this after new shared properties have been registered for the given container
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.PropertyObserverPool.RefreshHierarchyCaches(UnityEngine.Transform)">
+            refreshes cached information on whether the observed property is local or shared
+            - only affects observed properties of components underneath the base transform
+            - call this after the given base transform has been reparented
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackStaticStateUnit">
+            injected node to track state changes to static properties and by static methods
+            - hooked into the execution flow in front of the tracked node
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ExternalPropertyObserver">
+            property observer that observes a property path that spans multiple reference objects
+            - the internal path references a property inside the container
+            - the external path references any property of the object returned by the internal path
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ExternalPropertyObserver.InternalPropertyRef">
+            internal property reference
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ExternalPropertyObserver.ExternalPropertyRef">
+            external property reference
+            - container may be null if the internal property currently returns null
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ExternalPropertyObserver.RequiresPolling">
+            does the observed property require constant polling to detect updates?
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ExternalPropertyObserver.internalPropertyObserver">
+            internal property observer
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ExternalPropertyObserver.externalPropertyObserver">
+            external property observer
+            - null if the internal property is currently null
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.MeshVisualScripting">
+            central integration hub for Visual Scripting integration into Mesh
+            - automatically created at runtime
+            - singleton within any given scene
+        </member>
+        <member name="E:Microsoft.Mesh.VisualScripting.MeshVisualScripting.OnStartup">
+            callbacks to hook into implicit MeshVisualScripting lifecycle
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.MeshVisualScripting.TrackStateListeners">
+            callbacks to track state changes at script runtime
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.MeshVisualScripting.dirtyPropertyNamesByPropertyRef">
+            cache dirty property names
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.MeshVisualScripting.variablePropertyPathByVariableName">
+            cache constructed property paths
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedPropertyContent">
+            shared property content and its origin
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyContent.Origin">
+            origin of this content (sender client and sequence)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyContent.Value">
+            content value
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyContent.Type">
+            content type (may be null)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TypeSignature">
+            type signatures: e.g. UnityEngine.Transform, float, System.Text.StringBuilder
+            - types must be fully namespace-qualified
+            - standard types can use their aliases: e.g. bool, int, float, string, etc.
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TypeSignature.Of(System.Type,System.Boolean)">
+            construct the normalized type signature for the given type
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TypeSignature.Normalize(System.String)">
+            normalize the given type signature (no syntax or runtime validation)
+            - exactly one space after each comma, otherwise all whitespace stripped
+            - standard types represented by their aliases: e.g. bool, int, float, string, etc.
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedComponentState">
+            shared scene component base implementation
+            - extend to store additional per-component metadata
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedComponentState.ComponentId">
+            shared unique identifier for this component instance
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedComponentState.Component">
+            component instance
+            - null if data is received for this instance before it is registered locally
+            - no change once set
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedComponentState.EnableAutoRateLimiting">
+            enable automatic rate-limiting that defers updates while previous updates are in flight?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedComponentState.DeferredPropertyBundles">
+            shared properties enqueued by not yet sent to the server
+            - used for automatic rate-limiting to defer updates until previous update received back
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedComponentState.PredictedPropertyContents">
+            shared properties sent but not yet roundtripped through the server
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedComponentState.ReceivedPropertyContents">
+            shared properties received for this component instance
+            - includes received data for as yet unregistered properties
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ISessionBridge">
+            collects session and Mesh bridge interfaces
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.CollectionUtil.IdentityComparer`1">
+            compares objects by reference identity
+            - workaround for slow UnityEngine.Object reference identity calls
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.CollectionUtil.ForEachNoAlloc``1(System.Collections.Generic.IEnumerable{``0})">
+            optimizes foreach over plain List presented through a generic interface
+            - for example: IEnumerable{T}, IList{T}, IReadOnlyList{T}
+            - avoids heap allocation of an IEnumerator{T} when possible
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.CollectionUtil.ForEachNoAlloc``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+            optimizes foreach over plain Dictionary presented through a generic interface
+            - for example: IEnumerable{KeyValuePair{K,V}}, IDictionary{K,V}, IReadOnlyDictionary{K,V}
+            - avoids heap allocation of an IEnumerator{KeyValuePair{K,V}} when possible
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.CollectionUtil.ListNoAllocEnumerable`1">
+            wraps no-alloc plain List{T}.Enumerator with general IEnumerator fallback
+            - not a generic enumerable because using it as such would allocate anyway
+            - targets foreach iteration, which only requires MoveNext(), Current, and Dispose()
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.CollectionUtil.DictionaryNoAllocEnumerable`2">
+            wraps no-alloc plain Dictionary{K,V}.Enumerator with general IEnumerator fallback
+            - not a generic enumerable because using it as such would allocate anyway
+            - targets foreach iteration, which only requires MoveNext(), Current, and Dispose()
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.CollectionUtil.IListNoAllocEnumerable`1">
+            no-alloc IList{T} enumerable using index access
+            - generic enumerable so it can be used in all IEnumerable{T} contexts
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.CollectionUtil.IListNoAllocEnumerable`2">
+            no-alloc IList{T} enumerable using index access
+            - supports mapping list items to enumerated items for enumeration
+            - generic enumerable so it can be used in all IEnumerable{T} contexts
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomTypeCodeExtType">
+            extension type code for dispatch to custom type formatters
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomTypes">
+            custom type codes and type formatters
+            - to maintain runtime compatibility, avoid changing existing type codes
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomTypeByType">
+            custom type lookup by runtime type
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomTypeByTypeCode">
+            custom type lookup by serialized custom type code
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MessagePackExtensions.WriteAny(MessagePack.MessagePackWriter@,System.Object)">
+            serialize a value of any standard or supported custom type
+            - supports all standard types as well as IDictionary and ICollection of standard types
+            - supports all custom types declared in the CustomTypes array
+            - custom types are serialized with an FixExt1 header containing their custom type code
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MessagePackExtensions.ReadAny(MessagePack.MessagePackReader@)">
+            deserialize a value of any standard or supported custom type
+            - supports all standard types as well as IDictionary and ICollection of standard types
+            - supports all custom types declared in the CustomTypes array
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType">
+            base class for custom type formatter declarations
+            - serialized with an FixExt1 record with type CustomTypeCodeExtType
+            - type code must be unique and should remain stable to maintain runtime compatibility
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType.TypeCode">
+            custom type code
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType.Type">
+            runtime type to deserialize from and serialize to
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType.For``1(System.Byte,MessagePack.Formatters.IMessagePackFormatter{``0})">
+            create a custom type formatter declaration
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType.Write(MessagePack.MessagePackWriter@,System.Object)">
+            write a value of this custom type
+            - throws if the given value is not assignable to the custom type
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType.Read(MessagePack.MessagePackReader@)">
+            read the next value of this custom type
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.MessagePackExtensions.CustomType`1">
+            custom type formatter declaration
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.DirtySceneState">
+            records which property paths of which components were touched by visual scripts
+            - used for state synchronization across clients
+            - used for state change events in visual scripts
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.DirtySceneState.PropagateAndClearDirty(Microsoft.Mesh.VisualScripting.ISharedSceneState)">
+            propagate recorded dirty state
+            - share changed properties across clients
+            - invoke state change listeners
+            - clear dirty properties
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedPropertyOrigin">
+            sender client and sequence of a property
+            - uniquely identifies the origin of a property within a session
+            - defines an order of property updates for any given client (but not across clients)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyOrigin.ClientId">
+            client who sent this property value
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyOrigin.ClientSequence">
+            client-specific sequence in which this property value was sent 
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.SharedPropertyOrigin.CompareTo(Microsoft.Mesh.VisualScripting.SharedPropertyOrigin)">
+            sorts origins by origin participant, then origin-specific sequence
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IPropertyIdentifier">
+            property identifier in a property path
+            - path elements in a ParsedPropertyPath instance (see there for details)
+            - implementation KeyPropertyIdentifier represents plain-text property names
+            - implementation IndexPropertyIdentifier represents index lookups (by number or string)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.IPropertyIdentifier.IsSpecific">
+            does this identifier reference a single specific value in the container object?
+            - any KeyPropertyIdentifier is specific
+            - an IndexPropertyIdentifier is specific if it has a non-null index value
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.IPropertyIdentifier.IsGeneralized">
+            can this identifier be part of a generalized property path?
+            - any KeyPropertyIdentifier can be in a generalized property path
+            - an IndexPropertyIdentifier is generalized if it has a non-null index value
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IPropertyIdentifier.ToGeneralized">
+            convert this identifier to its generalized counterpart
+            - any KeyPropertyIdentifier generalizes to itself
+            - an IndexPropertyIdentifier generalizes to one with null index value
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IPropertyIdentifier.CreateReflector(System.Type)">
+            create a reflector for this identifier within the given container type
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IPropertyIdentifier.Accepts(Microsoft.Mesh.VisualScripting.IPropertyIdentifier)">
+            does this (potentially generalized) identifier accept the given (specific) identifier?
+            - any identifier accepts its equal
+            - an IndexPropertyIdentifier with null index value accepts any other IndexPropertyIdentifier
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IPropertyIdentifier.ToString(System.Boolean)">
+            create canonical string representation of this identifier
+            - isHead is true if this is the first identifier in the property path
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IPropertyReflector">
+            reflection-based access in a reflected property path
+            - path elements in a ReflectedPropertyPath instance (see there for details)
+            - PropertyReflector reflects a KeyPropertyIdentifier backed by a public non-indexed property
+            - FieldReflector reflects a KeyPropertyIdentifier backed by a public field
+            - IndexedReflector reflects an IndexPropertyIdentifier backed by a public indexed property
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.IPropertyReflector.ContainerType">
+            type of the container within which the property can be looked up
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.IPropertyReflector.PropertyType">
+            type of the returned property
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.IPropertyReflector.RequiresContainerInstance">
+            does this reflector require a container instance?
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IPropertyReflector.GetValue(System.Object)">
+            gets the current property value from the container
+            - container must be assignable to type ContainerType
+            - returns an object that is assignable to ContainerType (maybe null)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.IPropertyReflector.SetValue(System.Object,System.Object)">
+            sets the property value in the container
+            - container must be assignable to type ContainerType
+            - value must be assignable to PropertyType (maybe null)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ParsedPropertyPath">
+            parsed representation of a property path
+            - string representation similar to C# syntax: key1.key2[index1].key3["index2"].key4
+            - supports valid C# symbol names for keys and numbers and strings for index lookups
+            - use to construct a ReflectedPropertyPath to get and set properties at runtime
+            - see TestParsedPropertyPath for a comprehensive suite of examples
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.GeneralizedIndexPropertyIdentifier">
+            generalized IndexPropertyIdentifier with null index value
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.propertyIdentifiersAlongPath">
+            property identifiers along the parsed property path
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.#ctor(Microsoft.Mesh.VisualScripting.IPropertyIdentifier[])">
+            create parsed property path from constituent property identifiers
+            - useful to programmatically create stringified canonical property paths
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.#ctor(System.String)">
+            use GetOrCreateFor() to instantiate from string representation
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.Length">
+            number of property identifiers in this path
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.Item(System.Int32)">
+            direct access to individual property identifier in this path
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.GetOrCreateFor(System.String)">
+            parse string representation of a property path (or reuse cached instance)
+            - throws ArgumentException with error diagnostics in case of syntax errors
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.Accepts(Microsoft.Mesh.VisualScripting.ParsedPropertyPath)">
+            does this (potentially generalized) property path accept the given (specific) property path?
+            - requires that both property paths have the same number of identifiers
+            - key identifiers must match exactly
+            - specific index identifiers must match exactly, generalized index identifiers accept any index
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.IsSpecific">
+            does this identifier reference a single specific value in the container object?
+            - requires that the property path contains no generalized index identifiers
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.IsGeneralized">
+            is this property path fully generalized?
+            - requires that all index identifiers in the property path are generalized
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.ToGeneralized">
+            convert this property path to its generalized counterpart
+            - replaces all specific index identifiers with their generalized counterpart
+            - returns this instance if it is already fully generalized
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.ToString">
+            converts this property path to its canonical string representation
+            - the canonical representation contains no insignificant whitespace
+            - the returned string roundtrips into the same parsed property path representation
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ParsedPropertyPath.ToString(System.Range)">
+            converts part of this property path to its canonical string representation
+            - the canonical representation contains no insignificant whitespace
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath">
+            reflection-based access to an object property specified by a property path
+            - constructed from a ParsedPropertyPath to get and set properties at runtime
+            - property path must be specific to allow reflection-based access
+            - the same property path can produce different reflected paths depending on container type
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.ContainerType">
+            type of the container within which the property can be looked up
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.PropertyType">
+            type of the returned property
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.RequiresContainerInstance">
+            does this reflected property path require a container instance?
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.ParsedPropertyPath">
+            parsed property path from which this reflected property path was created
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.propertyReflectorsAlongPath">
+            property reflectors along this path
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.containersAlongPath">
+            property containers along this path (allocated lazily and reused)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.#ctor(System.Type,Microsoft.Mesh.VisualScripting.ParsedPropertyPath)">
+            use GetOrCreateFor() to instantiate
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.Length">
+            number of property reflectors in this path
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.Item(System.Int32)">
+            direct access to individual property reflectors in this path
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.GetOrCreateFor(System.Type,System.String)">
+            create reflector within containers of the given type from string property path
+            - throws ArgumentException on syntax errors in the property path
+            - throws InvalidOperationException if the property path is not specific
+            - throws ArgumentException if the property path cannot be resolved in the given container
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.GetOrCreateFor(System.Type,Microsoft.Mesh.VisualScripting.ParsedPropertyPath)">
+            create reflector within containers of the given type from parsed property path
+            - throws InvalidOperationException if the property path is not specific
+            - throws ArgumentException if the property path cannot be resolved in the given container
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.GetValue(System.Object)">
+            gets the current property value from the container
+            - the container must be assignable to type ContainerType
+            - performs null-conditional property lookup along the path
+            - returns an object that is assignable to ContainerType (can be null)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyPath.SetValue(System.Object,System.Object)">
+            sets the property value in the container
+            - the container must be assignable to ContainerType
+            - the value must be assignable to PropertyType (can be null)
+            - returns true if null-conditional assignment was successful, else false
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ReflectedPropertyTree">
+            gathers property updates on a single container object and applies them in depth-first order
+            - useful especially with struct-typed properties (read copy, update copy, write copy)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyTree.AddProperty(Microsoft.Mesh.VisualScripting.ParsedPropertyPath,System.Object)">
+            add a property value that should be set at a given property path
+            - if the same property path is set multiple times, the last value is retained
+            - if a parent property as well as some its children are set, the children are set after the parent
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.ReflectedPropertyTree.SetProperties">
+            apply all properties to the container object
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ReflectedPropertySubtree">
+            implementation of ReflectedPropertyTree (must be public because ReflectePropertyTree is public)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.MeshActionUnitBase.DoAction(Unity.VisualScripting.Flow)">
+            override in subclasses to implement the action
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.LocalSceneScope">
+            marks the root of a non-shared transform subtree within ISharedSceneRoot
+            - redundantly nested instances of this marker component are ignored
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.LocalSceneScope.shareVariablesOnThisGameObject">
+            Variables component on this GameObject is shared
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.LocalSceneScope.cloudScriptsCanWriteSubtree">
+            cloud scripting can write to this non-shared transform subtree
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.TrackStateUnit">
+            abstract base class for for injected nodes that track state-modifying standard nodes
+            - provides cached access to set of connected member units
+            - tracks dirty properties and caches the set of dirty property paths
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.TrackStateUnit.OutputPort">
+            output port connecting to the tracked MemberUnit
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.TrackStateUnit.ConnectedMemberUnits">
+            all member units connected to the output port of this unit
+            - at runtime, exactly one
+            - in playmode in the Editor, users can interactively add and remove unit connections
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TrackStateUnit.TrackNextStateChange(Unity.VisualScripting.Flow,System.Type,System.Object,Unity.VisualScripting.Member)">
+            track the state change caused by the given member on the given container
+            - marks all related properties as dirty
+            - invokes state tracking listeners (if any)
+            - does nothing during port value prediction and if session is not connected
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TrackStateUnit.TrackPropertyChanged(Microsoft.Mesh.Signals.SignalHub,System.Type,System.Object,System.String)">
+            track individual changed property by dispatching signal
+            - automatically tracks all related properties
+            - allows other signal subscribers to listen to this event
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.TrackStateUnit.TrackPropertiesChangedByMethod(Microsoft.Mesh.VisualScripting.DirtySceneState,System.Type,System.Object,System.Reflection.MethodInfo)">
+            track properties changed by a method invocation directly
+            - includes all related properties via allowlist data
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IScriptValidator">
+            determines which visual scripting units are allowed in a visual script
+            - verify that the unit type is allowed
+            - verify that unit instances are allowed (for specific types)
+            - implemented by an allowlist or interface definition
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedPropertyBundle">
+            shared properties and their origin
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyBundle.Origin">
+            origin of this bundle (sender client and sequence)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.SharedPropertyBundle.Properties">
+            property paths and values
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.SharedPropertyBundle.Pool">
+            pool of bundle objects for no-alloc reuse
+            - must either call Init() or Deserialize() on pooled objects before use
+            - method or class that obtained a bundle from the pool must also return it
+            - to extend the lifetime of a bundle, use CloneFromPool() to create a clone
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver">
+            property observer that uses callbacks to listen for property changes
+            - works both for local and for shared properties
+            - triggers only on actual value change (including on late join)
+            - automatically handles dependencies between related properties
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.MaybeSharedByClient">
+            does the client potentially share updates of this property?
+            - includes properties that are not shared themselves but affected by shared properties
+            - cached until RefreshPropertyShared() is called
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.MaybeSharedByServer">
+            does the server potentially share updates of this property?
+            - includes all Component properties outside of local scene scope
+            - cached until RefreshPropertyShared() is called
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.maybeSharedByClient">
+            backing field for cached properties (null if not initialized yet)
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.RequiresPolling">
+            does the observed property require constant polling to detect updates?
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.relatedPropertiesRequirePolling">
+            does any of the related property observers require polling?
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.onLocalPropertyChangedSubscription">
+            observe local property changes
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.onSharedBaseStateReceivedSubscription">
+            observe shared property changes (instigated locally or remotely)
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.relatedPropertyPaths">
+            related property paths from allowlist
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.emptyPropertyPaths">
+            empty set of related property paths (reused)
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.ListeningPropertyObserver.relatedPropertyObservers">
+            property observers for related properties
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.IntervalEventUnit">
+            <summary>
+            Triggers in regular time intervals synchronously on all clients.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.AllowlistDependencies">
+            determines value change dependencies between properties of an allowlisted type
+            - each property Depends establishes a directed dependency
+            - properties without any dependencies are root properties
+            - each property is related to all other properties that share at least one of its roots
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistDependencies.#ctor(Microsoft.Mesh.VisualScripting.Allowlist.TypeData)">
+            creates an instance for the given type
+            - throws if there are any circular property dependencies
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.AllowlistDependencies.Roots">
+            root properties of this type
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistDependencies.IsRoot(System.String)">
+            is the given property a root property of this type?
+            - true if the property has no dependencies on other properties
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistDependencies.RootsOf(System.String,System.Collections.Generic.HashSet{System.String})">
+            gathers root properties of the given property
+            - includes the given property if it is a root property itself
+            - adds to the given HashSet (without clearing it first)
+        </member>
+        <member name="M:Microsoft.Mesh.VisualScripting.AllowlistDependencies.RelationsOf(System.String,System.Collections.Generic.HashSet{System.String})">
+            gathers all properties that change when the given property changes
+            - does not include the given property itself
+            - adds to the given HashSet (without clearing it first)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.PollingPropertyObserver">
+            property observer that requires constant polling to detect changes
+            - fallback if nothing else can be used
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.SharedSceneStateExtensions">
+            extension methods for ISharedSceneState
+            - overloads that take PropertyRef instead of Component and propertyPath
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.StateChangedEventUnit">
+            <summary>
+            Triggers when any of its inputs change (variables, component properties, or anything else).
+            Also triggers just after connecting to a session if any inputs were changed before the session was joined.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.StateChangedEventUnit.EventData.propertyObserverPool">
+            reference to propertyObserverPool to release CalculatedStateInput observers
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.StateChangedEventUnit.EventData.onPropertyChangedDelegate">
+            delegate called when any state input changes (reused for all state inputs)
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.StateChangedEventUnit.EventData.statePropertyObservers">
+            property observers in same order as state inputs
+            - null elements where state cannot be observed (no input; disallowed polling)
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.StateChangedEventUnit.EventData.uninitializedStateIndices">
+            state inputs that could not be initialized yet (container not available yet)
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.INetwork">
+            peer-to-peer network integration
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.network">
+            peer-to-peer network integration interface
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.AssumeGuaranteedRoundtrip">
+            peer-to-peer broadcasts send all updates back to client
+        </member>
+        <member name="P:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.IsBaseStatePending">
+            is this client still waiting for base state after connecting?
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.clientSequenceByClientId">
+            per-sender property sequence already incorporated in shared state
+            - each sender increments its own state generation with each payload they send
+            - after base state is received, only payloads not yet incorporated are processed
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.baseStateSenderClientId">
+            requested base state from this client
+        </member>
+        <member name="F:Microsoft.Mesh.VisualScripting.PeerToPeerSharedSceneState.tentativePropertyBundles">
+            tentatively applicable payloads received before base state
+        </member>
+        <member name="T:Microsoft.Mesh.VisualScripting.NullSceneValidator">
+            disallow access to the entire scene (safe default)
+        </member>
+    </members>
+</doc>

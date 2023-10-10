@@ -10,9 +10,10 @@ For detailed instructions on getting started with development for Microsoft Mesh
 
     ![A screenshot of the Mesh 101 tutorial showing the sphere terraces and wind turbines.](README/001-mesh-distant-shot.png)
 
-1. **Physics showcase projects**: Get things moving with physics in two example projects: a [dart room](https://aka.ms/MeshDartRoomSample) and a [physics effects gallery](https://aka.ms/MeshPhysicsEffectsSample).
+1. **Physics showcase projects**: Get things moving with physics in three example projects: a [dart room](https://aka.ms/MeshDartRoomSample), a [science building](https://aka.ms/MeshScienceBuildingSample), or a [physics effects gallery](https://aka.ms/MeshPhysicsEffectsSample).
 
     ![A representative view of the DartRoom sample.](README/Dart_Room_Hero.png)
+     ![A representative view of the ScienceBuilding sample.](README/ScienceBuilding_Hero.png)
     ![An overhead view of the PhysicsEffectsGallery sample.](README/002-physics-gallery.png)
 
 1. [**Toybox**](https://aka.ms/MeshToyboxSample): Add games and other engaging activities to Mesh experiences.
