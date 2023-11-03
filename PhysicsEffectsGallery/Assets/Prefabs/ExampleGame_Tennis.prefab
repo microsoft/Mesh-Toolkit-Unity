@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,8 +105,9 @@ MonoBehaviour:
     Control the bouncing slider to bounce the ball back to the
     opponent.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
+  m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1821,6 +1822,24 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 8843224119643347580}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7834836222910368052, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_RootOrder
