@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 8828319465186389689}
   - component: {fileID: 1949351573905411885}
   - component: {fileID: 3815458424186406557}
+  - component: {fileID: 8721981236710857436}
   m_Layer: 31
   m_Name: toybox_beanbag_base_prefab
   m_TagString: Untagged
@@ -100,7 +101,6 @@ Transform:
   m_Children:
   - {fileID: 581826723750588326}
   - {fileID: 1606386387805828347}
-  - {fileID: 7650265933365921360}
   - {fileID: 422677682145336909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
     OutlineExclusionString: 
     highlightAmountProperties: []
     highlightColorProperties: []
-    CustomHighlightMaterial: {fileID: 2100000, guid: e92af5b2e838c0442aab102c065e8f9f,
+    CustomHighlightMaterial: {fileID: 2100000, guid: 30359e9fa92a482488523f8f3bb00068,
       type: 2}
     ExclusionString: _ignore_highlight
   hoverIKSettings:
@@ -140,16 +140,18 @@ MonoBehaviour:
     ConstrainArmWithinSphere: 1
   equippableSettings:
     InteractionOffset:
-      position: {x: 0.035, y: 0, z: 0.07}
-      rotation: {x: 0, y: -40, z: -30}
+      position: {x: 0.03, y: 0.03, z: 0.03}
+      rotation: {x: -15, y: -40, z: -15}
     EquipTargetPose:
       position: {x: 0.1, y: 0.17, z: 0.4}
       rotation: {x: 331.44354, y: 337.4083, z: 238.99628}
     EquipHandPose:
-      HandPoseShape: 5
+      HandPoseShape: 3
       HandPoseSize: 0.15
     Throwable: 1
-    ThrowVelocity: 2
+    MinThrowVelocity: 0
+    ThrowVelocity: 0.9
+    ThrowDirectionOffset: {x: 0, y: 0.75, z: 0}
     ArmExtensionOnAim: 0.7
     AimHandPose:
       HandPoseShape: 5
@@ -158,79 +160,7 @@ MonoBehaviour:
     ThrowHandPose:
       HandPoseShape: 6
       HandPoseSize: 0.965
-    ThrowTargetPoses:
-    - Position: {x: 0, y: 0.05, z: -0.15}
-      Rotation: {x: 0, y: 50, z: 0}
-      InterpolationTime: 0.2
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.44018042
-          value: 0.21478736
-          inSlope: 1.165909
-          outSlope: 1.165909
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.15151231
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1.2512416
-          outSlope: 1.2512416
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.14141458
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    - Position: {x: -0.05, y: -0.3, z: 0.01}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.2
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0.6653426
-          outSlope: 0.6653426
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.36302304
-        - serializedVersion: 3
-          time: 0.65422845
-          value: 0.9666499
-          inSlope: 0.48024926
-          outSlope: 0.48024926
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.21663451
-          outWeight: 0.686691
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: -0.13406152
-          outSlope: -0.13406152
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.91582626
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    ThrowTargetPoses: []
     ActivateType: 0
     ActivateTargetPoses:
     - Position: {x: 0.3, y: -0.3, z: 0.5}
@@ -303,8 +233,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2590424249165949453}
   serializedVersion: 4
-  m_Mass: 0.25
-  m_Drag: 0
+  m_Mass: 0.15
+  m_Drag: 0.2
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -334,7 +264,169 @@ MonoBehaviour:
   m_Script: {fileID: 1258557776, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifyWithVisualScripting: 0
+  highlightSettings:
+    Hovered: 1
+    Selected: 1
+    HighlightMechanism: 2
+    HighlightColor: {r: 0.92, g: 0.92, b: 0.92, a: 1}
+    HighlightTransitionDuration: 0.15
+    HighlightOutlineWidth: 0.004
+    CustomOutlineMaterial: {fileID: 0}
+    CustomStencilWriteMaterial: {fileID: 0}
+    OutlineExclusionMode: 0
+    OutlineExclusionString: 
+    highlightAmountProperties: []
+    highlightColorProperties: []
+    CustomHighlightMaterial: {fileID: 0}
+    ExclusionString: 
+  equippableSettings:
+    InteractionOffset:
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    EquipTargetPose:
+      position: {x: 0.25, y: 0.25, z: 0.25}
+      rotation: {x: 0, y: 0, z: 0}
+    EquipHandPose:
+      HandPoseShape: 4
+      HandPoseSize: 1
+    Throwable: 0
+    MinThrowVelocity: 1
+    ThrowVelocity: 5
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    ArmExtensionOnAim: 1
+    AimHandPose:
+      HandPoseShape: 4
+      HandPoseSize: 1
+    AimHandRotation: {x: 0, y: 0, z: 0}
+    ThrowHandPose:
+      HandPoseShape: 6
+      HandPoseSize: 1
+    ThrowTargetPoses:
+    - Position: {x: 0, y: 0, z: -0.3}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.3
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    - Position: {x: 0, y: 0, z: 0}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.3
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    ActivateType: 2
+    ActivateTargetPoses:
+    - Position: {x: 0.25, y: 0.25, z: 0.25}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.5
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  interactionProximityRadius: 0
+  equippable: 0
+  manipulable: 0
+  manipulationSettings:
+    forceMode: 0
+    scale:
+      enabled: 0
+      minScale: 0.3
+      maxScale: 10
+    translation:
+      enabled: 1
+      x: 1
+      y: 1
+      z: 1
+    rotation:
+      enabled: 1
+      x: 1
+      y: 1
+      z: 1
+      manipulationRotationLogic: 0
+    modifyTargetTransform:
+      enabled: 0
+      targetSpace: 1
+      newTargetPosition: {x: 0, y: 0, z: 0}
+      newTargetRotation: {x: 0, y: 0, z: 0, w: 1}
+    AvatarIKSettings:
+      CustomHandPose:
+        HandPoseShape: 6
+        HandPoseSize: 1
+      EnableIkTracking: 1
+      ConstrainArmWithinSphere: 1
+    pointSpring:
+      enabled: 0
+      springStrength: 1
+      dampingFactor: 0.2
+  hoverIKSettings:
+    CustomHandPose:
+      HandPoseShape: 0
+      HandPoseSize: 1
+    EnableIkTracking: 0
+    ConstrainArmWithinSphere: 1
+  modifyWithVisualScripting: 1
   _DebugTargetPosition: {x: 0, y: 0, z: 0}
   _DebugTargetRotation: {x: 0, y: 0, z: 0, w: 0}
   _DebugRayHitPosition: {x: 0, y: 0, z: 0}
@@ -356,13 +448,11 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"InteractableObjectSource","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TrailEffectParent","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PowerMeterObject","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ParentGame","value":null,"typeHandle":{"Identification":"UnityEngine.Component,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 2590424249165949453}
     - {fileID: 217981934395853815}
-    - {fileID: 6056161140877068947}
 --- !u!114 &8828319465186389689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,12 +499,31 @@ MeshCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8671657266643284128, guid: 5b1980b60b25eaa4284597726c08cc24, type: 3}
+--- !u!114 &8721981236710857436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590424249165949453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 970996483, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityThreshold: 0.001
+  timeThreshold: 0.001
+  affectedBodies:
+    conditions: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &4035271726240353898
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,107 +555,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6020121269285398742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7891528559709061822
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6020121269285398742}
-    m_Modifications:
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147702082151876653, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: m_Name
-      value: BeanBagGraph
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008212611989507002, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ThrowVelocityMax","value":{"$content":30.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ThrowVelocityMin","value":{"$content":5.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"RepeatInterval","value":{"$content":2.5,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ThrowVelocity","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Animator","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Animator,
-        UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"InteractableObject","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Microsoft.Mesh.Interactables.MeshInteractableBody,
-        Microsoft.Mesh.Interactables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UpDistance","value":{"$content":0.07,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"UpOrigin","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"HoverTarget","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008212611989507002, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[1]
-      value: 
-      objectReference: {fileID: 608670946837471193}
-    - target: {fileID: 8008212611989507002, guid: 8db27f865ad254e479ce22b50cf06d38,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[2]
-      value: 
-      objectReference: {fileID: 6020121269285398742}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8db27f865ad254e479ce22b50cf06d38, type: 3}
---- !u!1 &6056161140877068947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4147702082151876653, guid: 8db27f865ad254e479ce22b50cf06d38,
-    type: 3}
-  m_PrefabInstance: {fileID: 7891528559709061822}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7650265933365921360 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 553770391152313582, guid: 8db27f865ad254e479ce22b50cf06d38,
-    type: 3}
-  m_PrefabInstance: {fileID: 7891528559709061822}
-  m_PrefabAsset: {fileID: 0}

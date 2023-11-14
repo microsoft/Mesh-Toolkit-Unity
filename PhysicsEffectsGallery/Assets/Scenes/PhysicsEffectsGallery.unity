@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1981,16 +1981,10 @@ MonoBehaviour:
     Id: 80
   - Interactable: {fileID: 1186824538705572768}
     Id: 81
-  - Interactable: {fileID: 0}
-    Id: 82
   - Interactable: {fileID: 4894310960121153661}
     Id: 83
-  - Interactable: {fileID: 0}
-    Id: 84
   - Interactable: {fileID: 621787460}
     Id: 85
-  - Interactable: {fileID: 0}
-    Id: 86
   - Interactable: {fileID: 418901213}
     Id: 87
 --- !u!4 &775448096
@@ -3243,6 +3237,7 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionProximityRadius: 20
   highlightSettings:
     Hovered: 1
     Selected: 1
@@ -3275,9 +3270,10 @@ MonoBehaviour:
       HandPoseShape: 4
       HandPoseSize: 1
     Throwable: 0
-    MinThrowVelocity: 1
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
     ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -3341,7 +3337,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -3370,6 +3365,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 1
   manipulationSettings:
@@ -3404,7 +3404,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 20
 --- !u!1 &1729142293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,7 +3689,7 @@ PrefabInstance:
     - target: {fileID: 3203516585226644755, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
       propertyPath: m_Name
-      value: PlaymodeSetup [NoUpload]
+      value: MeshEmulatorSetup [NoUpload]
       objectReference: {fileID: 0}
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}

@@ -57,6 +57,111 @@ MonoBehaviour:
   transitionDuration: 0
   cooldownDuration: 0
   additionalJumpHeightScale: 0
+--- !u!1 &6397902563881078230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8412828154915191243}
+  - component: {fileID: 6166089525895131480}
+  - component: {fileID: 5944485649369494550}
+  - component: {fileID: 2920694743035373212}
+  m_Layer: 2
+  m_Name: ResetTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8412828154915191243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397902563881078230}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.998, y: 0.106, z: 0.002}
+  m_LocalScale: {x: 0.094447896, y: 0.072193034, z: 0.12016585}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5818462433804351685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6166089525895131480
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397902563881078230}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5944485649369494550
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397902563881078230}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2920694743035373212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397902563881078230}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7040941232180759196
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +194,7 @@ Transform:
   - {fileID: 8633438194735244806}
   - {fileID: 9193543074298212558}
   - {fileID: 966747958705857243}
+  - {fileID: 8412828154915191243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7987771318337825214
@@ -154,6 +260,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9193543074298212558}
     m_Modifications:
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"FreshMarsmallow","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnedMarshmallow","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurningParticles","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastingParticles","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnState","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetButton","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[5]
+      value: 
+      objectReference: {fileID: 7335735838517214154}
     - target: {fileID: 4364100006971221875, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
       propertyPath: uniqueObjectId
@@ -225,9 +353,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dccbd44e1325114a827201e2e4813fa, type: 3}
+--- !u!111 &323368554827608244 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 3508626527582640387, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3804961967623678391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5019021668469386187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8172579071726682748, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3804961967623678391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9140635868567347956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5339016416294210371, guid: 0dccbd44e1325114a827201e2e4813fa,
     type: 3}
   m_PrefabInstance: {fileID: 3804961967623678391}
   m_PrefabAsset: {fileID: 0}
@@ -239,6 +379,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9193543074298212558}
     m_Modifications:
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"FreshMarsmallow","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnedMarshmallow","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurningParticles","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastingParticles","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnState","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetButton","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[5]
+      value: 
+      objectReference: {fileID: 7335735838517214154}
     - target: {fileID: 4364100006971221875, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
       propertyPath: uniqueObjectId
@@ -310,9 +472,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dccbd44e1325114a827201e2e4813fa, type: 3}
+--- !u!1 &578184974848787543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5339016416294210371, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 4760831538628038420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3709570069171866984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8172579071726682748, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 4760831538628038420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &8259876816592164375 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 3508626527582640387, guid: 0dccbd44e1325114a827201e2e4813fa,
     type: 3}
   m_PrefabInstance: {fileID: 4760831538628038420}
   m_PrefabAsset: {fileID: 0}
@@ -334,7 +508,8 @@ PrefabInstance:
       propertyPath: _data._json
       value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"StartingPos","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButtonAnimation","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButonPressed","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
         type: 3}
@@ -351,6 +526,106 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[1]
       value: 
       objectReference: {fileID: 1826922242387422963}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[2]
+      value: 
+      objectReference: {fileID: 9140635868567347956}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[3]
+      value: 
+      objectReference: {fileID: 4493368332216577885}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[4]
+      value: 
+      objectReference: {fileID: 578184974848787543}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[5]
+      value: 
+      objectReference: {fileID: 4261830776678046055}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[6]
+      value: 
+      objectReference: {fileID: 9140635868567347956}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[7]
+      value: 
+      objectReference: {fileID: 4493368332216577885}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[8]
+      value: 
+      objectReference: {fileID: 578184974848787543}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[9]
+      value: 
+      objectReference: {fileID: 4261830776678046055}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[10]
+      value: 
+      objectReference: {fileID: 9140635868567347956}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[11]
+      value: 
+      objectReference: {fileID: 4493368332216577885}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[12]
+      value: 
+      objectReference: {fileID: 578184974848787543}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[13]
+      value: 
+      objectReference: {fileID: 4261830776678046055}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[14]
+      value: 
+      objectReference: {fileID: 323368554827608244}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[15]
+      value: 
+      objectReference: {fileID: 4971266627298622749}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[16]
+      value: 
+      objectReference: {fileID: 8259876816592164375}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[17]
+      value: 
+      objectReference: {fileID: 4720839599563836199}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[18]
+      value: 
+      objectReference: {fileID: 9140635868567347956}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[19]
+      value: 
+      objectReference: {fileID: 4493368332216577885}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[20]
+      value: 
+      objectReference: {fileID: 578184974848787543}
+    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[21]
+      value: 
+      objectReference: {fileID: 4261830776678046055}
     - target: {fileID: 7908666513429021967, guid: 1eea968b53fcd1245ba21a1da711f08b,
         type: 3}
       propertyPath: m_RootOrder
@@ -424,6 +699,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6965853043544418260}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7335735838517214154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 389115581550451742, guid: 1eea968b53fcd1245ba21a1da711f08b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6965853043544418260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8156845372699496996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -432,6 +713,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9193543074298212558}
     m_Modifications:
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"FreshMarsmallow","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnedMarshmallow","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurningParticles","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastingParticles","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnState","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetButton","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[5]
+      value: 
+      objectReference: {fileID: 7335735838517214154}
     - target: {fileID: 4364100006971221875, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
       propertyPath: uniqueObjectId
@@ -509,6 +812,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8156845372699496996}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4261830776678046055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5339016416294210371, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8156845372699496996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &4720839599563836199 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 3508626527582640387, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8156845372699496996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8380171500328592414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,6 +832,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9193543074298212558}
     m_Modifications:
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"FreshMarsmallow","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnedMarshmallow","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurningParticles","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastingParticles","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnState","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetButton","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020911283695613615, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[5]
+      value: 
+      objectReference: {fileID: 7335735838517214154}
     - target: {fileID: 4364100006971221875, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
       propertyPath: uniqueObjectId
@@ -594,6 +931,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8380171500328592414}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4493368332216577885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5339016416294210371, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8380171500328592414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &4971266627298622749 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 3508626527582640387, guid: 0dccbd44e1325114a827201e2e4813fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8380171500328592414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9023139122260255519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,7 +964,7 @@ PrefabInstance:
     - target: {fileID: 4721564510981747075, guid: fc4bbc4888f533c4b99530b95fafb5fb,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9040774
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 4721564510981747075, guid: fc4bbc4888f533c4b99530b95fafb5fb,
         type: 3}
@@ -625,7 +974,7 @@ PrefabInstance:
     - target: {fileID: 4721564510981747075, guid: fc4bbc4888f533c4b99530b95fafb5fb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9040774
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 4721564510981747075, guid: fc4bbc4888f533c4b99530b95fafb5fb,
         type: 3}
