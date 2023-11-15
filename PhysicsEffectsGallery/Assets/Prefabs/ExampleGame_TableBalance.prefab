@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 8853733010384964880}
   - component: {fileID: 8853733010384964887}
   - component: {fileID: 3645520357022936243}
-  - component: {fileID: 7446152538388703700}
+  - component: {fileID: 4937246880757430488}
   m_Layer: 0
   m_Name: MazeOuterCore
   m_TagString: Untagged
@@ -594,6 +594,7 @@ MonoBehaviour:
     Throwable: 0
     MinThrowVelocity: 1
     ThrowVelocity: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -721,22 +722,18 @@ MonoBehaviour:
       springStrength: 1
       dampingFactor: 0.2
   InteractionProximityRadius: 6
---- !u!111 &7446152538388703700
-Animation:
+--- !u!114 &4937246880757430488
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8853733010384964877}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 61f7458924ea0d54e8cfedf69abd6124, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 61f7458924ea0d54e8cfedf69abd6124, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 222356170, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8853733010401425053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1844,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1895,8 +1892,9 @@ MonoBehaviour:
     Control both sliders to tilt the surface and steer
     the ball in the hole.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
+  m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2297,6 +2295,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8853733010738267693}
     m_Modifications:
+    - target: {fileID: 4805093962120759759, guid: 14403095b75d7a640b316bb9224426bd,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 124
+      objectReference: {fileID: 0}
     - target: {fileID: 4805093963618665777, guid: 14403095b75d7a640b316bb9224426bd,
         type: 3}
       propertyPath: m_Name
@@ -2381,6 +2384,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8853733010738267693}
     m_Modifications:
+    - target: {fileID: 4805093962120759759, guid: 14403095b75d7a640b316bb9224426bd,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 118
+      objectReference: {fileID: 0}
     - target: {fileID: 4805093963618665777, guid: 14403095b75d7a640b316bb9224426bd,
         type: 3}
       propertyPath: m_Name
@@ -2486,6 +2494,24 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 8853733010738267692}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7834836222910368052, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -344,7 +344,8 @@ MonoBehaviour:
       HandPoseSize: 1
     Throwable: 1
     MinThrowVelocity: 1
-    ThrowVelocity: 20
+    ThrowVelocity: 16
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 0.6
     AimHandPose:
       HandPoseShape: 1
@@ -516,7 +517,7 @@ MonoBehaviour:
   targetAlignment: {x: 0, y: 1, z: 0}
   targetGameObject: {fileID: 0}
   alignInLocalSpace: 0
-  torqueMultiplier: 500
+  torqueMultiplier: 800
   angularDrag: 0.5
   dampingCoefficient: 1
   affectedBodies:

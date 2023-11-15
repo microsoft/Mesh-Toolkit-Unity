@@ -286,7 +286,9 @@ MonoBehaviour:
       HandPoseShape: 4
       HandPoseSize: 1
     Throwable: 0
+    MinThrowVelocity: 1
     ThrowVelocity: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -1288,7 +1290,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -1.4800262, y: 1.5066673, z: -1.9200015}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -1818,7 +1820,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1865,8 +1867,9 @@ MonoBehaviour:
 
     Collect all fish from the pool with a magnet hook.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
+  m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2325,16 +2328,6 @@ MonoBehaviour:
   surfaceType: 0
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   drag: 0.6
   skinFriction: 0.05
   preventDrift: 0
@@ -2482,6 +2475,24 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 200230271736584003}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7834836222910368052, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_RootOrder

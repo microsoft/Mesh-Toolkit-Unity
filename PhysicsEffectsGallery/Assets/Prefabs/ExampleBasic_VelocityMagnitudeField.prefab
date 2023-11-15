@@ -428,7 +428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,15 +471,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Speed Field \n\nAllows to accelerate/decelerate a rigid body until it
-    reaches a speed within a range of allowed speed.\nWorks only on the magnitude
+    reaches a speed within a range of allowed speed. Works only on the magnitude
     of velocity.\n\nExample 1:\n\t- min linear velocity set to 5 m/s\n\t- constant
-    acceleration of 1 m/s^2\n\nExample 2:\n\t- max linear velocity set to 1 m/s\n\t-
-    min angular velocity set to 10 rad/s\n\t- constant acceleration of 10 m/s^2(rad/s^2)\n\nExample
+    acceleration of 1 m/s^2\nExample 2:\n\t- max linear velocity set to 1 m/s\n\t-
+    min angular velocity set to 10 rad/s\n\t- constant acceleration of 10 m/s^2(rad/s^2)\nExample
     3:\n\t- max linear velocity set to 0 m/s\n\t- max  angular velocity set to 0
     rad/s\n\t- infinite acceleration\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
+  m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1002,16 +1003,6 @@ MonoBehaviour:
   accelerationType: 1
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -1461,16 +1452,6 @@ MonoBehaviour:
   accelerationType: 1
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -1557,16 +1538,6 @@ MonoBehaviour:
   accelerationType: 1
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -2431,16 +2402,6 @@ MonoBehaviour:
   accelerationType: 0
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -2632,16 +2593,6 @@ MonoBehaviour:
   accelerationType: 0
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -3493,6 +3444,24 @@ PrefabInstance:
       propertyPath: m_text
       value: Example 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7456194263003464223, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
         type: 3}
       propertyPath: _data._json
@@ -3616,6 +3585,24 @@ PrefabInstance:
       propertyPath: m_text
       value: Example 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7456194263003464223, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
         type: 3}
       propertyPath: _data._json
@@ -3739,6 +3726,24 @@ PrefabInstance:
       propertyPath: m_text
       value: Example 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7456194263003464223, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
         type: 3}
       propertyPath: _data._json

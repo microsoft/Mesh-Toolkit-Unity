@@ -163,7 +163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -205,11 +205,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sliders (experimental)\n\nTracks position of a slider and changes value
-    accordingly.\n\nExample 1:\n\t- Set frame of the animation"
+  m_text: "Slider with visual script\n\nTracks position of a slider and changes value
+    accordingly.\n\nExample:\n\t- Set frame of the animation"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
+  m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -327,6 +328,7 @@ GameObject:
   - component: {fileID: 5808621215583567979}
   - component: {fileID: 5808621215583567980}
   - component: {fileID: 5808621215583567978}
+  - component: {fileID: 3792537859141009006}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -468,6 +470,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3792537859141009006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808621215583567989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 222356170, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5808621215967217210
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +599,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805093962120759759, guid: 14403095b75d7a640b316bb9224426bd,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 4805093963618665777, guid: 14403095b75d7a640b316bb9224426bd,
         type: 3}

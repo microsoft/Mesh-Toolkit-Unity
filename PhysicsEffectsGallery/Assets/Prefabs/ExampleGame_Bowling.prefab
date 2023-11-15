@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2821135264932688455}
   - component: {fileID: 2821135264932688454}
   - component: {fileID: 2821135264932688449}
-  - component: {fileID: 5701501986699114872}
+  - component: {fileID: 8374891762745710856}
   m_Layer: 0
   m_Name: BowlingBallThrowable
   m_TagString: Untagged
@@ -134,7 +134,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: -0.000015258789}
---- !u!114 &5701501986699114872
+--- !u!114 &8374891762745710856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
       position: {x: 0, y: -0.05, z: 0.16}
       rotation: {x: 0, y: 0, z: 0}
     EquipTargetPose:
-      position: {x: 0.15, y: -0.15, z: 0.3}
+      position: {x: 0.15, y: -0.35, z: 0.2}
       rotation: {x: 25, y: 75, z: 185}
     EquipHandPose:
       HandPoseShape: 5
@@ -180,6 +180,7 @@ MonoBehaviour:
     Throwable: 1
     MinThrowVelocity: 10
     ThrowVelocity: 10
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 5
@@ -188,88 +189,7 @@ MonoBehaviour:
     ThrowHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
-    ThrowTargetPoses:
-    - Position: {x: -0.5, y: -1, z: 0.5}
-      Rotation: {x: 90, y: 0, z: 0}
-      InterpolationTime: 0.3
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    - Position: {x: 0, y: -0.25, z: 0}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.2
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    - Position: {x: 0, y: -0.25, z: 0}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.3
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    ThrowTargetPoses: []
     ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
@@ -1435,7 +1355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1477,12 +1397,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bowling\n\nThrow the ball and knock down all pins.\n\n\tBlack ball is
-    a normal object: \n\t- grab, run and release to throw.\n\n\tGray ball is a throwable
-    body:\n\t- grab and release to throw."
+  m_text: 'Bowling
+
+
+    Throw the ball and knock down all pins.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
+  m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2646,7 +2568,7 @@ MonoBehaviour:
       position: {x: 0, y: -0.05, z: 0.16}
       rotation: {x: 0, y: 0, z: 0}
     EquipTargetPose:
-      position: {x: 0.15, y: -0.15, z: 0.3}
+      position: {x: 0.15, y: -0.35, z: 0.2}
       rotation: {x: 25, y: 75, z: 185}
     EquipHandPose:
       HandPoseShape: 5
@@ -2654,6 +2576,7 @@ MonoBehaviour:
     Throwable: 1
     MinThrowVelocity: 10
     ThrowVelocity: 10
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 5
@@ -2662,88 +2585,7 @@ MonoBehaviour:
     ThrowHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
-    ThrowTargetPoses:
-    - Position: {x: -0.5, y: -1, z: 0.5}
-      Rotation: {x: 90, y: 0, z: 0}
-      InterpolationTime: 0.3
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    - Position: {x: 0, y: -0.25, z: 0}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.2
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    - Position: {x: 0, y: -0.25, z: 0}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.3
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    ThrowTargetPoses: []
     ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
@@ -2922,6 +2764,24 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 2821135265436996783}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
+    - target: {fileID: 7834836222910368052, guid: 09a0551ae93eae144a7eb02d73d0c615,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
+        type: 2}
     - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_RootOrder
