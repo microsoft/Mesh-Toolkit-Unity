@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1577615103988064704
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: S_VFX_Toasting
+  m_Shader: {fileID: -6465566751694194690, guid: f1cc6d60db907c746a3c2239e57201de,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Burnt_Normal:
+        m_Texture: {fileID: 2800000, guid: b66f8b07a5f6158459db2a6b3f4bc98a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Burnt_texture:
+        m_Texture: {fileID: 2800000, guid: 9d3bf4c2180a49949810a64f8572839b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Raw_Normal:
+        m_Texture: {fileID: 2800000, guid: becb68bc0ee86824c96efacebe3db096, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Raw_texture:
+        m_Texture: {fileID: 2800000, guid: 60fd081a97de7534394a95b459aab575, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Toasted_Normal:
+        m_Texture: {fileID: 2800000, guid: 545c55d260d9c9c409daf80e4c2849d1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Toasted_texture:
+        m_Texture: {fileID: 2800000, guid: 3a6f35faabbdefe43bf54fa11a6e21b5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BurnLines: 0
+    - _BurnNoise: 200
+    - _Dissolve: -1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _raw_to_toasted: 0
+    - _smoothness: 0
+    - _toasted_to_burnt: 0
+    m_Colors:
+    - _BurnColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

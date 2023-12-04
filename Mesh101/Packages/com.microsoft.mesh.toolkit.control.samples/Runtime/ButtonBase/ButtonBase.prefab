@@ -200,7 +200,9 @@ MonoBehaviour:
       HandPoseShape: 4
       HandPoseSize: 1
     Throwable: 0
+    MinThrowVelocity: 1
     ThrowVelocity: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -592,8 +594,8 @@ MonoBehaviour:
   m_Script: {fileID: 1130219089, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _assetId: 456
   _component: {fileID: 3813684047890160698}
+  _assetId: 456
 --- !u!1 &3813684049238586005
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +692,7 @@ GameObject:
   - component: {fileID: 3813684049337212057}
   - component: {fileID: 3813684049337212058}
   - component: {fileID: 3813684049337212059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Frontplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,8 +797,8 @@ MonoBehaviour:
   m_Script: {fileID: -593072866, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _assetId: 457
   _component: {fileID: 3813684049337212058}
+  _assetId: 457
 --- !u!1 &5748253776565854216
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,8 +929,8 @@ MonoBehaviour:
   m_Script: {fileID: -593072866, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _assetId: 457
   _component: {fileID: 0}
+  _assetId: 457
 --- !u!1001 &84570544
 PrefabInstance:
   m_ObjectHideFlags: 0

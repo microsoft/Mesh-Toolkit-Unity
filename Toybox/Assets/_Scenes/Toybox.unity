@@ -2425,7 +2425,7 @@ PrefabInstance:
     - target: {fileID: 3203516585226644755, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
       propertyPath: m_Name
-      value: PlaymodeSetup [NoUpload]
+      value: MeshEmulatorSetup [NoUpload]
       objectReference: {fileID: 0}
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
@@ -5044,6 +5044,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 375690514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &375690516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1119348344939462011, guid: 0cfcba99b8e16cb42a9fceb318407020,
+    type: 3}
+  m_PrefabInstance: {fileID: 375690514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &380841722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6799045248057239385, guid: da20cb3fb2220984d9afa18b4240a940,
@@ -6702,7 +6708,11 @@ PrefabInstance:
     - {fileID: 835070036, guid: 148437dffd7e9b64b9270b5c4e6d10dd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3608107278506993399, guid: 148437dffd7e9b64b9270b5c4e6d10dd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 148437dffd7e9b64b9270b5c4e6d10dd, type: 3}
 --- !u!1 &550503966 stripped
 GameObject:
@@ -7353,6 +7363,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1060273797}
     m_Modifications:
+    - target: {fileID: 1257523056119624209, guid: def0eb1d58b4e6d4994ce11b0d537c5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8072927989730996896, guid: def0eb1d58b4e6d4994ce11b0d537c5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7361,12 +7376,12 @@ PrefabInstance:
     - target: {fileID: 8072927989730996896, guid: def0eb1d58b4e6d4994ce11b0d537c5c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14599991
+      value: 0.131
       objectReference: {fileID: 0}
     - target: {fileID: 8072927989730996896, guid: def0eb1d58b4e6d4994ce11b0d537c5c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.84775
+      value: -24.63475
       objectReference: {fileID: 0}
     - target: {fileID: 8072927989730996896, guid: def0eb1d58b4e6d4994ce11b0d537c5c,
         type: 3}
@@ -13054,6 +13069,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1033985314}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1048617214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2625175491962730944, guid: 0a28019804f31544d90c7f2ca6bf0cb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 342012410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1057755164
 GameObject:
   m_ObjectHideFlags: 0
@@ -16622,25 +16643,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 197798336}
     m_Modifications:
+    - target: {fileID: 24834651327909976, guid: f709e1750c0839741b67980a404eab84,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.209
+      objectReference: {fileID: 0}
     - target: {fileID: 940295408291572819, guid: f709e1750c0839741b67980a404eab84,
         type: 3}
       propertyPath: m_Name
       value: ART_CleanMarshmallow
       objectReference: {fileID: 0}
-    - target: {fileID: 966747958705857243, guid: f709e1750c0839741b67980a404eab84,
+    - target: {fileID: 1232959455372097147, guid: f709e1750c0839741b67980a404eab84,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 966747958705857243, guid: f709e1750c0839741b67980a404eab84,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5515
-      objectReference: {fileID: 0}
-    - target: {fileID: 966747958705857243, guid: f709e1750c0839741b67980a404eab84,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.152
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1755668046824990020, guid: f709e1750c0839741b67980a404eab84,
         type: 3}
@@ -16662,6 +16678,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.138
       objectReference: {fileID: 0}
+    - target: {fileID: 2863863874045521426, guid: f709e1750c0839741b67980a404eab84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2905886606367448343, guid: f709e1750c0839741b67980a404eab84,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16671,13 +16692,28 @@ PrefabInstance:
         type: 3}
       propertyPath: _data._json
       value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"FreshMarsmallow","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastedMarshmallow","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnedMarshmallow","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurningParticles","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastingParticles","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnedMarshmallow","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurningParticles","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RoastingParticles","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BurnState","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetButton","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938115912128388888, guid: f709e1750c0839741b67980a404eab84,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938115912128388888, guid: f709e1750c0839741b67980a404eab84,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032547657145685940, guid: f709e1750c0839741b67980a404eab84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3136051571306006824, guid: f709e1750c0839741b67980a404eab84,
         type: 3}
@@ -20041,22 +20077,22 @@ PrefabInstance:
     - target: {fileID: 8426159102077555274, guid: da20cb3fb2220984d9afa18b4240a940,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.30431592
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8426159102077555274, guid: da20cb3fb2220984d9afa18b4240a940,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426159102077555274, guid: da20cb3fb2220984d9afa18b4240a940,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9525712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426159102077555274, guid: da20cb3fb2220984d9afa18b4240a940,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8426159102077555274, guid: da20cb3fb2220984d9afa18b4240a940,
         type: 3}
@@ -21152,17 +21188,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ed41b31fcce395e43af4bcddf66413de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed41b31fcce395e43af4bcddf66413de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed41b31fcce395e43af4bcddf66413de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -16.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ed41b31fcce395e43af4bcddf66413de,
         type: 3}
@@ -22791,6 +22827,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1721169536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1726330304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3620949943069284361, guid: def0eb1d58b4e6d4994ce11b0d537c5c,
+    type: 3}
+  m_PrefabInstance: {fileID: 585621757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1727213983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23585,6 +23627,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6600415355434278706, guid: 73e50550c014aa04f992db5cd0d09d42,
+        type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"AudioSource","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioSource,
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"IsPlaying","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Particles","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.ParticleSystem,
+        UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Button","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButtonAudio","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioSource,
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
     - target: {fileID: 8206583960251949769, guid: 73e50550c014aa04f992db5cd0d09d42,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24061,8 +24113,6 @@ MonoBehaviour:
     Id: 949
   - Interactable: {fileID: 1059537493}
     Id: 972
-  - Interactable: {fileID: 0}
-    Id: 960
   - Interactable: {fileID: 1148288226}
     Id: 963
   - Interactable: {fileID: 1153162715}
@@ -24105,8 +24155,6 @@ MonoBehaviour:
     Id: 929
   - Interactable: {fileID: 1728976557}
     Id: 935
-  - Interactable: {fileID: 0}
-    Id: 951
   - Interactable: {fileID: 1803179030}
     Id: 961
   - Interactable: {fileID: 1973044918}
@@ -24125,12 +24173,16 @@ MonoBehaviour:
     Id: 934
   - Interactable: {fileID: 965456925}
     Id: 0
-  - Interactable: {fileID: 0}
-    Id: 1
   - Interactable: {fileID: 585621758}
     Id: 2
   - Interactable: {fileID: 342012411}
     Id: 3
+  - Interactable: {fileID: 1726330304}
+    Id: 4
+  - Interactable: {fileID: 1048617214}
+    Id: 5
+  - Interactable: {fileID: 375690516}
+    Id: 1
 --- !u!4 &1826127930
 Transform:
   m_ObjectHideFlags: 0

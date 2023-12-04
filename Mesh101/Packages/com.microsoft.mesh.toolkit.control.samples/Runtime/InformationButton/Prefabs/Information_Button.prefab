@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8824995997108818447}
   - component: {fileID: 875803361646604943}
   - component: {fileID: 6284352077823072808}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ProximityDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 5229252568862699218}
   - component: {fileID: 4185055647797104350}
   - component: {fileID: 8478356746928967427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Information_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,9 @@ MonoBehaviour:
       HandPoseShape: 4
       HandPoseSize: 1
     Throwable: 0
+    MinThrowVelocity: 1
     ThrowVelocity: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -500,10 +502,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3322489363898261337, guid: d60e7531a01b8ce478bcddb2b273b852,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3345255073398105018, guid: d60e7531a01b8ce478bcddb2b273b852,
         type: 3}
       propertyPath: m_Name
       value: vfx_info_coin_sphere_burst_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345255073398105018, guid: d60e7531a01b8ce478bcddb2b273b852,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3345255073398105018, guid: d60e7531a01b8ce478bcddb2b273b852,
         type: 3}
@@ -515,10 +527,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 521e840338121db468261f3359d3e085, type: 2}
+    - target: {fileID: 5497474622252667876, guid: d60e7531a01b8ce478bcddb2b273b852,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5981803790592791458, guid: d60e7531a01b8ce478bcddb2b273b852,
         type: 3}
       propertyPath: m_Name
       value: Spheres_blue_up
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981803790592791458, guid: d60e7531a01b8ce478bcddb2b273b852,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009587065623354853, guid: d60e7531a01b8ce478bcddb2b273b852,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7476931591317010454, guid: d60e7531a01b8ce478bcddb2b273b852,
         type: 3}

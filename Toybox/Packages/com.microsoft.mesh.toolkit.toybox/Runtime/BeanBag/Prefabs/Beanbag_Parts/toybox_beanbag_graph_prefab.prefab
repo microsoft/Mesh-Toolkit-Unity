@@ -31,8 +31,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7365239308592046977}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8008212611989507002
@@ -53,16 +52,14 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"RepeatInterval","value":{"$content":2.5,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ThrowVelocity","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Animator","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Animator,
-      UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"InteractableObjectSource","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"InteractableObjectSource","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UpDistance","value":{"$content":0.07,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"UpOrigin","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"HoverTarget","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"UpOrigin","value":null,"typeHandle":{"Identification":"UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"HoverTarget","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
-    - {fileID: 8492543080597556782}
     - {fileID: 0}
     - {fileID: 0}
-    - {fileID: 7365239308592046977}
 --- !u!114 &-8911511030837540647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +75,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: dba3bd4ae6a7f6645913b5483447aa33, type: 2}
+    - {fileID: 11400000, guid: 1155f26962865d7498a4f2f1e257cd9d, type: 2}
 --- !u!114 &-6705444355282552829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,75 +90,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shareVariablesOnThisGameObject: 0
   cloudScriptsCanWriteSubtree: 0
---- !u!1001 &181403855292033259
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 553770391152313582}
-    m_Modifications:
-    - target: {fileID: 4180001609224698428, guid: 9a177ccd386eb5c41adef697eec0ee90,
-        type: 3}
-      propertyPath: m_Name
-      value: PowerMeter
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256125800255982442, guid: 9a177ccd386eb5c41adef697eec0ee90,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256125800255982442, guid: 9a177ccd386eb5c41adef697eec0ee90,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256125800255982442, guid: 9a177ccd386eb5c41adef697eec0ee90,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256125800255982442, guid: 9a177ccd386eb5c41adef697eec0ee90,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4180001609224698428, guid: 9a177ccd386eb5c41adef697eec0ee90,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2793976599437771630}
-  m_SourcePrefab: {fileID: 100100000, guid: 9a177ccd386eb5c41adef697eec0ee90, type: 3}
---- !u!1 &4072978686959637207 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4180001609224698428, guid: 9a177ccd386eb5c41adef697eec0ee90,
-    type: 3}
-  m_PrefabInstance: {fileID: 181403855292033259}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2793976599437771630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4072978686959637207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 941873841, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &7365239308592046977 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7256125800255982442, guid: 9a177ccd386eb5c41adef697eec0ee90,
-    type: 3}
-  m_PrefabInstance: {fileID: 181403855292033259}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8492543080597556782 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8601852438332925637, guid: 9a177ccd386eb5c41adef697eec0ee90,
-    type: 3}
-  m_PrefabInstance: {fileID: 181403855292033259}
-  m_PrefabAsset: {fileID: 0}

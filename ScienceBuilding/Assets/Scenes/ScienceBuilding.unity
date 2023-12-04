@@ -14324,7 +14324,7 @@ PrefabInstance:
     - target: {fileID: 3203516585226644755, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
       propertyPath: m_Name
-      value: PlaymodeSetup [NoUpload]
+      value: MeshEmulatorSetup [NoUpload]
       objectReference: {fileID: 0}
     - target: {fileID: 7556072684714657305, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
@@ -25959,6 +25959,7 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionProximityRadius: 20
   highlightSettings:
     Hovered: 1
     Selected: 1
@@ -25991,8 +25992,10 @@ MonoBehaviour:
       HandPoseShape: 4
       HandPoseSize: 1
     Throwable: 0
-    MinThrowVelocity: 1
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -26056,7 +26059,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -26085,6 +26087,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 1
   manipulationSettings:
@@ -26119,7 +26126,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 20
 --- !u!4 &2071684684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4491114713114808376, guid: 34a82548b6461904bb2ab67f697a948e,
@@ -26362,12 +26368,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UniqueInteractableIds:
-  - Interactable: {fileID: 0}
-    Id: 0
-  - Interactable: {fileID: 0}
-    Id: 1
-  - Interactable: {fileID: 0}
-    Id: 2
   - Interactable: {fileID: 1772990139}
     Id: 3
   - Interactable: {fileID: 1499394468}
