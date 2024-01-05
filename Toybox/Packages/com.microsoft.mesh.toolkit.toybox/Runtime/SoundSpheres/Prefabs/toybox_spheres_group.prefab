@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 10
+  interactionProximityRadius: 10
   highlightSettings:
     Hovered: 0
     Selected: 0
@@ -121,6 +124,10 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -130,37 +137,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    ActivateType: 2
-    ActivateTargetPoses:
-    - Position: {x: 0.25, y: 0.25, z: 0.25}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.5
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -224,7 +207,39 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    InteractionEvents: []
+    ActivateTargetPoses:
+    - Position: {x: 0.25, y: 0.25, z: 0.25}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.5
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -259,8 +274,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  interactionEvents: []
-  InteractionProximityRadius: 10
 --- !u!135 &8812120889374201397
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -416,6 +429,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 10
+  interactionProximityRadius: 10
   highlightSettings:
     Hovered: 0
     Selected: 0
@@ -438,6 +454,10 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -447,37 +467,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    ActivateType: 2
-    ActivateTargetPoses:
-    - Position: {x: 0.25, y: 0.25, z: 0.25}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.5
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -541,7 +537,39 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    InteractionEvents: []
+    ActivateTargetPoses:
+    - Position: {x: 0.25, y: 0.25, z: 0.25}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.5
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -576,8 +604,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  interactionEvents: []
-  InteractionProximityRadius: 10
 --- !u!135 &558830436401604144
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -648,7 +674,7 @@ GameObject:
   - component: {fileID: 6755270578109700911}
   - component: {fileID: 5138125334038286028}
   - component: {fileID: 4345112841966079736}
-  m_Layer: 6
+  m_Layer: 29
   m_Name: InteractableSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,6 +813,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 10
+  interactionProximityRadius: 10
   highlightSettings:
     Hovered: 0
     Selected: 0
@@ -809,6 +838,10 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -818,37 +851,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    ActivateType: 2
-    ActivateTargetPoses:
-    - Position: {x: 0.25, y: 0.25, z: 0.25}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.5
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -912,7 +921,39 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    InteractionEvents: []
+    ActivateTargetPoses:
+    - Position: {x: 0.25, y: 0.25, z: 0.25}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.5
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -947,8 +988,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  interactionEvents: []
-  InteractionProximityRadius: 10
 --- !u!1 &5805657911029253785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1198,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 10
+  interactionProximityRadius: 10
   highlightSettings:
     Hovered: 0
     Selected: 0
@@ -1181,6 +1223,10 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -1190,37 +1236,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    ActivateType: 2
-    ActivateTargetPoses:
-    - Position: {x: 0.25, y: 0.25, z: 0.25}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.5
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -1284,7 +1306,39 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    InteractionEvents: []
+    ActivateTargetPoses:
+    - Position: {x: 0.25, y: 0.25, z: 0.25}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.5
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -1319,8 +1373,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  interactionEvents: []
-  InteractionProximityRadius: 10
 --- !u!135 &5951926888223326056
 SphereCollider:
   m_ObjectHideFlags: 0

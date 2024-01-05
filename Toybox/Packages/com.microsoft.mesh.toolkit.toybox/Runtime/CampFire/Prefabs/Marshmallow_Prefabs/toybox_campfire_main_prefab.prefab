@@ -67,15 +67,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8412828154915191243}
   - component: {fileID: 6166089525895131480}
-  - component: {fileID: 5944485649369494550}
   - component: {fileID: 2920694743035373212}
   m_Layer: 2
-  m_Name: ResetTrigger
+  m_Name: MarshmallowResetTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8412828154915191243
 Transform:
   m_ObjectHideFlags: 0
@@ -99,48 +98,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6397902563881078230}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5944485649369494550
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6397902563881078230}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2920694743035373212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -287,6 +244,26 @@ PrefabInstance:
       propertyPath: uniqueObjectId
       value: 940
       objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762019658436408249, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
       propertyPath: m_Name
@@ -406,6 +383,26 @@ PrefabInstance:
       propertyPath: uniqueObjectId
       value: 938
       objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762019658436408249, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
       propertyPath: m_Name
@@ -505,32 +502,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
         type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"StartingPos","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButtonAnimation","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButonPressed","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
-        type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 5183529169240804227}
     - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
         type: 3}
-      propertyPath: _data._objectReferences.Array.data[1]
-      value: 
-      objectReference: {fileID: 1826922242387422963}
-    - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
-        type: 3}
       propertyPath: _data._objectReferences.Array.data[2]
       value: 
-      objectReference: {fileID: 9140635868567347956}
+      objectReference: {fileID: 6397902563881078230}
     - target: {fileID: 4001283186877253437, guid: 1eea968b53fcd1245ba21a1da711f08b,
         type: 3}
       propertyPath: _data._objectReferences.Array.data[3]
@@ -681,6 +660,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8680631810627788155, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680631810627788155, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680631810627788155, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680631810627788155, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680631810627788155, guid: 1eea968b53fcd1245ba21a1da711f08b,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2175353941891880224, guid: 1eea968b53fcd1245ba21a1da711f08b, type: 3}
     m_RemovedGameObjects: []
@@ -690,12 +694,6 @@ PrefabInstance:
 --- !u!4 &966747958705857243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7908666513429021967, guid: 1eea968b53fcd1245ba21a1da711f08b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6965853043544418260}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1826922242387422963 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8786846636825037095, guid: 1eea968b53fcd1245ba21a1da711f08b,
     type: 3}
   m_PrefabInstance: {fileID: 6965853043544418260}
   m_PrefabAsset: {fileID: 0}
@@ -739,6 +737,26 @@ PrefabInstance:
         type: 3}
       propertyPath: uniqueObjectId
       value: 937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762019658436408249, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
@@ -858,6 +876,26 @@ PrefabInstance:
         type: 3}
       propertyPath: uniqueObjectId
       value: 939
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892015532113610476, guid: 0dccbd44e1325114a827201e2e4813fa,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762019658436408249, guid: 0dccbd44e1325114a827201e2e4813fa,
         type: 3}
