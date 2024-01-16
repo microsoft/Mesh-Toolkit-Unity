@@ -12533,7 +12533,7 @@ GameObject:
   - component: {fileID: 2007451869100010744}
   - component: {fileID: 6136894357203520802}
   - component: {fileID: 6136894357203520803}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: WindTurbine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12942,6 +12942,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4000887427591419667}
     m_Modifications:
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7234938729053006429, guid: 119b85850e1ea9f4f8e00bcd465864af,
         type: 3}
       propertyPath: m_Name
@@ -13071,6 +13096,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4000887427591419667}
     m_Modifications:
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7234938729053006429, guid: 119b85850e1ea9f4f8e00bcd465864af,
         type: 3}
       propertyPath: m_Name
@@ -13522,7 +13572,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6136894357203520803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13697,7 +13747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 349005d660ea665469fe1813fef74bbc, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13741,8 +13791,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2022 \n\u2022 "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 671dbf751a1b0604fb9b5c4787896a57, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 349005d660ea665469fe1813fef74bbc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
