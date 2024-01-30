@@ -1,0 +1,401 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7234938729053006429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7234938729053006430}
+  - component: {fileID: 7234938729053006369}
+  - component: {fileID: 3068899959559080955}
+  - component: {fileID: 2545763816943479079}
+  - component: {fileID: 2893015583806019720}
+  m_Layer: 15
+  m_Name: WindTurbine_small
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7234938729053006430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234938729053006429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8798649241410949501}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7234938729053006369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234938729053006429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -223059493, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assetId: 133
+  _component: {fileID: 8798649241410949501}
+--- !u!54 &3068899959559080955
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234938729053006429}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &2545763816943479079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234938729053006429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14160186, y: 0.2703296, z: 0.10313294}
+  m_Center: {x: 0.41145393, y: 0, z: -0.26590973}
+--- !u!114 &2893015583806019720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234938729053006429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ded9aa6fb542b242abd0314f55305de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeGrabbed: 1
+  grabPoint: 1
+  grabDistance:
+    maxGrabDistance: Infinity
+    maxCarryDistance: Infinity
+    pullThroughObstructions: 0
+  rotationSetup:
+    axis: {x: 0, y: 1, z: 0}
+    frameOfReference: 0
+  targetingSetup:
+    pointer: {x: 0, y: 0, z: -1}
+    frameOfReference: 0
+  rotationConstraint:
+    type: 2
+    planeNormalOrDirection: {x: 0, y: 1, z: 0}
+    frameOfReference: 0
+  targetingConstraint:
+    type: 1
+    direction: {x: 0, y: 0, z: -1}
+    frameOfReference: 0
+  targetingConstraintOverride:
+    gameObjectTag: 
+    maxDistanceToObject: Infinity
+  gravity:
+    dangleFromGrabPoint: 0
+    dangleDamping: 2
+    neutralRadiusAroundCenterOfMass: 0.1
+  positionalMotion:
+    speedOfApproach: 1
+    collisionResistance: 0.2
+  rotationalMotion:
+    speedOfApproach: 1
+    collisionResistance: 0.5
+  tetherPrefab: {fileID: 9078778673154059452, guid: b534ff6ea360f0141b16d1671ee9f4a1,
+    type: 3}
+  tetherSetup:
+    prefab: {fileID: 0}
+    minLength: 2
+    holdOffsetInFocusDirection: 1
+    holdOffsetInGravityDirection: 0.5
+  hasVerticalIndicator: 0
+  whenGrabbedOrReleased:
+    bodyGrabbed:
+      actions: []
+      description: 
+      m_PersistentCalls:
+        m_Calls: []
+      sharedEventsDispatchForMigratedActions: 2
+    bodyReleased:
+      actions: []
+      description: 
+      m_PersistentCalls:
+        m_Calls: []
+      sharedEventsDispatchForMigratedActions: 2
+  whenTargetingOverrideStartedOrStopped:
+    startTargetingObject:
+      actions: []
+      description: 
+      m_PersistentCalls:
+        m_Calls: []
+      sharedEventsDispatchForMigratedActions: 2
+    stopTargetingObject:
+      actions: []
+      description: 
+      m_PersistentCalls:
+        m_Calls: []
+      sharedEventsDispatchForMigratedActions: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!1 &8798649241410522457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8798649241410949497}
+  - component: {fileID: 8798649241413816667}
+  - component: {fileID: 8798649241412719515}
+  - component: {fileID: 8798649241410522458}
+  - component: {fileID: 8798649241410522460}
+  m_Layer: 15
+  m_Name: Windmill_Turbine_001:Propellors10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8798649241410949497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522457}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: -1}
+  m_LocalPosition: {x: 0.4167, y: 0.1261, z: -0.2077}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8798649241410949501}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 360}
+--- !u!33 &8798649241413816667
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522457}
+  m_Mesh: {fileID: 4300006, guid: 52801e7e72ff2ab429e4616e1873c796, type: 3}
+--- !u!23 &8798649241412719515
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522457}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2825795289b99c94ab70b4099cb834cb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &8798649241410522458
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522457}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e535fbfab66e3cb48848978ac24a2f6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8798649241410522460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2081783618, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assetId: 130
+  _component: {fileID: 8798649241410522458}
+  _animatorType:
+    _name: 
+    _fullClassName: 
+    _layers: []
+    _parameters: []
+--- !u!1 &8798649241410522461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8798649241410949501}
+  - component: {fileID: 8798649241413816671}
+  - component: {fileID: 8798649241412719519}
+  - component: {fileID: 7234938729805819119}
+  - component: {fileID: 7234938729478009760}
+  m_Layer: 15
+  m_Name: WindTurbineBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8798649241410949501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522461}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8798649241410949497}
+  m_Father: {fileID: 7234938729053006430}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8798649241413816671
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522461}
+  m_Mesh: {fileID: 4300008, guid: 52801e7e72ff2ab429e4616e1873c796, type: 3}
+--- !u!23 &8798649241412719519
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522461}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2825795289b99c94ab70b4099cb834cb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7234938729805819119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -25556058, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assetId: 122
+  _component: {fileID: 0}
+--- !u!114 &7234938729478009760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798649241410522461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -223059493, guid: 02703c3431227cd478b8fb81bd8584af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assetId: 13
+  _component: {fileID: 8798649241410949497}
