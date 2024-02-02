@@ -163,8 +163,8 @@ GameObject:
   - component: {fileID: 5229252568862699218}
   - component: {fileID: 4185055647797104350}
   - component: {fileID: 8478356746928967427}
-  m_Layer: 7
-  m_Name: Information_Button
+  m_Layer: 22
+  m_Name: InformationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,6 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 6
+  interactionProximityRadius: 6
   highlightSettings:
     Hovered: 0
     Selected: 0
@@ -257,6 +260,10 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -266,10 +273,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    MinThrowVelocity: 1
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
     ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -333,7 +343,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -362,6 +371,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -396,7 +410,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 6
 --- !u!114 &4185055647797104350
 MonoBehaviour:
   m_ObjectHideFlags: 0

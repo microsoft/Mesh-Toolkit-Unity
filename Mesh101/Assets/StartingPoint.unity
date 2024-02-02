@@ -12143,10 +12143,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 29754155317308242}
-    - targetCorrespondingSourceObject: {fileID: 3784528164680557777, guid: af2c575c354a79d42a896a47711f6984,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 29754155317308241}
     - targetCorrespondingSourceObject: {fileID: 3784528165147703433, guid: af2c575c354a79d42a896a47711f6984,
         type: 3}
       insertIndex: -1
@@ -12242,20 +12238,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 29754155317308235}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &29754155317308241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29754155317308240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1932828386, guid: 23f4952d963b87044852157c8bad25cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shareVariablesOnThisGameObject: 0
-  cloudScriptsCanWriteSubtree: 0
 --- !u!114 &29754155317308242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12271,10 +12253,8 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Teleport
       to Open Air Platform","summary":"Defines how to Teleport to open air platform
-      from chapter 3","pan":{"x":200.8282,"y":141.7395},"zoom":1.0,"elements":[{"type":"System.Boolean","value":{"$content":true,"$type":"System.Boolean"},"defaultValues":{},"position":{"x":120.0,"y":-54.0},"guid":"99044891-e541-4236-8cf5-72b2d773a547","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"10"},{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":-73.0,"y":-214.0},"guid":"adc7c020-12d1-46e2-a60e-f85dbdae4993","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"12"},{"type":"System.Boolean","value":{"$content":false,"$type":"System.Boolean"},"defaultValues":{},"position":{"x":480.0,"y":292.0},"guid":"dcc0f57c-d976-4297-ab67-ce74450f19ac","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"14"},{"type":"UnityEngine.GameObject","value":{"$content":0,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-578.0,"y":-198.0},"guid":"08bb29a0-722c-4d5e-96ef-216fd585576e","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"16"},{"defaultValues":{},"position":{"x":-111.0,"y":172.0},"guid":"a0288dc0-46ca-454f-8587-90ba5b78fb06","$version":"A","$type":"Unity.VisualScripting.If","$id":"18"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"TeleportNow","$type":"System.String"},"object":null},"position":{"x":-613.0,"y":168.0},"guid":"bfbdf4dd-7df1-40f4-8413-8d0accd6fbb9","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"20"},{"member":{"name":"IsSelected","parameterTypes":null,"targetType":"Microsoft.Mesh.Interactables.MeshInteractableBody","targetTypeName":"Microsoft.Mesh.Interactables.MeshInteractableBody","$version":"A"},"defaultValues":{"target":null},"position":{"x":-300.0,"y":-197.0},"guid":"f3665ce6-3704-412e-a50f-ee1292fefb7d","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"22"},{"kind":"Object","defaultValues":{"name":{"$content":"TeleportNow","$type":"System.String"},"object":null},"position":{"x":612.0,"y":169.0},"guid":"8b5e50bd-161e-418a-8411-889e0a209f9e","$version":"A","$type":"Unity.VisualScripting.SetVariable","$id":"25"},{"kind":"Object","defaultValues":{"name":{"$content":"TeleportNow","$type":"System.String"},"object":null},"position":{"x":297.0,"y":-203.0},"guid":"dd089abe-6819-43b9-bfff-d79f63ac6a62","$version":"A","$type":"Unity.VisualScripting.SetVariable","$id":"27"},{"defaultValues":{},"position":{"x":133.0,"y":-198.0},"guid":"8dfc29e0-252e-4d0a-a599-42fe0c1d92f3","$version":"A","$type":"Unity.VisualScripting.If","$id":"29"},{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":-340.0,"y":139.0},"guid":"fe5a54fe-a38a-4851-b84f-affda7191a93","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"31"},{"sourceUnit":{"$ref":"12"},"sourceKey":"trigger","destinationUnit":{"$ref":"29"},"destinationKey":"enter","guid":"1da61f21-0436-4fc3-b10c-e942b2542960","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"29"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"27"},"destinationKey":"assign","guid":"cb3d927c-c8de-40dc-9f64-f09c977d2c72","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"31"},"sourceKey":"trigger","destinationUnit":{"$ref":"18"},"destinationKey":"enter","guid":"4c65db9c-ebee-4f2e-a948-bbd0903ec042","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"20"},"sourceKey":"value","destinationUnit":{"$ref":"31"},"destinationKey":"in_0","guid":"b7a78c0e-6ca6-4a94-b03e-a51368e0a884","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"31"},"sourceKey":"out_0","destinationUnit":{"$ref":"18"},"destinationKey":"condition","guid":"80ba14fc-a785-4a71-9b4e-11b919c2a49e","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"out_0","destinationUnit":{"$ref":"29"},"destinationKey":"condition","guid":"82bbb48c-93ea-4baa-baa6-166b9042070b","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"output","destinationUnit":{"$ref":"25"},"destinationKey":"input","guid":"13fcbf1b-d533-41cb-beda-43fb0c140413","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"22"},"sourceKey":"value","destinationUnit":{"$ref":"12"},"destinationKey":"in_0","guid":"28c345ab-0075-4cdb-a80c-057897e9961a","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"output","destinationUnit":{"$ref":"27"},"destinationKey":"input","guid":"9f8674fd-5241-4ff5-8442-ee054b88d973","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"16"},"sourceKey":"output","destinationUnit":{"$ref":"22"},"destinationKey":"target","guid":"6c8923a1-7d02-4c2a-bd45-7ba11050bac9","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-682.0,"yMin":-258.0,"xMax":599.0,"yMax":74.0},"label":"Telelport
-      Button Behavior","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"18d15040-5114-48df-960e-c71e536b396b","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-679.0,"yMin":85.0,"xMax":850.0,"yMax":480.0},"label":"Teleport
-      to OpenPlatform","comment":"Defines how to Teleport to open air platform form
-      chapter 3 terrace","color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"1988af1a-8eab-4a99-a5ec-f5a3b674144c","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-671.0,"yMin":-331.0,"xMax":-425.0,"yMax":-266.0},"title":"","body":"//
+      from chapter 3","pan":{"x":29.67847,"y":66.8759},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":133.0,"y":-198.0},"guid":"8dfc29e0-252e-4d0a-a599-42fe0c1d92f3","$version":"A","$type":"Unity.VisualScripting.If","$id":"10"},{"type":"UnityEngine.GameObject","value":{"$content":0,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-578.0,"y":-198.0},"guid":"08bb29a0-722c-4d5e-96ef-216fd585576e","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"12"},{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":-73.0,"y":-214.0},"guid":"adc7c020-12d1-46e2-a60e-f85dbdae4993","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"14"},{"member":{"name":"IsSelected","parameterTypes":null,"targetType":"Microsoft.Mesh.Interactables.MeshInteractableBody","targetTypeName":"Microsoft.Mesh.Interactables.MeshInteractableBody","$version":"A"},"defaultValues":{"target":null},"position":{"x":-300.0,"y":-197.0},"guid":"f3665ce6-3704-412e-a50f-ee1292fefb7d","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"16"},{"sourceUnit":{"$ref":"14"},"sourceKey":"trigger","destinationUnit":{"$ref":"10"},"destinationKey":"enter","guid":"1da61f21-0436-4fc3-b10c-e942b2542960","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"out_0","destinationUnit":{"$ref":"10"},"destinationKey":"condition","guid":"82bbb48c-93ea-4baa-baa6-166b9042070b","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"16"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"in_0","guid":"28c345ab-0075-4cdb-a80c-057897e9961a","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"output","destinationUnit":{"$ref":"16"},"destinationKey":"target","guid":"6c8923a1-7d02-4c2a-bd45-7ba11050bac9","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-682.0,"yMin":-258.0,"xMax":856.0,"yMax":74.0},"label":"Telelport
+      Button Behavior","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"18d15040-5114-48df-960e-c71e536b396b","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-671.0,"yMin":-331.0,"xMax":-425.0,"yMax":-266.0},"title":"","body":"//
       Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"62a97a9e-04f8-42ab-b870-5f9f18e5ffb8","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}}'
     _objectReferences:
     - {fileID: 360285302}
@@ -12291,8 +12271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"TeleportNow","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!4 &407391572108416928
 Transform:
@@ -12554,7 +12533,7 @@ GameObject:
   - component: {fileID: 2007451869100010744}
   - component: {fileID: 6136894357203520802}
   - component: {fileID: 6136894357203520803}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: WindTurbine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12963,6 +12942,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4000887427591419667}
     m_Modifications:
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7234938729053006429, guid: 119b85850e1ea9f4f8e00bcd465864af,
         type: 3}
       propertyPath: m_Name
@@ -13092,6 +13096,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4000887427591419667}
     m_Modifications:
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054976268889350528, guid: 119b85850e1ea9f4f8e00bcd465864af,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7234938729053006429, guid: 119b85850e1ea9f4f8e00bcd465864af,
         type: 3}
       propertyPath: m_Name
@@ -13543,7 +13572,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6136894357203520803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13718,7 +13747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 349005d660ea665469fe1813fef74bbc, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13762,8 +13791,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2022 \n\u2022 "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 671dbf751a1b0604fb9b5c4787896a57, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 349005d660ea665469fe1813fef74bbc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

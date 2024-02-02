@@ -9889,6 +9889,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 6
+  interactionProximityRadius: 6
   highlightSettings:
     Hovered: 1
     Selected: 1
@@ -9912,6 +9915,10 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 0
     InteractionOffset:
       position: {x: 0.115, y: 0.2, z: 0.05}
       rotation: {x: 7, y: 0, z: -33}
@@ -9921,10 +9928,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 0.025
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    MinThrowVelocity: 1
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
     ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -9943,7 +9953,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 0
     ActivateTargetPoses:
     - Position: {x: 0.15, y: -0.1, z: 0.42}
       Rotation: {x: 35, y: -10, z: -80}
@@ -9999,6 +10008,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 0
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 1
   manipulable: 0
   manipulationSettings:
@@ -10033,7 +10047,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 6
 --- !u!111 &3508626527582640387
 Animation:
   m_ObjectHideFlags: 0
@@ -10078,6 +10091,10 @@ MonoBehaviour:
     CustomHighlightMaterial: {fileID: 0}
     ExclusionString: 
   equippableSettings:
+    version: 0
+    ThrowVelocity: 5
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -10087,10 +10104,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    MinThrowVelocity: 1
-    ThrowVelocity: 5
+    MaxThrowVelocity2D: 5
     ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 5
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -10154,7 +10174,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -10183,6 +10202,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 0
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   interactionProximityRadius: 0
   equippable: 0
   manipulable: 0
@@ -10224,7 +10248,6 @@ MonoBehaviour:
       HandPoseSize: 1
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
-  modifyWithVisualScripting: 1
   _DebugTargetPosition: {x: 0, y: 0, z: 0}
   _DebugTargetRotation: {x: 0, y: 0, z: 0, w: 0}
   _DebugRayHitPosition: {x: 0, y: 0, z: 0}

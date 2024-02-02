@@ -170,7 +170,8 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"TargetColliderName","value":{"$content":"TargetCollider","$type":"System.String"},"typeHandle":{"Identification":"System.String,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ResetButton1","value":{"$content":13,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Microsoft.Mesh.Interactables.MeshInteractableBody,
       Microsoft.Mesh.Interactables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetButton2","value":{"$content":14,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Microsoft.Mesh.Interactables.MeshInteractableBody,
-      Microsoft.Mesh.Interactables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Microsoft.Mesh.Interactables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MixerGroup","value":{"$content":15,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Audio.AudioMixerGroup,
+      UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 646767385061665418}
     - {fileID: 1631544766717809775}
@@ -187,6 +188,7 @@ MonoBehaviour:
     - {fileID: 1889776774797584439}
     - {fileID: 3307912106397797156}
     - {fileID: 4684797122992344386}
+    - {fileID: 24300002, guid: 2a13b3b16183edb48af754b625e220c3, type: 2}
 --- !u!1 &1206110899760625668
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,8 +309,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5, y: 2, z: 2}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 3.5, y: 1.75, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1631544766717809774
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,8 +400,6 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ScoreRed","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ScoreBlue","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"GameWinner","value":{"$content":"None","$type":"System.String"},"typeHandle":{"Identification":"System.String,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"WinCelebrationActive","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"TimeWinCelebrationBegan","value":{"$content":-1.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LocalVariables","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
@@ -1506,6 +1506,16 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[2]
       value: 
       objectReference: {fileID: 5143806030045147847}
+    - target: {fileID: 362345375634085554, guid: 131a58627c94f63418b99b288c1336cf,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362345375634085554, guid: 131a58627c94f63418b99b288c1336cf,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 452300560015493385, guid: 131a58627c94f63418b99b288c1336cf,
         type: 3}
       propertyPath: uniqueObjectId
@@ -1587,8 +1597,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
         type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
       propertyPath: InteractionProximityRadius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8758991414696893304, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
         type: 3}
@@ -1726,6 +1766,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4222607316894569080, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222607316894569080, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4268666660687751519, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
         type: 3}
       propertyPath: _data._json
@@ -1791,6 +1841,16 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[2]
       value: 
       objectReference: {fileID: 5143806030045147847}
+    - target: {fileID: 362345375634085554, guid: 131a58627c94f63418b99b288c1336cf,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362345375634085554, guid: 131a58627c94f63418b99b288c1336cf,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 452300560015493385, guid: 131a58627c94f63418b99b288c1336cf,
         type: 3}
       propertyPath: uniqueObjectId
@@ -2252,8 +2312,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
         type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
       propertyPath: InteractionProximityRadius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798201153311621900, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8758991414696893304, guid: 6dd7d6c6cb08ef544a036cbcc224eab7,
         type: 3}
@@ -2628,6 +2718,16 @@ PrefabInstance:
       propertyPath: uniqueObjectId
       value: 997
       objectReference: {fileID: 0}
+    - target: {fileID: 4222607316894569080, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222607316894569080, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4268666660687751519, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
         type: 3}
       propertyPath: _data._json
@@ -2745,6 +2845,16 @@ PrefabInstance:
       propertyPath: uniqueObjectId
       value: 998
       objectReference: {fileID: 0}
+    - target: {fileID: 4222607316894569080, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222607316894569080, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4268666660687751519, guid: cfd648fde6b02dd4e9a855b7ad7c1460,
         type: 3}
       propertyPath: _data._json
@@ -2815,6 +2925,16 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[2]
       value: 
       objectReference: {fileID: 5143806030045147847}
+    - target: {fileID: 362345375634085554, guid: 131a58627c94f63418b99b288c1336cf,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362345375634085554, guid: 131a58627c94f63418b99b288c1336cf,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 452300560015493385, guid: 131a58627c94f63418b99b288c1336cf,
         type: 3}
       propertyPath: uniqueObjectId
