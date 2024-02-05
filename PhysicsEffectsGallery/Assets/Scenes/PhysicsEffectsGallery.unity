@@ -3237,8 +3237,6 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
-  InteractionProximityRadius: 6
   interactionProximityRadius: 20
   highlightSettings:
     Hovered: 1
@@ -3262,10 +3260,6 @@ MonoBehaviour:
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
   equippableSettings:
-    version: 1
-    ThrowVelocity: 5
-    MinThrowVelocity: 1
-    ActivateType: 0
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -3275,8 +3269,6 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    UseAimAnimationSystem: 0
-    ReleaseTime: 0.21
     Throwable: 0
     MaxThrowVelocity2D: 1
     ThrowDirectionOffset: {x: 0, y: 0, z: 0}
@@ -3702,7 +3694,7 @@ PrefabInstance:
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
       propertyPath: UseMeshAvatars
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
@@ -3805,7 +3797,7 @@ GameObject:
   - component: {fileID: 1928527178}
   - component: {fileID: 1928527177}
   - component: {fileID: 1928527176}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: SolidFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4522,66 +4514,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleGame_Fishing
       objectReference: {fileID: 0}
-    - target: {fileID: 5295474040277051930, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295474040277051930, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295474040277051930, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295474040277051930, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295474040277051930, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295474040277051930, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139661548568095523, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139661548568095523, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139661548568095523, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139661548568095523, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139661548568095523, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7139661548568095523, guid: 748b649ec171f064ea81939ae652105e,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4729,36 +4661,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ExampleUnity_Shapes
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872092744207156792, guid: 2d7df6cbb1fd7ff4b85ed81935aaaab9,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872092744207156792, guid: 2d7df6cbb1fd7ff4b85ed81935aaaab9,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872092744207156792, guid: 2d7df6cbb1fd7ff4b85ed81935aaaab9,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872092744207156792, guid: 2d7df6cbb1fd7ff4b85ed81935aaaab9,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872092744207156792, guid: 2d7df6cbb1fd7ff4b85ed81935aaaab9,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872092744207156792, guid: 2d7df6cbb1fd7ff4b85ed81935aaaab9,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4937,26 +4839,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 7509212137696531868, guid: 4367966ab4be41e48a53a068c9a44eb3,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509212137696531868, guid: 4367966ab4be41e48a53a068c9a44eb3,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509212137696531868, guid: 4367966ab4be41e48a53a068c9a44eb3,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509212137696531868, guid: 4367966ab4be41e48a53a068c9a44eb3,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8746624121234395895, guid: 4367966ab4be41e48a53a068c9a44eb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5033,36 +4915,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 944210001316843133, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 944210001316843133, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 944210001316843133, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 944210001316843133, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 944210001316843133, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 944210001316843133, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1217267562126054220, guid: d30e79b4065b70e439df67d8169b6ebb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5117,66 +4969,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ExampleBasic_VelocityMagnitudeField
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294257199793182614, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294257199793182614, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294257199793182614, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294257199793182614, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294257199793182614, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8294257199793182614, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174812592297000746, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174812592297000746, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174812592297000746, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174812592297000746, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174812592297000746, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9174812592297000746, guid: d30e79b4065b70e439df67d8169b6ebb,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5262,36 +5054,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1642652759024328120, guid: 28c5589b90d9afc4fa699a8e590667d6,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642652759024328120, guid: 28c5589b90d9afc4fa699a8e590667d6,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642652759024328120, guid: 28c5589b90d9afc4fa699a8e590667d6,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642652759024328120, guid: 28c5589b90d9afc4fa699a8e590667d6,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642652759024328120, guid: 28c5589b90d9afc4fa699a8e590667d6,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642652759024328120, guid: 28c5589b90d9afc4fa699a8e590667d6,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5368,66 +5130,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8358552508943796472, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358552508943796472, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358552508943796472, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358552508943796472, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358552508943796472, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358552508943796472, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448116039515358021, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448116039515358021, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448116039515358021, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448116039515358021, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448116039515358021, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8448116039515358021, guid: b5b1c717863f0744d9c175c47a505b4c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5477,36 +5179,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 602630972008471950, guid: 1f1a84eea56b9b24d88790678aa3201c,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 602630972008471950, guid: 1f1a84eea56b9b24d88790678aa3201c,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 602630972008471950, guid: 1f1a84eea56b9b24d88790678aa3201c,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 602630972008471950, guid: 1f1a84eea56b9b24d88790678aa3201c,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 602630972008471950, guid: 1f1a84eea56b9b24d88790678aa3201c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 602630972008471950, guid: 1f1a84eea56b9b24d88790678aa3201c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2709333081884745044, guid: 1f1a84eea56b9b24d88790678aa3201c,
         type: 3}
       propertyPath: m_Name
@@ -5605,41 +5277,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269725494799639892, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MinThrowVelocityVR
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2821135265436996780, guid: 9757405dfd4fd39489a40cf507f62dca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5694,71 +5331,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ExampleGame_Bowling
-      objectReference: {fileID: 0}
-    - target: {fileID: 5112957308479159794, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5112957308479159794, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5112957308479159794, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5112957308479159794, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5112957308479159794, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5112957308479159794, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374891762745710856, guid: 9757405dfd4fd39489a40cf507f62dca,
-        type: 3}
-      propertyPath: equippableSettings.MinThrowVelocityVR
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5836,36 +5408,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleGame_AirHockey
       objectReference: {fileID: 0}
-    - target: {fileID: 5248764249717257148, guid: c66e07e1411e30043978827d602c040f,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248764249717257148, guid: c66e07e1411e30043978827d602c040f,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248764249717257148, guid: c66e07e1411e30043978827d602c040f,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248764249717257148, guid: c66e07e1411e30043978827d602c040f,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248764249717257148, guid: c66e07e1411e30043978827d602c040f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248764249717257148, guid: c66e07e1411e30043978827d602c040f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5941,36 +5483,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548697905005258873, guid: c112c177240fa5144a3cc942640dc09b,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548697905005258873, guid: c112c177240fa5144a3cc942640dc09b,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548697905005258873, guid: c112c177240fa5144a3cc942640dc09b,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548697905005258873, guid: c112c177240fa5144a3cc942640dc09b,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548697905005258873, guid: c112c177240fa5144a3cc942640dc09b,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548697905005258873, guid: c112c177240fa5144a3cc942640dc09b,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6048,36 +5560,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleBasic_MagneticBody
       objectReference: {fileID: 0}
-    - target: {fileID: 5989643325345258425, guid: 79da0e84e1354304db4b3ffd5dc2bb1c,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989643325345258425, guid: 79da0e84e1354304db4b3ffd5dc2bb1c,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989643325345258425, guid: 79da0e84e1354304db4b3ffd5dc2bb1c,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989643325345258425, guid: 79da0e84e1354304db4b3ffd5dc2bb1c,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989643325345258425, guid: 79da0e84e1354304db4b3ffd5dc2bb1c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989643325345258425, guid: 79da0e84e1354304db4b3ffd5dc2bb1c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6153,36 +5635,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562394662154983957, guid: 5c2b67be4b5a45849b93094e873f2296,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562394662154983957, guid: 5c2b67be4b5a45849b93094e873f2296,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562394662154983957, guid: 5c2b67be4b5a45849b93094e873f2296,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562394662154983957, guid: 5c2b67be4b5a45849b93094e873f2296,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562394662154983957, guid: 5c2b67be4b5a45849b93094e873f2296,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562394662154983957, guid: 5c2b67be4b5a45849b93094e873f2296,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6260,126 +5712,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5373621785506063033, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373621785506063033, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373621785506063033, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373621785506063033, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373621785506063033, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373621785506063033, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5609896547327289353, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5609896547327289353, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5609896547327289353, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5609896547327289353, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5609896547327289353, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5609896547327289353, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902982459486401654, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902982459486401654, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902982459486401654, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902982459486401654, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902982459486401654, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902982459486401654, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783250238684411377, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783250238684411377, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783250238684411377, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783250238684411377, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783250238684411377, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783250238684411377, guid: 0e018ccc9e5a11e44ac9d9b65622d7c8,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6423,246 +5755,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 2722838935975577634, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722838935975577634, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722838935975577634, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722838935975577634, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722838935975577634, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722838935975577634, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405769129043, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405769129043, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405769129043, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405769129043, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405769129043, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405769129043, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405950916355, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405950916355, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405950916355, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405950916355, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405950916355, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319405950916355, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406061191940, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406061191940, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406061191940, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406061191940, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406061191940, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406061191940, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406297951564, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406297951564, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406297951564, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406297951564, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406297951564, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406297951564, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406766829600, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406766829600, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406766829600, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406766829600, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406766829600, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406766829600, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406778753505, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406778753505, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406778753505, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406778753505, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406778753505, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406778753505, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406890326527, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406890326527, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406890326527, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406890326527, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406890326527, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834319406890326527, guid: d29fc53ad0b14bb479e2905cfa25b8af,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 16
-      objectReference: {fileID: 0}
     - target: {fileID: 4907524537609277761, guid: d29fc53ad0b14bb479e2905cfa25b8af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6739,61 +5831,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 45253660583189848, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 45253660583189848, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 45253660583189848, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 45253660583189848, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 45253660583189848, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825104327513560092, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825104327513560092, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825104327513560092, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825104327513560092, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825104327513560092, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825104327513560092, guid: 025b7ddae76eb18418ccc9c03324b598,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5108974702556495817, guid: 025b7ddae76eb18418ccc9c03324b598,
         type: 3}
       propertyPath: m_Name
@@ -6875,66 +5912,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleBasic_SphericalExplosion
       objectReference: {fileID: 0}
-    - target: {fileID: 2919308720727943532, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2919308720727943532, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2919308720727943532, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2919308720727943532, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2919308720727943532, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2919308720727943532, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848832080379338510, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848832080379338510, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848832080379338510, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848832080379338510, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848832080379338510, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848832080379338510, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3881459314991064704, guid: ddee82f1388da5f42a059b4ff82b58db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6984,96 +5961,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280190338235140394, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280190338235140394, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280190338235140394, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280190338235140394, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280190338235140394, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280190338235140394, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519781036124224468, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519781036124224468, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519781036124224468, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519781036124224468, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519781036124224468, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519781036124224468, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6425206297676993642, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6425206297676993642, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6425206297676993642, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6425206297676993642, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6425206297676993642, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6425206297676993642, guid: ddee82f1388da5f42a059b4ff82b58db,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7184,66 +6071,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 2031336025115864888, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031336025115864888, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031336025115864888, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031336025115864888, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031336025115864888, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031336025115864888, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189049925331416690, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189049925331416690, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189049925331416690, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189049925331416690, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189049925331416690, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189049925331416690, guid: ae7132555af3c314db7422dbd7b29abd,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5590013890611652618, guid: ae7132555af3c314db7422dbd7b29abd,
         type: 3}
       propertyPath: m_Name
@@ -7375,71 +6202,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1330764074059015677, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330764074059015677, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330764074059015677, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330764074059015677, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330764074059015677, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330764074059015677, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4020658415004033763, guid: 77360ef1968dd4d4aaa7c28ce10e167b,
-        type: 3}
-      propertyPath: equippableSettings.MinThrowVelocityVR
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7533,66 +6295,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 3737706535611967036, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737706535611967036, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737706535611967036, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737706535611967036, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737706535611967036, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737706535611967036, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4768594449669933515, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4768594449669933515, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4768594449669933515, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4768594449669933515, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4768594449669933515, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4768594449669933515, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5912505360687733814, guid: 16d95f56c67e12b47a71a0e781cb1f66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7648,66 +6350,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleBasic_OffsetCenterOfMass
       objectReference: {fileID: 0}
-    - target: {fileID: 6926016257199081521, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926016257199081521, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926016257199081521, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926016257199081521, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926016257199081521, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926016257199081521, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185565826225986637, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185565826225986637, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185565826225986637, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185565826225986637, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185565826225986637, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9185565826225986637, guid: 16d95f56c67e12b47a71a0e781cb1f66,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7741,70 +6383,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 3585573283815868964, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585573283815868964, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585573283815868964, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585573283815868964, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585573283815868964, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3585573283815868964, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4235615018688035658, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4235615018688035658, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4235615018688035658, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4235615018688035658, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4235615018688035658, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4235615018688035658, guid: 010bbb21f2b7f3c4b94006c112b296d2,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5983079218155416033, guid: 010bbb21f2b7f3c4b94006c112b296d2,
         type: 3}
       propertyPath: m_Name
-      value: ExampleGame_CastleSiege
+      value: ExampleGame_AngryBirds
       objectReference: {fileID: 0}
     - target: {fileID: 5983079218155416035, guid: 010bbb21f2b7f3c4b94006c112b296d2,
         type: 3}
@@ -7885,36 +6467,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 3831465695545098488, guid: 767cbe2d25b83fd49895b071ce43abcc,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831465695545098488, guid: 767cbe2d25b83fd49895b071ce43abcc,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831465695545098488, guid: 767cbe2d25b83fd49895b071ce43abcc,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831465695545098488, guid: 767cbe2d25b83fd49895b071ce43abcc,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831465695545098488, guid: 767cbe2d25b83fd49895b071ce43abcc,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831465695545098488, guid: 767cbe2d25b83fd49895b071ce43abcc,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6124448846413853954, guid: 767cbe2d25b83fd49895b071ce43abcc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8046,26 +6598,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleButton_LocalColor
       objectReference: {fileID: 0}
-    - target: {fileID: 7725644392111606914, guid: c1d7d42d2d88006418dd4cb29248d2a2,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7725644392111606914, guid: c1d7d42d2d88006418dd4cb29248d2a2,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7725644392111606914, guid: c1d7d42d2d88006418dd4cb29248d2a2,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7725644392111606914, guid: c1d7d42d2d88006418dd4cb29248d2a2,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8087,71 +6619,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 854778932142075936, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.MinThrowVelocityVR
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414926113930197219, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414926113930197219, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414926113930197219, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414926113930197219, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414926113930197219, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414926113930197219, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6671669354426962184, guid: 5932bfcfbd6ed184cbaf1c93fbee96c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8228,66 +6695,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 924662574566132223, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 924662574566132223, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 924662574566132223, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 924662574566132223, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 924662574566132223, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 924662574566132223, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302044943006934591, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302044943006934591, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302044943006934591, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302044943006934591, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302044943006934591, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1302044943006934591, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6797972032219958769, guid: 38b5816de7020e54eb45f12e2384b91f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8343,36 +6750,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExampleGame_Pinball
       objectReference: {fileID: 0}
-    - target: {fileID: 8810999056432018746, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810999056432018746, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810999056432018746, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810999056432018746, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810999056432018746, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810999056432018746, guid: 38b5816de7020e54eb45f12e2384b91f,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8402,36 +6779,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 4591290143095089496, guid: 76b0f440b305d3d498fab69015347381,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591290143095089496, guid: 76b0f440b305d3d498fab69015347381,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591290143095089496, guid: 76b0f440b305d3d498fab69015347381,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591290143095089496, guid: 76b0f440b305d3d498fab69015347381,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591290143095089496, guid: 76b0f440b305d3d498fab69015347381,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591290143095089496, guid: 76b0f440b305d3d498fab69015347381,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6802117731513930761, guid: 76b0f440b305d3d498fab69015347381,
         type: 3}
       propertyPath: m_Name
@@ -8558,36 +6905,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2937613156849461821, guid: b72d0bbc635cf4945851b8a9b121052e,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2937613156849461821, guid: b72d0bbc635cf4945851b8a9b121052e,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2937613156849461821, guid: b72d0bbc635cf4945851b8a9b121052e,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2937613156849461821, guid: b72d0bbc635cf4945851b8a9b121052e,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2937613156849461821, guid: b72d0bbc635cf4945851b8a9b121052e,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2937613156849461821, guid: b72d0bbc635cf4945851b8a9b121052e,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4958073103224167242, guid: b72d0bbc635cf4945851b8a9b121052e,
         type: 3}
       propertyPath: m_Name
@@ -8614,36 +6931,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 791480991534916623, guid: df677fc5db20829489ddf096eb01f77d,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 791480991534916623, guid: df677fc5db20829489ddf096eb01f77d,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 791480991534916623, guid: df677fc5db20829489ddf096eb01f77d,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 791480991534916623, guid: df677fc5db20829489ddf096eb01f77d,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 791480991534916623, guid: df677fc5db20829489ddf096eb01f77d,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 791480991534916623, guid: df677fc5db20829489ddf096eb01f77d,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7721869897664976478, guid: df677fc5db20829489ddf096eb01f77d,
         type: 3}
       propertyPath: m_Name
@@ -8726,36 +7013,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 1107938971560428095, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107938971560428095, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107938971560428095, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107938971560428095, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107938971560428095, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107938971560428095, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7976508917406868289, guid: 41994b2cf4a208b4e9bcc5aabdcae17a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8920,36 +7177,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 1473044569377750857, guid: cbf46962f84fb5046b573e9dcb596178,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473044569377750857, guid: cbf46962f84fb5046b573e9dcb596178,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473044569377750857, guid: cbf46962f84fb5046b573e9dcb596178,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473044569377750857, guid: cbf46962f84fb5046b573e9dcb596178,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473044569377750857, guid: cbf46962f84fb5046b573e9dcb596178,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473044569377750857, guid: cbf46962f84fb5046b573e9dcb596178,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8476687358021757385, guid: cbf46962f84fb5046b573e9dcb596178,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9026,36 +7253,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 1975674499429109746, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975674499429109746, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975674499429109746, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975674499429109746, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975674499429109746, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975674499429109746, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8843224119643347555, guid: 49ee08d9f7464ce478ad7ccbbc46e38c,
         type: 3}
       propertyPath: m_Name
@@ -9132,61 +7329,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1725605136}
     m_Modifications:
-    - target: {fileID: 1949134246704630367, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949134246704630367, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949134246704630367, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949134246704630367, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949134246704630367, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1949134246704630367, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645520357022936243, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645520357022936243, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645520357022936243, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645520357022936243, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645520357022936243, guid: 97390d2fd0fdea64f84985c6d2250a26,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8853733010738267683, guid: 97390d2fd0fdea64f84985c6d2250a26,
         type: 3}
       propertyPath: m_Name
@@ -9272,57 +7414,7 @@ PrefabInstance:
     - target: {fileID: 1145319141927539628, guid: da48ed29664b114488360dfe1368d6cd,
         type: 3}
       propertyPath: m_Name
-      value: ExampleGame_BlockTower
-      objectReference: {fileID: 0}
-    - target: {fileID: 5778324949147651754, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5778324949147651754, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5778324949147651754, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5778324949147651754, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163215970793432154, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163215970793432154, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163215970793432154, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163215970793432154, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163215970793432154, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7163215970793432154, guid: da48ed29664b114488360dfe1368d6cd,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
+      value: ExampleGame_JengaTower
       objectReference: {fileID: 0}
     - target: {fileID: 7508203911670578350, guid: da48ed29664b114488360dfe1368d6cd,
         type: 3}

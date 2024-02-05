@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16174111, g: 0.27780515, b: 0.4723338, a: 1}
+  m_IndirectSpecularColor: {r: 0.16174631, g: 0.27780262, b: 0.47233292, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1298,11 +1298,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 919861041}
     m_Modifications:
-    - target: {fileID: 33290528955963448, guid: b4c62dd816c91bd489afeed5ad53f0dd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7cc51c787efb9b84888d0eea6b9b40c7, type: 2}
     - target: {fileID: 7001597364894376079, guid: b4c62dd816c91bd489afeed5ad53f0dd,
         type: 3}
       propertyPath: m_Name
@@ -6517,74 +6512,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1171787264
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3203516585226644755, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_Name
-      value: MeshEmulatorSetup [NoUpload]
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 618e82aa8ef311d4dbbf984185775523, type: 3}
 --- !u!134 &1351273765
 PhysicMaterial:
   m_ObjectHideFlags: 0
@@ -14510,11 +14437,6 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 1650190502}
-    - target: {fileID: 33290528955963448, guid: b4c62dd816c91bd489afeed5ad53f0dd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7cc51c787efb9b84888d0eea6b9b40c7, type: 2}
     - target: {fileID: 7001597364894376079, guid: b4c62dd816c91bd489afeed5ad53f0dd,
         type: 3}
       propertyPath: m_Name
@@ -14813,4 +14735,3 @@ SceneRoots:
   - {fileID: 919861041}
   - {fileID: 1054224290}
   - {fileID: 1675328388}
-  - {fileID: 1171787264}
