@@ -1,0 +1,36 @@
+#pragma kernel GlobePointsMover
+
+struct GlobePoint
+{
+  float3 Position;
+  float3 Velocity;
+};
+
+RWStructuredBuffer<GlobePoint> _PointsBuffer;
+StructuredBuffer<float3> _BasePositionsBuffer;
+
+float3 _EffectorPos;
+float _EffectorRadius;
+
+[numthreads(128,1,1)]
+void GlobePointsMover(uint3 id : SV_DispatchThreadID)
+{
+  float3 basePoint = _BasePositionsBuffer[id.x];
+  GlobePoint currentPoint = _PointsBuffer[id.x];
+
+  float3 newPosition = currentPoint.Position + currentPoint.Velocity;
+  float3 diff =  basePoint - newPosition;
+  newPosition = lerp(newPosition, basePoint, .01);
+
+  float3 toEffector = newPosition - _EffectorPos;
+  float3 velocityChange = normalize(toEffector) * .01 * saturate(1 - length(toEffector * .1));
+
+  float3 newVelocity = currentPoint.Velocity + velocityChange;
+  newVelocity += diff * .0001;
+  newVelocity *= .99;
+   
+  GlobePoint newPoint;
+  newPoint.Position = newPosition;
+  newPoint.Velocity = newVelocity;
+  _PointsBuffer[id.x] = newPoint;
+}

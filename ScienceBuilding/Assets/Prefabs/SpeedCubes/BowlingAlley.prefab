@@ -244,6 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 0
+  InteractionProximityRadius: 30
+  interactionProximityRadius: 6
   highlightSettings:
     Hovered: 1
     Selected: 1
@@ -266,6 +269,10 @@ MonoBehaviour:
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 0
+    ThrowVelocity: 18
+    MinThrowVelocity: 1
+    ActivateType: 0
     InteractionOffset:
       position: {x: 0, y: -0.05, z: 0.16}
       rotation: {x: 0, y: 0, z: 0}
@@ -275,8 +282,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 5
       HandPoseSize: 1
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 1
-    ThrowVelocity: 18
+    MaxThrowVelocity2D: 5
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 5
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 5
@@ -367,7 +379,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 0
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -396,6 +407,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 0
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 1
   manipulable: 0
   manipulationSettings:
@@ -430,7 +446,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 30
 --- !u!1 &3069173352472576778
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +592,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 0
+  InteractionProximityRadius: 30
+  interactionProximityRadius: 6
   highlightSettings:
     Hovered: 1
     Selected: 1
@@ -599,6 +617,10 @@ MonoBehaviour:
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 0
+    ThrowVelocity: 18
+    MinThrowVelocity: 1
+    ActivateType: 0
     InteractionOffset:
       position: {x: 0, y: -0.05, z: 0.16}
       rotation: {x: 0, y: 0, z: 0}
@@ -608,8 +630,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 5
       HandPoseSize: 1
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 1
-    ThrowVelocity: 18
+    MaxThrowVelocity2D: 5
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 5
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 5
@@ -700,7 +727,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 0
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -729,6 +755,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 0
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 1
   manipulable: 0
   manipulationSettings:
@@ -763,7 +794,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 30
 --- !u!1001 &1302240883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,7 +824,7 @@ PrefabInstance:
     - target: {fileID: 1333502343666378056, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.624
+      value: 2.214
       objectReference: {fileID: 0}
     - target: {fileID: 1333502343666378056, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
@@ -882,6 +912,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 10e0eabd44f5c4141a706efa9fccb14e,
         type: 2}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

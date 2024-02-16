@@ -524,6 +524,9 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 30
+  interactionProximityRadius: 30
   highlightSettings:
     Hovered: 1
     Selected: 1
@@ -546,6 +549,10 @@ MonoBehaviour:
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -555,8 +562,13 @@ MonoBehaviour:
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
@@ -620,7 +632,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    ActivateType: 2
     ActivateTargetPoses:
     - Position: {x: 0.25, y: 0.25, z: 0.25}
       Rotation: {x: 0, y: 0, z: 0}
@@ -649,6 +660,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 1
   manipulationSettings:
@@ -683,7 +699,6 @@ MonoBehaviour:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  InteractionProximityRadius: 30
 --- !u!1 &290491055431400753
 GameObject:
   m_ObjectHideFlags: 0
@@ -9011,10 +9026,9 @@ GameObject:
   - component: {fileID: 8620614327048214272}
   - component: {fileID: 7958236600375364531}
   - component: {fileID: 6553454498272227025}
-  - component: {fileID: 4968094925629219216}
   - component: {fileID: 1023967638664418083}
   m_Layer: 0
-  m_Name: Rectangle002
+  m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9085,28 +9099,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4968094925629219216
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968094925629219223}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8377211728942078173, guid: bafba3741a72fb44989a00c752fef465, type: 3}
 --- !u!54 &1023967638664418083
 Rigidbody:
   m_ObjectHideFlags: 0
