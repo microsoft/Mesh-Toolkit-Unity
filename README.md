@@ -4,11 +4,15 @@ The Mesh Toolkit enables creators and developers to build custom 3D environments
 
 ## Getting started: 
 
-For detailed instructions on getting started with development for Microsoft Mesh, [visit our documentation at learn.microsoft.com](https://aka.ms/MeshDeveloper). 
+For detailed instructions on getting started with development for Microsoft Mesh, [visit our documentation at learn.microsoft.com](https://aka.ms/MeshDeveloper).
 
 1. [**Mesh 101**](https://aka.ms/Mesh101Tutorial): Start here to learn how to build for Mesh!
 
     ![A screenshot of the Mesh 101 tutorial showing the sphere terraces and wind turbines.](README/001-mesh-distant-shot.png)
+
+1. [**Mesh 201**](aka.ms/Mesh201Tutorial): Explore more of the Mesh Toolkit to help along your journey while building for Mesh!
+
+    ![A screenshot of the Mesh 201 tutorial showing the terraces, webslates and the Earth globe.](README/mesh-201-shot.png)
 
 1. **Physics showcase projects**: Get things moving with physics in three example projects: a [dart room](https://aka.ms/MeshDartRoomSample), a [science building](https://aka.ms/MeshScienceBuildingSample), or a [physics effects gallery](https://aka.ms/MeshPhysicsEffectsSample).
 
