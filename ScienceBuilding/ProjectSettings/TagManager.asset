@@ -34,32 +34,32 @@ TagManager:
   - PostUI
   - Water
   - UI
-  - UserContent
-  - UIForcePerspective
-  - Reserved01
-  - Reserved02
-  - ThirdPersonOnly
-  - Reserved03
-  - Reserved04
-  - Displays
-  - NavMesh
+  - Reserved06
+  - PerspectiveUI
+  - Reserved08
+  - Reserved09
+  - Reserved10
+  - Reserved11
+  - Reserved12
+  - Reserved13
+  - GroundCollision
   - Avatars
   - CharacterController
-  - Reserved05
+  - IgnoreCollisions
   - TriggerVolume
-  - Reserved06
-  - HolographicElements
-  - HolographicWindows
-  - Reserved07
+  - Reserved19
+  - ObjectCollision
+  - IgnoreObjects
+  - RaycastOnly
   - HideFromCamera
   - AudioOccluder
-  - AppLayer01
-  - AppLayer02
-  - AppLayer03
-  - AppLayer04
-  - ArtLayer01
-  - Wall
-  - Interactable
+  - Reserved25
+  - Custom26
+  - Custom27
+  - Custom28
+  - IgnoreRealtimeLight
+  - WallCollision
+  - IgnoreParticipant
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -72,6 +72,9 @@ TagManager:
     locked: 0
   - name: UIForeground
     uniqueID: 368963701
+    locked: 0
+  - name: UIPriority
+    uniqueID: 1857200525
     locked: 0
   - name: Fader
     uniqueID: 522702613

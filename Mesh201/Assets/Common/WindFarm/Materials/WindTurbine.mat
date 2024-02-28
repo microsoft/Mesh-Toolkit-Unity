@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WindTurbine
+  m_Shader: {fileID: 4800000, guid: c21ee41b43b125b4c9394c92cc81d33a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo_Texture_:
+        m_Texture: {fileID: 2800000, guid: 8ff6a9fb2c4d63846a2345383f0efec6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OceanLiveCube_ao:
+        m_Texture: {fileID: 2800000, guid: 823e31e18bc5c794dacf2c6d2431440e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Terrain_BaseColor:
+        m_Texture: {fileID: 2800000, guid: 8ff6a9fb2c4d63846a2345383f0efec6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Edge_Reflect_: 1
+    - _Front_Reflect_: 0.164
+    - _Horizon_Power_: 1
+    - _Indirect_Diffuse_: 0.4
+    - _Power_: 4
+    - _Reflection_: 1.228
+    - _SSS_Intensity_: 0
+    - _SSS_Vx_Color_Mix_: 0
+    - _Shininess_: 10
+    - _Specular_: 0.5
+    - _Sun_Phi_: 0.3
+    - _Sun_Theta_: 0.426
+    - _Vx_Color_Blend_: 0
+    - __dirty: 0
+    m_Colors:
+    - _Albedo_: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 1, g: 1, b: 1, a: 0}
+    - _Ground_Color_: {r: 0.4295123, g: 0.47373825, b: 0.7169812, a: 1}
+    - _Horizon_Color_: {r: 0.6179246, g: 0.69433963, b: 1, a: 1}
+    - _SSS_Base_Color_: {r: 1, g: 1, b: 1, a: 1}
+    - _Sky_Color_: {r: 1, g: 0.9179344, b: 0.69411767, a: 1}
+    - _bias_scale_pow: {r: 0.35, g: 1, b: 1, a: 0}

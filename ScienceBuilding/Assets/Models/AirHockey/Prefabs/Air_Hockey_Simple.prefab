@@ -271,16 +271,6 @@ MonoBehaviour:
     - enabled: 1
       condition:
         rid: 8794443948993544196
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds:
@@ -374,16 +364,6 @@ MonoBehaviour:
   accelerationType: 1
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -402,16 +382,6 @@ MonoBehaviour:
   maxDeviationFromContainment: 0.001
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -921,16 +891,6 @@ MonoBehaviour:
     - enabled: 1
       condition:
         rid: 8794443948993544197
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds:
@@ -1084,16 +1044,6 @@ MonoBehaviour:
   accelerationType: 1
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -1261,16 +1211,6 @@ MonoBehaviour:
   accelerationType: 1
   affectedBodies:
     conditions: []
-    rootGameObject: {fileID: 0}
-    rigidbodyMass:
-      min: 0
-      max: Infinity
-    gameObjectName:
-      condition: 0
-      operand: 
-    gameObjectTag:
-      condition: 0
-      operand: 
   references:
     version: 2
     RefIds: []
@@ -9322,12 +9262,12 @@ PrefabInstance:
     - target: {fileID: 1333502343666378056, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.397
+      value: 1.689
       objectReference: {fileID: 0}
     - target: {fileID: 1333502343666378056, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.803
+      value: 0.551
       objectReference: {fileID: 0}
     - target: {fileID: 1333502343666378056, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
@@ -9590,6 +9530,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 10e0eabd44f5c4141a706efa9fccb14e,
         type: 2}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619644527756702077, guid: 938abe01bc89074469c83ca34edc5764,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

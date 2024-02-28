@@ -1,4 +1,7 @@
-Shader "Microsoft/InformationCoin"
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+Shader "Microsoft/Mesh Toolkit/InformationCoin"
 {
     Properties
     {
