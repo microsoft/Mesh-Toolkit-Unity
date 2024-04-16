@@ -255,8 +255,10 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 6
       HandPoseSize: 1
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
+  interactionCooldownTime: 0
   equippableSettings:
     version: 1
     ThrowVelocity: 5
@@ -392,7 +394,7 @@ MonoBehaviour:
       x: 1
       y: 1
       z: 1
-      manipulationRotationLogic: 0
+      manipulationRotationLogic: 2
     modifyTargetTransform:
       enabled: 0
       targetSpace: 1
@@ -402,6 +404,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
@@ -553,6 +556,7 @@ MonoBehaviour:
     OverrideAimArcColor: 0
     AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   interactionProximityRadius: 0
+  interactionCooldownTime: 0
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -581,6 +585,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
@@ -591,6 +596,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
   _DebugTargetPosition: {x: 0, y: 0, z: 0}
