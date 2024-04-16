@@ -6,7 +6,7 @@ For these types of features, we want the community to get a chance to see them e
 
 ## Getting started
 
-There are a few ways to add the Control Samples package to your project. You an copy and paste the com.microsoft.mesh.toolkit.control.samples folder located in this repo's Packages folder into your project's Packages folder. Or you can reference the Control Samples package from GitHub. To import the Control Samples package into your Unity project via GitHub follow the below steps:
+There are a few ways to add the Control Samples package to your project: a) copy and paste the *com.microsoft.mesh.toolkit.control.samples* folder located in this repository's `Packages` folder into your project's `Packages` folder, or b) reference the Control Samples package from GitHub. To use this second method, follow these steps:
 
 1. In Unity select `Window > Package Manager` from the file menu bar
 

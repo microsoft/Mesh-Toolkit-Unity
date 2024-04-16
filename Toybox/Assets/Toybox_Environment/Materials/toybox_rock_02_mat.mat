@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2870620765764047905
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: toybox_rock_02_mat
+  m_Shader: {fileID: -6465566751694194690, guid: 8b78125caa5e0d6488d6ef75d4b91715,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_0ff6c92feecb4c02ba93de964a30bb68_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 24e4eebd0f056ef43ab8259f414c9412, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_3169831194424bacbd2fd7923a4136f2_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: acf0fbf3dc80641499e7636ca0f68411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_fda989bca84848e58f0e9594dfad354f_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: acf0fbf3dc80641499e7636ca0f68411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_b9374e9dd48540b58271ab2e536e4a52_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_d23a7610e34a4b14b52a6e7af3ec237d_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2e5f36fd275ea2a42bbd29a883ddec6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _baseColor_texture:
+        m_Texture: {fileID: 2800000, guid: 98f5cf5b7f8121e479c34cd33bbad7ef, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _baseRock_height:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cracks_height:
+        m_Texture: {fileID: 2800000, guid: 98f5cf5b7f8121e479c34cd33bbad7ef, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cracks_height_02:
+        m_Texture: {fileID: 2800000, guid: d55dc8df7234b154c835fb4aaf58083b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cracks_normals:
+        m_Texture: {fileID: 2800000, guid: d4c64eb004465c847a5afc945c8f4799, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _moss_color:
+        m_Texture: {fileID: 2800000, guid: 0dc1447d6f897b74d893e1ad50d876d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _moss_height:
+        m_Texture: {fileID: 2800000, guid: 0dc1447d6f897b74d893e1ad50d876d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _moss_roughness:
+        m_Texture: {fileID: 2800000, guid: d2e5e12743b6f334185885c289873ad6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _pebbles_normals:
+        m_Texture: {fileID: 2800000, guid: fcf3d63241024464b9d8ef3541a8ed63, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _pevvles_height:
+        m_Texture: {fileID: 2800000, guid: 2e5f36fd275ea2a42bbd29a883ddec6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _rock_base_color:
+        m_Texture: {fileID: 2800000, guid: acf0fbf3dc80641499e7636ca0f68411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _rock_base_texture:
+        m_Texture: {fileID: 2800000, guid: acf0fbf3dc80641499e7636ca0f68411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _stripeTexture:
+        m_Texture: {fileID: 2800000, guid: acf0fbf3dc80641499e7636ca0f68411, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - _altitudeZero: 1
+    - _baeColor_strength: 1.31
+    - _baseColor_scale: 0.3
+    - _baseColor_scale_1: 0.1
+    - _baseNormal_strength: 0.1
+    - _cracka_density: -1.01
+    - _cracka_spread: 1
+    - _cracks_depth: 0.04
+    - _cracks_scale: 0.25
+    - _cracks_scale_U: -0.08
+    - _cracks_scale_V: -2.72
+    - _cracks_strength: 0.08
+    - _moss_altitude: -5.5
+    - _moss_normal_strength: 0.2
+    - _moss_scale: -0.95
+    - _moss_scale_U: 1
+    - _moss_scale_V: -11.47
+    - _pebble_scale_U: 48
+    - _pebble_scale_V: 54.5
+    - _pebbles_density: 0
+    - _pebbles_strength: 3.1
+    - _stripeBrightness: 1.82
+    - _stripeColor_scale: 0.04
+    - _stripeIntensity: 0.43
+    - _stripeNormals_strength: 0
+    - _stripeScale: -0.98
+    - _triplanar_separation: 0
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _color_01: {r: 1, g: 1, b: 1, a: 1}
+    - _color_02: {r: 0, g: 0, b: 0, a: 0}
+    - _moss_color_bias: {r: 0.8634931, g: 1, b: 0.5525606, a: 0}
+    - _rock_base_color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+  m_BuildTextureStacks: []
