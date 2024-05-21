@@ -17,6 +17,8 @@ Shader "Microsoft/Mesh Toolkit/Earth"
 
 		_CloudShadowDistance("Cloud Shadow Distance", Range(-1, 1)) = .1
 		_ScrollSpeed("Scroll Speed", Float) = 1
+
+        [Toggle(_USE_VIEW_DIRECTIONAL_LIGHT)] _UseViewDirectionalLight("Use View Directional Light", Float) = 0.0
 	}
 	SubShader
 	{
@@ -28,6 +30,8 @@ Shader "Microsoft/Mesh Toolkit/Earth"
 			HLSLPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+
+            #pragma shader_feature_local _ _USE_VIEW_DIRECTIONAL_LIGHT
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/UnityInstancing.hlsl"
@@ -99,14 +103,20 @@ Shader "Microsoft/Mesh Toolkit/Earth"
 
 			float4 frag(v2f i) : COLOR
 			{
-                Light directionalLight = GetMainLight();
+                i.worldView = normalize(i.worldView);
 
-				i.worldView = normalize(i.worldView);
+                #if defined(_USE_VIEW_DIRECTIONAL_LIGHT)
+                    float3 directionalLightDirection = i.worldView;
+                #else
+                    Light directionalLight = GetMainLight();
+                    float3 directionalLightDirection = directionalLight.direction.xyz;
+                #endif
+
 				i.worldNormal = normalize(i.worldNormal);
 				float fresnel = dot(i.worldView, i.worldNormal);
 
 				half3 baseCol = texCUBE(_BaseMap, i.localNormal).xyz;
-				float3 cloudShadowNormal = lerp(i.cloudNormal, directionalLight.direction.xyz, _CloudShadowDistance);
+				float3 cloudShadowNormal = lerp(i.cloudNormal, directionalLightDirection, _CloudShadowDistance);
 				float3 cloudShadow = texCUBElod(_CloudMap, float4(cloudShadowNormal, 5)).xyz * _CloudColor.a;
 				float3 gloss = texCUBE(_GlossMap, i.localNormal).xyz;
 
@@ -114,9 +124,9 @@ Shader "Microsoft/Mesh Toolkit/Earth"
 
 				float3 lights = texCUBE(_LightsMap, i.localNormal).xyz;
 
-				half baseShade = -dot(i.worldNormal, directionalLight.direction.xyz);
+				half baseShade = -dot(i.worldNormal, directionalLightDirection);
 
-				float3 halfAngle = normalize(i.worldView + directionalLight.direction.xyz);
+				float3 halfAngle = normalize(i.worldView + directionalLightDirection);
 				float spec = dot(i.worldNormal, halfAngle);
 				float3 shine = pow(saturate(spec), 90) * float3(1, 1, .5);
 				shine += pow(saturate(spec), 30) * float3(1, .2, 0) * .5;

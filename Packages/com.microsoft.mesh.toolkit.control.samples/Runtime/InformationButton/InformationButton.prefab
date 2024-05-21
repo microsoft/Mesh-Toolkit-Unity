@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8824995997108818447}
   - component: {fileID: 875803361646604943}
   - component: {fileID: 6284352077823072808}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: ProximityDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,8 +257,11 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 6
       HandPoseSize: 1
+    OverrideHandRotation: 0
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
+  interactionCooldownTime: 0
   equippableSettings:
     version: 1
     ThrowVelocity: 1
@@ -389,6 +392,7 @@ MonoBehaviour:
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -404,6 +408,8 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
