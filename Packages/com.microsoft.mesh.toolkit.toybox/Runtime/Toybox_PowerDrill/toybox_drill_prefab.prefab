@@ -293,6 +293,7 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"isPressed","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"isGrabbed","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"startDrillOnActivate","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"drillVolume","value":{"$content":0.25,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 2529624285897398954}
@@ -685,8 +686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 748794745038602147}
-  - component: {fileID: 2766829103047157715}
-  - component: {fileID: 6457119200212512324}
   - component: {fileID: 138373041310125661}
   - component: {fileID: 9132689288623354456}
   m_Layer: 0
@@ -711,74 +710,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2905058490377420816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2766829103047157715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3651562815549806432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aff4833db8e2b14aa0f0b6071c41e5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_usdFile: c:/Users/brand/Desktop/MeshToybox/mesh.toolkit.toybox/Toybox/Assets/LOD/Head_Battery_Handle_Decorations_Trigger_Grip/LOD1/Head_Battery_Handle_Decorations_Trigger_Grip_LOD1.usd
-  m_projectAssetPath: Assets/LOD/Head_Battery_Handle_Decorations_Trigger_Grip/LOD1/
-  m_usdRootPath: /ProcessedMeshNode
-  m_usdTimeOffset: 0
-  m_payloadPolicy: 1
-  m_importHierarchy: 1
-  m_scale: 1
-  m_changeHandedness: 1
-  m_interpolation: 1
-  m_useOriginalShaderIfAvailable: 1
-  m_displayColorMaterial: {fileID: 0}
-  m_specularWorkflowMaterial: {fileID: 0}
-  m_metallicWorkflowMaterial: {fileID: 0}
-  m_enableGpuInstancing: 0
-  m_points: 0
-  m_topology: 0
-  m_boundingBox: 1
-  m_color: 0
-  m_normals: 0
-  m_tangents: 0
-  m_st: 0
-  m_texcoord1: 0
-  m_texcoord2: 0
-  m_texcoord3: 0
-  m_generateLightmapUVs: 0
-  m_unwrapAngleError: 0.08
-  m_unwrapAreaError: 0.15
-  m_unwrapHardAngle: 88
-  m_unwrapPackMargin: 4
-  m_materialImportMode: 0
-  m_importCameras: 1
-  m_importMeshes: 1
-  m_importSkinning: 1
-  m_importTransforms: 1
-  m_importSceneInstances: 1
-  m_importPointInstances: 1
-  m_importMonoBehaviors: 0
-  m_debugShowSkeletonBindPose: 0
-  m_debugShowSkeletonRestPose: 0
-  m_debugPrintVariabilityCache: 0
-  m_usdVariabilityCache: 1
-  LastHandedness: 1
-  LastScale: 1
---- !u!114 &6457119200212512324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3651562815549806432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c0a2371b63dc44199935c88ef12809, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_usdPrimPath: /ProcessedMeshNode
 --- !u!33 &138373041310125661
 MeshFilter:
   m_ObjectHideFlags: 0

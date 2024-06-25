@@ -65,7 +65,7 @@ namespace CloudScripting.Sample
             {
                 infoButton.Selected += async (sender, args) =>
                 {
-                    // Ensure we have weather data before begining the conversation
+                    // Ensure we have weather data before beginning the conversation
                     await GetCurrentWeather(_latlong);
 
                     // Display an input dialog for the user to send a message to the LLM
@@ -107,7 +107,13 @@ namespace CloudScripting.Sample
                         }
                         catch (Exception ex)
                         {
-                            _logger.LogCritical($"Exception during OpenAI request: {ex.Message}");
+                            var log = $"Exception during OpenAI request: {ex.Message}";
+                            _logger.LogCritical(log);
+
+                            if (!response.IsCanceled)
+                            {
+                                _app.ShowMessageToParticipant(log, args.Participant);
+                            }
                         }
                     }, TaskScheduler.Default);
                 };

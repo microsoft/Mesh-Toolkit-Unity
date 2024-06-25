@@ -139,23 +139,25 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 6
       HandPoseSize: 1
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
+  interactionCooldownTime: 0
   equippableSettings:
     version: 1
     ThrowVelocity: 5
     MinThrowVelocity: 1
     ActivateType: 0
     InteractionOffset:
-      position: {x: 0.03, y: 0.03, z: 0.03}
+      position: {x: 0.03, y: 0.03, z: 0.06}
       rotation: {x: -15, y: -40, z: -15}
     EquipTargetPose:
       position: {x: 0.1, y: 0.17, z: 0.4}
       rotation: {x: 331.44354, y: 337.4083, z: 238.99628}
     EquipHandPose:
       HandPoseShape: 3
-      HandPoseSize: 0.15
-    UseAimAnimationSystem: 0
+      HandPoseSize: 0.25
+    UseAimAnimationSystem: 1
     ReleaseTime: 0.21
     Throwable: 1
     MaxThrowVelocity2D: 6.5
@@ -164,8 +166,8 @@ MonoBehaviour:
     MaxThrowVelocityVR: 7.5
     ArmExtensionOnAim: 0.7
     AimHandPose:
-      HandPoseShape: 5
-      HandPoseSize: 0.15
+      HandPoseShape: 3
+      HandPoseSize: 0.25
     AimHandRotation: {x: 40, y: -30, z: 200}
     ThrowHandPose:
       HandPoseShape: 6
@@ -232,6 +234,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
@@ -410,6 +413,7 @@ MonoBehaviour:
     OverrideAimArcColor: 0
     AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   interactionProximityRadius: 0
+  interactionCooldownTime: 0
   equippable: 0
   manipulable: 0
   manipulationSettings:
@@ -438,6 +442,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
@@ -448,6 +453,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
   _DebugTargetPosition: {x: 0, y: 0, z: 0}

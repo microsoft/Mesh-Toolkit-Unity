@@ -41,7 +41,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5064684263032372861}
-  - component: {fileID: 962199763285338550}
   - component: {fileID: 8326535161521976183}
   - component: {fileID: 2296439075468361368}
   m_Layer: 0
@@ -66,19 +65,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1312669811333387240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &962199763285338550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2386000869970405573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c0a2371b63dc44199935c88ef12809, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_usdPrimPath: /baseball
 --- !u!33 &8326535161521976183
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -225,6 +211,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    OverrideHandRotation: 0
     HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
@@ -352,13 +339,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -374,6 +363,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
       HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1

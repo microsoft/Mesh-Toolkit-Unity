@@ -96,6 +96,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    OverrideHandRotation: 0
     HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
@@ -106,7 +107,7 @@ MonoBehaviour:
     MinThrowVelocity: 1
     ActivateType: 0
     InteractionOffset:
-      position: {x: -0.007, y: 0.031, z: 0.043}
+      position: {x: -0.007, y: 0.009, z: 0.043}
       rotation: {x: 103.5, y: -4.651, z: -23.13}
     EquipTargetPose:
       position: {x: 0.1, y: 0.05, z: 0.38}
@@ -223,13 +224,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -245,6 +248,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
       HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
@@ -272,7 +276,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.31658462, y: 0.10017721, z: 0.31}
-  m_Center: {x: 0.0032923073, y: 0.049, z: 0}
+  m_Center: {x: 0.0032923073, y: 0.009, z: 0}
 --- !u!1 &9178496615155892392
 GameObject:
   m_ObjectHideFlags: 0

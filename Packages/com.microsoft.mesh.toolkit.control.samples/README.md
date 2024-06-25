@@ -6,19 +6,38 @@ For these types of features, we want the community to get a chance to see them e
 
 ## Getting started
 
-There are a few ways to add the Control Samples package to your project: a) copy and paste the *com.microsoft.mesh.toolkit.control.samples* folder located in this repository's `Packages` folder into your project's `Packages` folder, or b) reference the Control Samples package from GitHub. To use this second method, follow these steps:
+There are a couple of ways to add the Control Samples package to your project.
 
-1. In Unity select `Window > Package Manager` from the file menu bar
+1. Copy and paste the com.microsoft.mesh.toolkit.control.samples folder located in this repository's Packages folder into your project's Packages folder.
+2. Reference the Control Samples package from GitHub.
 
-1. Click the `'+'` icon within the Package Manager and select `"Add package from git URL..."`
+> [!IMPORTANT]
+> To reference the Control Samples package from GitHub you must have [Git](https://gitforwindows.org/) installed on your computer.
+
+To import the Control Samples package into your Unity project using GitHub:
+
+1. In your project, on the menu bar, select Window > Package Manager.
+
+1. In the Package Manager, click the '+' drop-down and then select "Add package from git URL..."
 
     ![Package Manager Add](README~/PackageManagerAdd.png)
 
-1. Paste *https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples* into the text field and click `"Add"`
+1. Paste <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples> into the text field and then click Add.
 
     ![Package Manager Paste](README~/PackageManagerPaste.png)
 
-The Control Samples will now be installed within your Unity project as package within the project's `Packages` folder named `Microsoft Mesh Toolkit Control Samples`. You can now start using prefabs and visual scripts within the Control Samples' runtime folder.
+The Control Samples package will now be installed in your Unity project as a package in the project's Packages folder with the name Microsoft Mesh Toolkit Control Samples. You can now start using prefabs and visual scripts within the Control Samples runtime folder.
+
+> [!TIP]
+> It is advised you use a specific release of the Control Samples package to ensure your project is locked to a release.
+
+You can reference a specific release version, branch, or git commit hash by altering the URL in step 3 as demonstrated below:
+
+| Syntax           | URL example                                                                                                                                              |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Specific version | <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples#vX.Y.Z>                                   |
+| Specific branch  | <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples#my_branch>                                |
+| Git commit hash  | <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples#badc0ffee0ddf00ddead10cc8badf00d1badb002> |
 
 ## List of controls
 

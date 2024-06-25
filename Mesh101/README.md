@@ -1,10 +1,10 @@
 # Microsoft Mesh Toolkit Sample: Mesh 101
 
-![Chapter 3 and Chapter 4 Sphere Terraces](README/Mesh101.png)
+![Chapter 3 and Chapter 4 Sphere Terraces](README/Mesh101.jpg)
 
 ## What is Mesh 101?
 
-The *Mesh 101* tutorial project is created for intermediate to advanced Unity developers with an introduction to the fundamental Mesh Toolkit building blocks thus enabling them to hone their skills and eventually create delightful experiences with our Mesh Toolkit in Unity. In the Mesh 101 tutorial project, we demonstrate building shared immersive environments and experiences in Mesh using an interactive learning experience about wind turbines. The tutorial gives a holistic introduction to the power of Mesh, spanning Mesh Physics, Mesh Scripting, and more.
+The *Mesh 101* tutorial project is created for intermediate to advanced Unity developers with an introduction to the fundamental Mesh Toolkit building blocks thus enabling them to hone their skills and eventually create delightful experiences with our Mesh Toolkit in Unity. In the Mesh 101 tutorial project, we demonstrate building shared immersive environments and experiences in Mesh using an interactive learning experience about wind turbines. The tutorial gives a holistic introduction to the power of Mesh, spanning Mesh Physics, Mesh Visual Scripting, and more.
 
 In this project, you'll find 2 Scenes:
 
@@ -28,7 +28,7 @@ In this tutorial, you'll complete a series of tasks that use Mesh Visual Scripti
 
 Developers start with a pre-built Unity project, where they can add custom interactivity and other Mesh features, and then deploy the project as an Environment to Microsoft Mesh.
 
-## How to use
+## Getting started
 
-* Follow the Mesh 101 Tutorial Docs for a guided walkthrough
+* Follow the [Mesh 101 Tutorial Docs](aka.ms/Mesh101Tutorial) for a guided walkthrough.
 * Additional info about the [Microsoft Mesh Toolkit Control Samples package](Packages/com.microsoft.mesh.toolkit.control.samples/README.md).

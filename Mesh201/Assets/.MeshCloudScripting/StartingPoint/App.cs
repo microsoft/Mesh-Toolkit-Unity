@@ -55,7 +55,7 @@ namespace CloudScripting.Sample
             {
                 infoButton.Selected += async (sender, args) =>
                 {
-                    // Ensure we have weather data before begining the conversation
+                    // Ensure we have weather data before beginning the conversation
                     await GetCurrentWeather(_latlong);
 
                     // Display an input dialog for the user to send a message to the LLM

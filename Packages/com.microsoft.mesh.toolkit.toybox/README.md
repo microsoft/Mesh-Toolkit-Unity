@@ -1,27 +1,8 @@
+# What is the Toybox package?
 
-# What is Toybox?
+Toybox is a Unity Engine package that empowers creators to build interactive experiences and games for Microsoft Mesh. This package provides visual scripts, assets, and shaders to help jumpstart creating activities for Mesh environments while staying within performance budgets.
 
-![Pavilion](README/Toybox.jpg)
-
-Toybox is a Unity Engine sample and package that empowers creators to build interactive experiences and games for Microsoft Mesh. This sample and package provides visual scripts, assets, and shaders to help jumpstart creating activities for Mesh environments while staying within performance budgets.
-
-## What's Inside?
-
-  1. A sample project called `Toybox`
-  2. A Unity package called `Microsoft Mesh Toolkit Toybox` located in the *Packages\com.microsoft.mesh.toolkit.toybox* folder
-
-  The Unity sample project contains five interactive activities that use mixtures of visual scripting, animations, VFX, and SoundFX to drive social engagement across Mesh experiences.
-  
-Activities include:
-
-- Bean Bag Toss - two versions :trophy:
-- Fire Pit & Roasting Marshmallows :fire:
-- Ice Breaker :interrobang:
-- Sound Orbs :notes:
-- Radio & Boombox :musical_note:
-- *Bonus: Astronaut :rocket:*
-
-### Getting Started
+## Getting started
 
 There are a couple of ways to add the Toybox package to your project.
 
@@ -37,11 +18,11 @@ To import the Toybox package into your Unity project using GitHub:
 
 1. In the Package Manager, click the '+' drop-down and then select "Add package from git URL..."
 
-    ![Package Manager Add](README/PackageManagerAdd.png)
+    ![Package Manager Add](README~/PackageManagerAdd.png)
 
 1. Paste <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.toybox> into the text field and then click Add.
 
-    ![Package Manager Paste](README/PackageManagerPaste.png)
+    ![Package Manager Paste](README~/PackageManagerPaste.png)
 
 The Toybox package will now be installed in your Unity project as a package in the project's Packages folder with the name Microsoft Mesh Toolkit Toybox. You can now start using prefabs and visual scripts within the Toybox runtime folder.
 
@@ -55,3 +36,14 @@ You can reference a specific release version, branch, or git commit hash by alte
 | Specific version | <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.toybox#vX.Y.Z>                                   |
 | Specific branch  | <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.toybox#my_branch>                                |
 | Git commit hash  | <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.toybox#badc0ffee0ddf00ddead10cc8badf00d1badb002> |
+
+## List of activities
+
+In the Runtime folder you will find the following activities:
+
+- Bean Bag Toss - two versions :trophy:
+- Fire Pit & Roasting Marshmallows :fire:
+- Ice Breaker :interrobang:
+- Sound Orbs :notes:
+- Radio & Boombox :musical_note:
+- *Bonus: Astronaut :rocket:*
