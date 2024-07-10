@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4200196631000443256}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.12839817, z: -0, w: 0.9917227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    OverrideHandRotation: 0
     HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
@@ -338,13 +339,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -360,6 +363,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
       HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1

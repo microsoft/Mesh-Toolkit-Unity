@@ -11,7 +11,7 @@ using WeatherAPI;
 namespace CloudScripting.Sample
 {
     /// <summary>
-    /// Cloud app which displays weather information on a 3D globe and allows a user to chat with a LLM about the weather.
+    /// Cloud app which displays weather information on a 3D globe and allows a user to chat with a large language model (LLM) about the weather.
     /// </summary>
     public class App : IHostedService, IAsyncDisposable
     {
@@ -44,9 +44,8 @@ namespace CloudScripting.Sample
         public Task StartAsync(CancellationToken token)
         {
             // When a user selects the globe, refresh the current weather
-            var refreshButton = _app.Scene.FindFirstChild("Earth", true) as TransformNode
-                ?? throw new NullReferenceException("Could not find Earth");
-            var refreshButtonNode = refreshButton.FindFirstChild<InteractableNode>(true);
+            var refreshButton = _app.Scene.FindFirstChild("Earth", true) as TransformNode;
+            var refreshButtonNode = refreshButton?.FindFirstChild<InteractableNode>(true);
 
             if (refreshButtonNode != null)
             {
@@ -56,10 +55,9 @@ namespace CloudScripting.Sample
                 };
             }
 
-            // When a user selects the information button begin a conversation with a LLM
-            var aiParentNode = _app.Scene.FindFirstChild("5 - AIAssistant", true) as TransformNode
-                ?? throw new NullReferenceException("Could not find infoButtonParent");
-            var infoButton = aiParentNode.FindFirstChild<InteractableNode>(true);
+            // When a user selects the information button begin a conversation with a large language model (LLM)
+            var aiParentNode = _app.Scene.FindFirstChild("5 - AIAssistant", true) as TransformNode;
+            var infoButton = aiParentNode?.FindFirstChild<InteractableNode>(true);
 
             if (infoButton != null)
             {
@@ -68,7 +66,7 @@ namespace CloudScripting.Sample
                     // Ensure we have weather data before beginning the conversation
                     await GetCurrentWeather(_latlong);
 
-                    // Display an input dialog for the user to send a message to the LLM
+                    // Display an input dialog for the user to send a message to the large language model (LLM)
                     await _app.ShowInputDialogToParticipantAsync("Ask Azure OpenAI", args.Participant).ContinueWith(async (response) =>
                     {
                         try
@@ -101,7 +99,7 @@ namespace CloudScripting.Sample
                             // Wait for a response from OpenAI based on the user's message
                             var aiResponse = await _openAIClient.GetChatCompletionsAsync(chatCompletionsOptions);
 
-                            // Display the first response from the LLM
+                            // Display the first response from the large language model (LLM)
                             var responseMessage = aiResponse.Value.Choices[0].Message;
                             _app.ShowMessageToParticipant($"<i>You asked: {participantInput}</i>\n\nResponse: {responseMessage.Content}", args.Participant);
                         }
@@ -120,9 +118,8 @@ namespace CloudScripting.Sample
             }
 
             // When a user selects the reset button, reset the weather markers
-            var resetButton = _app.Scene.FindFirstChild("ResetWeatherButton", true) as TransformNode
-                ?? throw new NullReferenceException("Could not find ResetWeatherButton");
-            var resetButtonNode = resetButton.FindFirstChild<InteractableNode>(true);
+            var resetButton = _app.Scene.FindFirstChild("ResetWeatherButton", true) as TransformNode;
+            var resetButtonNode = resetButton?.FindFirstChild<InteractableNode>(true);
 
             if (resetButtonNode != null)
             {

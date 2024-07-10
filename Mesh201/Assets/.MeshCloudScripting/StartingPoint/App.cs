@@ -1,8 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Azure;
-using Azure.AI.OpenAI;
+// Paste code here
 using Microsoft.Mesh.CloudScripting;
 using System.Numerics;
 using System.Text.Json;
@@ -11,7 +10,7 @@ using WeatherAPI;
 namespace CloudScripting.Sample
 {
     /// <summary>
-    /// Cloud app which displays weather information on a 3D globe and allows a user to chat with a LLM about the weather.
+    /// Cloud app which displays weather information on a 3D globe and allows a user to chat with a large language model (LLM) about the weather.
     /// </summary>
     public class App : IHostedService, IAsyncDisposable
     {
@@ -20,7 +19,7 @@ namespace CloudScripting.Sample
 
         private readonly string? _weatherAPIBaseUrl;
         private readonly string? _weatherAPIKey;
-        private OpenAIClient _openAIClient;
+        // Paste code here
 
         private string[] _latlong = new string[] { "6.465422,3.406448",     // Lagos, Nigeria
                                                    "47.673988,-122.121513", // Redmond, WA, USA
@@ -34,10 +33,7 @@ namespace CloudScripting.Sample
 
             _weatherAPIBaseUrl = configuration.GetValue<string>("WEATHER_API_URI");
             _weatherAPIKey = configuration.GetValue<string>("WEATHER_API_KEY");
-
-            Uri azureOpenAIResourceUri = new(configuration.GetValue<string>("AZURE_OPENAI_API_URI"));
-            AzureKeyCredential azureOpenAIApiKey = new(configuration.GetValue<string>("AZURE_OPENAI_API_KEY"));
-            _openAIClient = new(azureOpenAIResourceUri, azureOpenAIApiKey);
+            // Paste code here
         }
 
         /// <inheritdoc/>
@@ -46,27 +42,12 @@ namespace CloudScripting.Sample
             // When a user selects the globe, refresh the current weather
             // Paste code here
 
-            // When a user selects the information button begin a conversation with a LLM
-            var aiParentNode = _app.Scene.FindFirstChild("5 - AIAssistant", true) as TransformNode
-                ?? throw new NullReferenceException("Could not find infoButtonParent");
-            var infoButton = aiParentNode.FindFirstChild<InteractableNode>(true);
-
-            if (infoButton != null)
-            {
-                infoButton.Selected += async (sender, args) =>
-                {
-                    // Ensure we have weather data before beginning the conversation
-                    await GetCurrentWeather(_latlong);
-
-                    // Display an input dialog for the user to send a message to the LLM
-                    // Paste code here
-                };
-            }
+            // When a user selects the information button begin a conversation with a large language model (LLM)
+            // Paste code here
 
             // When a user selects the reset button, reset the weather markers
-            var resetButton = _app.Scene.FindFirstChild("ResetWeatherButton", true) as TransformNode
-                ?? throw new NullReferenceException("Could not find ResetWeatherButton");
-            var resetButtonNode = resetButton.FindFirstChild<InteractableNode>(true);
+            var resetButton = _app.Scene.FindFirstChild("ResetWeatherButton", true) as TransformNode;
+            var resetButtonNode = resetButton?.FindFirstChild<InteractableNode>(true);
 
             if (resetButtonNode != null)
             {
