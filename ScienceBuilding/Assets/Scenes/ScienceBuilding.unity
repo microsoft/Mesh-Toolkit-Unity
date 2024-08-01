@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 13566a710f359e34983d34d9b3a0df73
+  m_OcclusionCullingData: {fileID: 36300000, guid: 76e5cc4c650efba498a7f1d5abfd57f0,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -38,7 +39,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.028628329, g: 0.06336663, b: 0.12563641, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2124,66 +2124,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1935932666}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &127929644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 127929647}
-  - component: {fileID: 127929646}
-  - component: {fileID: 127929645}
-  m_Layer: 0
-  m_Name: VisualScripting SceneVariables
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &127929645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127929644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &127929646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127929644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!4 &127929647
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127929644}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129058587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,32 +2439,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 57427701}
     m_Modifications:
-    - target: {fileID: 116936735, guid: e3fb3e8b23ea3414cb613f8715b20c74, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 116936737, guid: e3fb3e8b23ea3414cb613f8715b20c74, type: 3}
-      propertyPath: surfaceType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1468923273, guid: e3fb3e8b23ea3414cb613f8715b20c74, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1468923275, guid: e3fb3e8b23ea3414cb613f8715b20c74, type: 3}
-      propertyPath: surfaceType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436011528616914208, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512259446929986517, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1512259446929986517, guid: e3fb3e8b23ea3414cb613f8715b20c74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2575,50 +2489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1556648652880305264, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773695450722656992, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074685898656034176, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2285382579530877295, guid: e3fb3e8b23ea3414cb613f8715b20c74,
         type: 3}
       propertyPath: m_Name
       value: Bouyancy_Pod_Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985213261958476309, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 5061196918332394992, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486804474579968252, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7173765198959929713, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 9172434886166455826, guid: e3fb3e8b23ea3414cb613f8715b20c74,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2655,34 +2529,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1677646527}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &164300929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3056243432950992213, guid: 5216ce197712fef44858cf602a97e43f,
-    type: 3}
-  m_PrefabInstance: {fileID: 753348361}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &164300933
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164300929}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2659766976517860931, guid: 4dde5c72b9a34a241afe1bd1f8e452f3, type: 3}
 --- !u!1001 &165006591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6540,12 +6386,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1736203392}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &439983149 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2271469283046783562, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 815499013}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &441203121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 95ff6a7b71138334a8e98036f609bfac,
@@ -7369,36 +7209,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527430266389, guid: 9c802a46694516e43ad4e9a4b826e47d,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527430266389, guid: 9c802a46694516e43ad4e9a4b826e47d,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527430266389, guid: 9c802a46694516e43ad4e9a4b826e47d,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527430266389, guid: 9c802a46694516e43ad4e9a4b826e47d,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527430266389, guid: 9c802a46694516e43ad4e9a4b826e47d,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527430266389, guid: 9c802a46694516e43ad4e9a4b826e47d,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7903380492586013036, guid: 9c802a46694516e43ad4e9a4b826e47d,
         type: 3}
@@ -9627,34 +9437,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2001294983}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &664466229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3037778695956130293, guid: 5216ce197712fef44858cf602a97e43f,
-    type: 3}
-  m_PrefabInstance: {fileID: 753348361}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &664466233
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664466229}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8860097174770372528, guid: 4dde5c72b9a34a241afe1bd1f8e452f3, type: 3}
 --- !u!1 &666521020
 GameObject:
   m_ObjectHideFlags: 0
@@ -11447,35 +11229,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 57427701}
     m_Modifications:
-    - target: {fileID: 2733152047955308274, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 1.435
-      objectReference: {fileID: 0}
-    - target: {fileID: 3056243432950992213, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4067928530079568595, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 1.435
-      objectReference: {fileID: 0}
     - target: {fileID: 6276441428332794197, guid: 5216ce197712fef44858cf602a97e43f,
         type: 3}
       propertyPath: m_Name
       value: Bouyancy_Pod
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276441428332794197, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652298875801570287, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6652298875801570287, guid: 5216ce197712fef44858cf602a97e43f,
         type: 3}
@@ -11530,15 +11287,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3056243432950992213, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 164300933}
-    - targetCorrespondingSourceObject: {fileID: 3037778695956130293, guid: 5216ce197712fef44858cf602a97e43f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 664466233}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5216ce197712fef44858cf602a97e43f, type: 3}
 --- !u!4 &753348362 stripped
 Transform:
@@ -12007,69 +11756,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7619644527871482673, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527871482673, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527871482673, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527871482673, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527871482673, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527871482673, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984701735874414247, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984701735874414247, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984701735874414247, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984701735874414247, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984701735874414247, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984701735874414247, guid: a6aa85a5814994340966ac2826176a43,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1111605438122813329, guid: a6aa85a5814994340966ac2826176a43, type: 3}
-    - {fileID: 1946586005776281939, guid: a6aa85a5814994340966ac2826176a43, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12354,103 +12041,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Velocity_Races
       objectReference: {fileID: 0}
-    - target: {fileID: 7619644526749658986, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526749658986, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526749658986, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526749658986, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526749658986, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526749658986, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526765009566, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526765009566, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526765009566, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526765009566, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526765009566, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526765009566, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527905565452, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527905565452, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527905565452, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527905565452, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527905565452, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527905565452, guid: 1d33889b90b35fd4b9d55d4c8937a9fa,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1111605439111173066, guid: 1d33889b90b35fd4b9d55d4c8937a9fa, type: 3}
-    - {fileID: 1946586006767813896, guid: 1d33889b90b35fd4b9d55d4c8937a9fa, type: 3}
-    - {fileID: 1111605439229285950, guid: 1d33889b90b35fd4b9d55d4c8937a9fa, type: 3}
-    - {fileID: 1946586006817734908, guid: 1d33889b90b35fd4b9d55d4c8937a9fa, type: 3}
-    - {fileID: 1111605438223996844, guid: 1d33889b90b35fd4b9d55d4c8937a9fa, type: 3}
-    - {fileID: 1946586005809299822, guid: 1d33889b90b35fd4b9d55d4c8937a9fa, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15256,6 +14847,669 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1368615428}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1086117971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086117973}
+  - component: {fileID: 1086117972}
+  m_Layer: 0
+  m_Name: MeshUniqueIdManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1086117972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086117971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -136581813, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UniqueInteractableIds:
+  - Interactable: {fileID: 1929101966}
+    Id: 0
+  - Interactable: {fileID: 1646477511}
+    Id: 1
+  - Interactable: {fileID: 2089601758}
+    Id: 2
+  - Interactable: {fileID: 855060424}
+    Id: 3
+  - Interactable: {fileID: 1507876650}
+    Id: 4
+  - Interactable: {fileID: 467509966}
+    Id: 5
+  - Interactable: {fileID: 295741141}
+    Id: 6
+  - Interactable: {fileID: 1475074368}
+    Id: 7
+  - Interactable: {fileID: 1567879582}
+    Id: 8
+  - Interactable: {fileID: 1182372302}
+    Id: 9
+  - Interactable: {fileID: 1868347841}
+    Id: 10
+  - Interactable: {fileID: 1767786982}
+    Id: 11
+  - Interactable: {fileID: 1860477940}
+    Id: 12
+  - Interactable: {fileID: 460268305}
+    Id: 13
+  - Interactable: {fileID: 1477165541}
+    Id: 14
+  - Interactable: {fileID: 1290365572}
+    Id: 15
+  - Interactable: {fileID: 855012663}
+    Id: 16
+  - Interactable: {fileID: 771794849}
+    Id: 17
+  - Interactable: {fileID: 427049681}
+    Id: 18
+  - Interactable: {fileID: 1249206770}
+    Id: 19
+  - Interactable: {fileID: 98080313}
+    Id: 20
+  - Interactable: {fileID: 612681437}
+    Id: 21
+  - Interactable: {fileID: 1585212839}
+    Id: 22
+  - Interactable: {fileID: 1212175171}
+    Id: 23
+  - Interactable: {fileID: 1849725583}
+    Id: 24
+  - Interactable: {fileID: 1341385082}
+    Id: 25
+  - Interactable: {fileID: 1040516577}
+    Id: 26
+  - Interactable: {fileID: 242555502}
+    Id: 27
+  - Interactable: {fileID: 206944491}
+    Id: 28
+  - Interactable: {fileID: 1193727031}
+    Id: 29
+  - Interactable: {fileID: 896575007}
+    Id: 30
+  - Interactable: {fileID: 1437262110}
+    Id: 31
+  - Interactable: {fileID: 878705892}
+    Id: 32
+  - Interactable: {fileID: 1160179782}
+    Id: 33
+  - Interactable: {fileID: 1665171283}
+    Id: 34
+  - Interactable: {fileID: 519044990}
+    Id: 35
+  - Interactable: {fileID: 334253210}
+    Id: 36
+  - Interactable: {fileID: 1801040702}
+    Id: 37
+  - Interactable: {fileID: 656099633}
+    Id: 38
+  - Interactable: {fileID: 905387830}
+    Id: 39
+  - Interactable: {fileID: 1236680560}
+    Id: 40
+  - Interactable: {fileID: 1015943196}
+    Id: 41
+  - Interactable: {fileID: 1112147591}
+    Id: 42
+  - Interactable: {fileID: 689616100}
+    Id: 43
+  - Interactable: {fileID: 2019665304}
+    Id: 44
+  - Interactable: {fileID: 371000550}
+    Id: 45
+  - Interactable: {fileID: 551119948}
+    Id: 46
+  - Interactable: {fileID: 294130756}
+    Id: 47
+  - Interactable: {fileID: 949670156}
+    Id: 48
+  - Interactable: {fileID: 700704303}
+    Id: 49
+  - Interactable: {fileID: 963707427}
+    Id: 50
+  - Interactable: {fileID: 1047722290}
+    Id: 51
+  - Interactable: {fileID: 1851781857}
+    Id: 52
+  - Interactable: {fileID: 2053982707}
+    Id: 53
+  - Interactable: {fileID: 226574503}
+    Id: 54
+  - Interactable: {fileID: 1667654499}
+    Id: 55
+  - Interactable: {fileID: 871688797}
+    Id: 56
+  - Interactable: {fileID: 1916844903}
+    Id: 57
+  - Interactable: {fileID: 79517326}
+    Id: 58
+  - Interactable: {fileID: 32122125}
+    Id: 59
+  - Interactable: {fileID: 1520659160}
+    Id: 60
+  - Interactable: {fileID: 733718040}
+    Id: 61
+  - Interactable: {fileID: 1939790239}
+    Id: 62
+  - Interactable: {fileID: 2086989527}
+    Id: 63
+  - Interactable: {fileID: 430770311}
+    Id: 64
+  - Interactable: {fileID: 177888488}
+    Id: 65
+  - Interactable: {fileID: 1197016457}
+    Id: 66
+  - Interactable: {fileID: 1826699708}
+    Id: 67
+  - Interactable: {fileID: 1735297373}
+    Id: 68
+  - Interactable: {fileID: 1253111765}
+    Id: 69
+  - Interactable: {fileID: 340257435}
+    Id: 70
+  - Interactable: {fileID: 62986420}
+    Id: 71
+  - Interactable: {fileID: 659641434}
+    Id: 72
+  - Interactable: {fileID: 790505184}
+    Id: 73
+  - Interactable: {fileID: 1426608932}
+    Id: 74
+  - Interactable: {fileID: 970173672}
+    Id: 75
+  - Interactable: {fileID: 251721961}
+    Id: 76
+  - Interactable: {fileID: 1199022966}
+    Id: 77
+  - Interactable: {fileID: 411997993}
+    Id: 78
+  - Interactable: {fileID: 195536961}
+    Id: 79
+  - Interactable: {fileID: 815731725}
+    Id: 80
+  - Interactable: {fileID: 409532879}
+    Id: 81
+  - Interactable: {fileID: 1637762200}
+    Id: 82
+  - Interactable: {fileID: 2135464310}
+    Id: 83
+  - Interactable: {fileID: 173293950}
+    Id: 84
+  - Interactable: {fileID: 385740378}
+    Id: 85
+  - Interactable: {fileID: 2036130445}
+    Id: 86
+  - Interactable: {fileID: 552247410}
+    Id: 87
+  - Interactable: {fileID: 750129267}
+    Id: 88
+  - Interactable: {fileID: 1902364081}
+    Id: 89
+  - Interactable: {fileID: 1449255387}
+    Id: 90
+  - Interactable: {fileID: 1937765874}
+    Id: 91
+  - Interactable: {fileID: 1347529517}
+    Id: 92
+  - Interactable: {fileID: 1622733757}
+    Id: 93
+  - Interactable: {fileID: 24418791}
+    Id: 94
+  - Interactable: {fileID: 717306252}
+    Id: 95
+  - Interactable: {fileID: 506842522}
+    Id: 96
+  - Interactable: {fileID: 1205133107}
+    Id: 97
+  - Interactable: {fileID: 407272200}
+    Id: 98
+  - Interactable: {fileID: 1287589863}
+    Id: 99
+  - Interactable: {fileID: 552545009}
+    Id: 100
+  - Interactable: {fileID: 585081433}
+    Id: 101
+  - Interactable: {fileID: 808222776}
+    Id: 102
+  - Interactable: {fileID: 1842359702}
+    Id: 103
+  - Interactable: {fileID: 1879858609}
+    Id: 104
+  - Interactable: {fileID: 1058964862}
+    Id: 107
+  - Interactable: {fileID: 745466998}
+    Id: 108
+  - Interactable: {fileID: 74696452}
+    Id: 109
+  - Interactable: {fileID: 1118674684}
+    Id: 110
+  - Interactable: {fileID: 613103127}
+    Id: 111
+  - Interactable: {fileID: 349252802}
+    Id: 112
+  - Interactable: {fileID: 207090000}
+    Id: 113
+  - Interactable: {fileID: 813163054}
+    Id: 114
+  - Interactable: {fileID: 261126191}
+    Id: 115
+  - Interactable: {fileID: 2081198682}
+    Id: 116
+  - Interactable: {fileID: 35111289}
+    Id: 117
+  - Interactable: {fileID: 298173360}
+    Id: 118
+  - Interactable: {fileID: 876149502}
+    Id: 119
+  - Interactable: {fileID: 1645452999}
+    Id: 120
+  - Interactable: {fileID: 1967964592}
+    Id: 121
+  - Interactable: {fileID: 157648830}
+    Id: 122
+  - Interactable: {fileID: 1104340462}
+    Id: 123
+  - Interactable: {fileID: 105001303}
+    Id: 124
+  - Interactable: {fileID: 1547960864}
+    Id: 125
+  - Interactable: {fileID: 1863642495}
+    Id: 126
+  - Interactable: {fileID: 55084002}
+    Id: 127
+  - Interactable: {fileID: 1064686882}
+    Id: 128
+  - Interactable: {fileID: 1267430004}
+    Id: 129
+  - Interactable: {fileID: 1950445199}
+    Id: 130
+  - Interactable: {fileID: 1553429813}
+    Id: 131
+  - Interactable: {fileID: 79108543}
+    Id: 132
+  - Interactable: {fileID: 262595769}
+    Id: 133
+  - Interactable: {fileID: 1473507454}
+    Id: 134
+  - Interactable: {fileID: 1957490210}
+    Id: 135
+  - Interactable: {fileID: 298910428}
+    Id: 136
+  - Interactable: {fileID: 1537189027}
+    Id: 137
+  - Interactable: {fileID: 986258242}
+    Id: 138
+  - Interactable: {fileID: 1720593648}
+    Id: 139
+  - Interactable: {fileID: 1909010446}
+    Id: 140
+  - Interactable: {fileID: 1888832312}
+    Id: 141
+  - Interactable: {fileID: 1988156744}
+    Id: 142
+  - Interactable: {fileID: 1569700226}
+    Id: 143
+  - Interactable: {fileID: 1155681519}
+    Id: 144
+  - Interactable: {fileID: 1219119864}
+    Id: 145
+  - Interactable: {fileID: 1531862086}
+    Id: 146
+  - Interactable: {fileID: 1111628006}
+    Id: 147
+  - Interactable: {fileID: 1152333613}
+    Id: 148
+  - Interactable: {fileID: 1472803877}
+    Id: 149
+  - Interactable: {fileID: 81220994}
+    Id: 150
+  - Interactable: {fileID: 1318776679}
+    Id: 151
+  - Interactable: {fileID: 1780344299}
+    Id: 152
+  - Interactable: {fileID: 1772990139}
+    Id: 153
+  - Interactable: {fileID: 1499394468}
+    Id: 154
+  - Interactable: {fileID: 438302575}
+    Id: 155
+  - Interactable: {fileID: 343605007}
+    Id: 156
+  - Interactable: {fileID: 1846626171}
+    Id: 157
+  - Interactable: {fileID: 1404380290}
+    Id: 158
+  - Interactable: {fileID: 1834952578}
+    Id: 159
+  - Interactable: {fileID: 762008510}
+    Id: 160
+  - Interactable: {fileID: 750778490}
+    Id: 161
+  - Interactable: {fileID: 626832644}
+    Id: 162
+  - Interactable: {fileID: 1686940472}
+    Id: 163
+  - Interactable: {fileID: 1862966696}
+    Id: 164
+  - Interactable: {fileID: 101249838}
+    Id: 165
+  - Interactable: {fileID: 1816635323}
+    Id: 166
+  - Interactable: {fileID: 1162188226}
+    Id: 167
+  - Interactable: {fileID: 861622150}
+    Id: 168
+  - Interactable: {fileID: 86344144}
+    Id: 169
+  - Interactable: {fileID: 294452363}
+    Id: 170
+  - Interactable: {fileID: 1051789964}
+    Id: 171
+  - Interactable: {fileID: 1353220776}
+    Id: 172
+  - Interactable: {fileID: 325635636}
+    Id: 173
+  - Interactable: {fileID: 73225540}
+    Id: 174
+  - Interactable: {fileID: 1995188674}
+    Id: 175
+  - Interactable: {fileID: 747902899}
+    Id: 176
+  - Interactable: {fileID: 1456708882}
+    Id: 177
+  - Interactable: {fileID: 503663260}
+    Id: 178
+  - Interactable: {fileID: 283724154}
+    Id: 179
+  - Interactable: {fileID: 1180147030}
+    Id: 180
+  - Interactable: {fileID: 525003396}
+    Id: 181
+  - Interactable: {fileID: 2147365768}
+    Id: 182
+  - Interactable: {fileID: 122299474}
+    Id: 183
+  - Interactable: {fileID: 1476856433}
+    Id: 184
+  - Interactable: {fileID: 1142393720}
+    Id: 185
+  - Interactable: {fileID: 1372690649}
+    Id: 186
+  - Interactable: {fileID: 148987014}
+    Id: 187
+  - Interactable: {fileID: 522220942}
+    Id: 188
+  - Interactable: {fileID: 1069896385}
+    Id: 189
+  - Interactable: {fileID: 70413440}
+    Id: 190
+  - Interactable: {fileID: 1609557314}
+    Id: 191
+  - Interactable: {fileID: 1931015275}
+    Id: 192
+  - Interactable: {fileID: 1477115814}
+    Id: 193
+  - Interactable: {fileID: 1701305403}
+    Id: 194
+  - Interactable: {fileID: 1903928350}
+    Id: 195
+  - Interactable: {fileID: 456524261}
+    Id: 196
+  - Interactable: {fileID: 1236176846}
+    Id: 197
+  - Interactable: {fileID: 1258020468}
+    Id: 198
+  - Interactable: {fileID: 1356875075}
+    Id: 199
+  - Interactable: {fileID: 224511739}
+    Id: 200
+  - Interactable: {fileID: 285043407}
+    Id: 201
+  - Interactable: {fileID: 4992199}
+    Id: 202
+  - Interactable: {fileID: 766381642}
+    Id: 203
+  - Interactable: {fileID: 1979522964}
+    Id: 204
+  - Interactable: {fileID: 1108207696}
+    Id: 205
+  - Interactable: {fileID: 501791861}
+    Id: 206
+  - Interactable: {fileID: 305182849}
+    Id: 207
+  - Interactable: {fileID: 1897252341}
+    Id: 208
+  - Interactable: {fileID: 1771882851}
+    Id: 209
+  - Interactable: {fileID: 711397930}
+    Id: 210
+  - Interactable: {fileID: 642449235}
+    Id: 211
+  - Interactable: {fileID: 961816741}
+    Id: 212
+  - Interactable: {fileID: 483126899}
+    Id: 213
+  - Interactable: {fileID: 417503336}
+    Id: 214
+  - Interactable: {fileID: 1984772493}
+    Id: 215
+  - Interactable: {fileID: 977534768}
+    Id: 216
+  - Interactable: {fileID: 1429696210}
+    Id: 217
+  - Interactable: {fileID: 559789046}
+    Id: 218
+  - Interactable: {fileID: 1972819765}
+    Id: 219
+  - Interactable: {fileID: 1881180104}
+    Id: 220
+  - Interactable: {fileID: 1782039828}
+    Id: 221
+  - Interactable: {fileID: 1043232297}
+    Id: 222
+  - Interactable: {fileID: 1176208088}
+    Id: 223
+  - Interactable: {fileID: 438428378}
+    Id: 224
+  - Interactable: {fileID: 1904294291}
+    Id: 225
+  - Interactable: {fileID: 780094440}
+    Id: 226
+  - Interactable: {fileID: 1924185989}
+    Id: 227
+  - Interactable: {fileID: 890835858}
+    Id: 228
+  - Interactable: {fileID: 1220722354}
+    Id: 229
+  - Interactable: {fileID: 1029724663}
+    Id: 230
+  - Interactable: {fileID: 1057232373}
+    Id: 231
+  - Interactable: {fileID: 1546309969}
+    Id: 232
+  - Interactable: {fileID: 1977567803}
+    Id: 233
+  - Interactable: {fileID: 253734502}
+    Id: 234
+  - Interactable: {fileID: 32403700}
+    Id: 235
+  - Interactable: {fileID: 1587094897}
+    Id: 236
+  - Interactable: {fileID: 1954666337}
+    Id: 237
+  - Interactable: {fileID: 343101838}
+    Id: 238
+  - Interactable: {fileID: 1946815964}
+    Id: 239
+  - Interactable: {fileID: 1730550706}
+    Id: 240
+  - Interactable: {fileID: 691632865}
+    Id: 241
+  - Interactable: {fileID: 351356632}
+    Id: 242
+  - Interactable: {fileID: 809174338}
+    Id: 243
+  - Interactable: {fileID: 981607507}
+    Id: 244
+  - Interactable: {fileID: 414681894}
+    Id: 245
+  - Interactable: {fileID: 515851102}
+    Id: 246
+  - Interactable: {fileID: 1238199112}
+    Id: 247
+  - Interactable: {fileID: 1725574469}
+    Id: 248
+  - Interactable: {fileID: 1900334139}
+    Id: 249
+  - Interactable: {fileID: 1354294832}
+    Id: 250
+  - Interactable: {fileID: 1695455302}
+    Id: 251
+  - Interactable: {fileID: 1855523662}
+    Id: 252
+  - Interactable: {fileID: 260211133}
+    Id: 253
+  - Interactable: {fileID: 1385593076}
+    Id: 254
+  - Interactable: {fileID: 2035173977}
+    Id: 255
+  - Interactable: {fileID: 6193913739867866049}
+    Id: 256
+  - Interactable: {fileID: 73943549}
+    Id: 257
+  - Interactable: {fileID: 133951878}
+    Id: 258
+  - Interactable: {fileID: 14103716}
+    Id: 259
+  - Interactable: {fileID: 1398238952}
+    Id: 260
+  - Interactable: {fileID: 2004207865}
+    Id: 261
+  - Interactable: {fileID: 1538502937}
+    Id: 262
+  - Interactable: {fileID: 1117797391}
+    Id: 263
+  - Interactable: {fileID: 913528787}
+    Id: 264
+  - Interactable: {fileID: 1087578763}
+    Id: 265
+  - Interactable: {fileID: 1184381844}
+    Id: 266
+  - Interactable: {fileID: 1121776241}
+    Id: 267
+  - Interactable: {fileID: 1413003959}
+    Id: 268
+  - Interactable: {fileID: 230256375}
+    Id: 269
+  - Interactable: {fileID: 1867726714}
+    Id: 270
+  - Interactable: {fileID: 1352246956}
+    Id: 271
+  - Interactable: {fileID: 1513193012}
+    Id: 272
+  - Interactable: {fileID: 343115996}
+    Id: 273
+  - Interactable: {fileID: 1514286835}
+    Id: 274
+  - Interactable: {fileID: 637959180}
+    Id: 275
+  - Interactable: {fileID: 1226679450}
+    Id: 276
+  - Interactable: {fileID: 1202640390}
+    Id: 277
+  - Interactable: {fileID: 1197977005}
+    Id: 278
+  - Interactable: {fileID: 746028542}
+    Id: 279
+  - Interactable: {fileID: 1684971910}
+    Id: 280
+  - Interactable: {fileID: 112913440}
+    Id: 281
+  - Interactable: {fileID: 1537762768}
+    Id: 282
+  - Interactable: {fileID: 1579248373}
+    Id: 283
+  - Interactable: {fileID: 1491433612}
+    Id: 284
+  - Interactable: {fileID: 1906930765}
+    Id: 285
+  - Interactable: {fileID: 211935769}
+    Id: 286
+  - Interactable: {fileID: 877335337}
+    Id: 287
+  - Interactable: {fileID: 1315742552}
+    Id: 288
+  - Interactable: {fileID: 1583637042}
+    Id: 289
+  - Interactable: {fileID: 1249793420}
+    Id: 290
+  - Interactable: {fileID: 1557238738}
+    Id: 291
+  - Interactable: {fileID: 2115753149}
+    Id: 292
+  - Interactable: {fileID: 714166242}
+    Id: 293
+  - Interactable: {fileID: 1680299667}
+    Id: 294
+  - Interactable: {fileID: 1080836236}
+    Id: 295
+  - Interactable: {fileID: 362297565}
+    Id: 296
+  - Interactable: {fileID: 1259388168}
+    Id: 297
+  - Interactable: {fileID: 61143411}
+    Id: 298
+  - Interactable: {fileID: 834442169}
+    Id: 299
+  - Interactable: {fileID: 2001019517}
+    Id: 300
+  - Interactable: {fileID: 1713109969}
+    Id: 301
+  - Interactable: {fileID: 756131429}
+    Id: 302
+  - Interactable: {fileID: 322975698}
+    Id: 303
+  - Interactable: {fileID: 971099820}
+    Id: 304
+  - Interactable: {fileID: 933312885}
+    Id: 305
+  - Interactable: {fileID: 725223200}
+    Id: 306
+  - Interactable: {fileID: 448155835}
+    Id: 307
+  - Interactable: {fileID: 364540092}
+    Id: 308
+  - Interactable: {fileID: 612204599}
+    Id: 309
+  - Interactable: {fileID: 1157837284}
+    Id: 105
+--- !u!4 &1086117973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086117971}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1086730842
 GameObject:
   m_ObjectHideFlags: 0
@@ -16594,39 +16848,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: TRM
       objectReference: {fileID: 0}
-    - target: {fileID: 7619644528173136206, guid: dc734c62c531d3f418153da10662f895,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528173136206, guid: dc734c62c531d3f418153da10662f895,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528173136206, guid: dc734c62c531d3f418153da10662f895,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528173136206, guid: dc734c62c531d3f418153da10662f895,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528173136206, guid: dc734c62c531d3f418153da10662f895,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528173136206, guid: dc734c62c531d3f418153da10662f895,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1111605437955212782, guid: dc734c62c531d3f418153da10662f895, type: 3}
-    - {fileID: 1946586005541737260, guid: dc734c62c531d3f418153da10662f895, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21369,12 +21591,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2001294983}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1633636598 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 63b60d0ee82805249afa9771865884e9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1795592000}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1637762200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6780234223393051385, guid: 6ee30ee2807429d438ee7c2eef229b38,
@@ -23479,11 +23695,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 63b60d0ee82805249afa9771865884e9,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.26
       objectReference: {fileID: 0}
@@ -23532,44 +23743,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3dd2c97367716734fac6ca336708f515, type: 2}
-    - target: {fileID: -7511558181221131132, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: ba0d4995b91b38840852495c34b740c0, type: 2}
-    - target: {fileID: -7511558181221131132, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: f6d2f145101067a4d979c23120b4b647, type: 2}
     - target: {fileID: 919132149155446097, guid: 63b60d0ee82805249afa9771865884e9,
         type: 3}
       propertyPath: m_Name
       value: Planetary_Orbital_Pod
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63b60d0ee82805249afa9771865884e9,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1795592004}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b60d0ee82805249afa9771865884e9, type: 3}
 --- !u!4 &1795592001 stripped
 Transform:
@@ -23577,28 +23759,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1795592000}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1795592004
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633636598}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -572050766738342601, guid: 63b60d0ee82805249afa9771865884e9, type: 3}
 --- !u!1 &1801040702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8567708015004589359, guid: 6ee30ee2807429d438ee7c2eef229b38,
@@ -24690,103 +24850,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: GravityPod_Scenarios
       objectReference: {fileID: 0}
-    - target: {fileID: 7619644527550165580, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527550165580, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527550165580, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527550165580, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527550165580, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644527550165580, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528241432081, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528241432081, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528241432081, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528241432081, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528241432081, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528241432081, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528298458334, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528298458334, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528298458334, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528298458334, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528298458334, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644528298458334, guid: 0826ad08030b27f42a93df4996271609,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1111605438020905649, guid: 0826ad08030b27f42a93df4996271609, type: 3}
-    - {fileID: 1946586005609495667, guid: 0826ad08030b27f42a93df4996271609, type: 3}
-    - {fileID: 1111605438301130476, guid: 0826ad08030b27f42a93df4996271609, type: 3}
-    - {fileID: 1946586005975701550, guid: 0826ad08030b27f42a93df4996271609, type: 3}
-    - {fileID: 1111605437973577854, guid: 0826ad08030b27f42a93df4996271609, type: 3}
-    - {fileID: 1946586005632423612, guid: 0826ad08030b27f42a93df4996271609, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25794,39 +25858,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowlingAlley
       objectReference: {fileID: 0}
-    - target: {fileID: 7619644526456565518, guid: f1d19b26de378144b9a332fddab1b320,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526456565518, guid: f1d19b26de378144b9a332fddab1b320,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526456565518, guid: f1d19b26de378144b9a332fddab1b320,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526456565518, guid: f1d19b26de378144b9a332fddab1b320,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526456565518, guid: f1d19b26de378144b9a332fddab1b320,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7619644526456565518, guid: f1d19b26de378144b9a332fddab1b320,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1111605439386473390, guid: f1d19b26de378144b9a332fddab1b320, type: 3}
-    - {fileID: 1946586007063004524, guid: f1d19b26de378144b9a332fddab1b320, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26369,8 +26401,11 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    OverrideHandRotation: 0
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
+  interactionCooldownTime: 0
   equippableSettings:
     version: 1
     ThrowVelocity: 5
@@ -26494,13 +26529,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -26516,6 +26553,8 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
@@ -26734,671 +26773,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.078943, y: 0.98231, z: 0.15870021}
   m_Center: {x: 0.0000038146973, y: 2.945483e-14, z: 0.6908999}
---- !u!1 &2131488180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2131488182}
-  - component: {fileID: 2131488181}
-  m_Layer: 0
-  m_Name: MeshUniqueIdManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2131488181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131488180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -136581813, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UniqueInteractableIds:
-  - Interactable: {fileID: 1772990139}
-    Id: 3
-  - Interactable: {fileID: 1499394468}
-    Id: 4
-  - Interactable: {fileID: 438302575}
-    Id: 5
-  - Interactable: {fileID: 343605007}
-    Id: 6
-  - Interactable: {fileID: 1846626171}
-    Id: 7
-  - Interactable: {fileID: 1404380290}
-    Id: 8
-  - Interactable: {fileID: 1834952578}
-    Id: 9
-  - Interactable: {fileID: 762008510}
-    Id: 10
-  - Interactable: {fileID: 750778490}
-    Id: 11
-  - Interactable: {fileID: 626832644}
-    Id: 12
-  - Interactable: {fileID: 1686940472}
-    Id: 13
-  - Interactable: {fileID: 1862966696}
-    Id: 14
-  - Interactable: {fileID: 101249838}
-    Id: 15
-  - Interactable: {fileID: 1816635323}
-    Id: 16
-  - Interactable: {fileID: 1162188226}
-    Id: 17
-  - Interactable: {fileID: 861622150}
-    Id: 18
-  - Interactable: {fileID: 86344144}
-    Id: 19
-  - Interactable: {fileID: 294452363}
-    Id: 20
-  - Interactable: {fileID: 1051789964}
-    Id: 21
-  - Interactable: {fileID: 1353220776}
-    Id: 22
-  - Interactable: {fileID: 325635636}
-    Id: 23
-  - Interactable: {fileID: 73225540}
-    Id: 24
-  - Interactable: {fileID: 1995188674}
-    Id: 25
-  - Interactable: {fileID: 747902899}
-    Id: 26
-  - Interactable: {fileID: 1456708882}
-    Id: 27
-  - Interactable: {fileID: 503663260}
-    Id: 28
-  - Interactable: {fileID: 283724154}
-    Id: 29
-  - Interactable: {fileID: 1180147030}
-    Id: 30
-  - Interactable: {fileID: 525003396}
-    Id: 31
-  - Interactable: {fileID: 2147365768}
-    Id: 32
-  - Interactable: {fileID: 122299474}
-    Id: 33
-  - Interactable: {fileID: 1476856433}
-    Id: 34
-  - Interactable: {fileID: 1142393720}
-    Id: 35
-  - Interactable: {fileID: 1372690649}
-    Id: 36
-  - Interactable: {fileID: 148987014}
-    Id: 37
-  - Interactable: {fileID: 522220942}
-    Id: 38
-  - Interactable: {fileID: 1069896385}
-    Id: 39
-  - Interactable: {fileID: 70413440}
-    Id: 40
-  - Interactable: {fileID: 1609557314}
-    Id: 41
-  - Interactable: {fileID: 1931015275}
-    Id: 42
-  - Interactable: {fileID: 1477115814}
-    Id: 43
-  - Interactable: {fileID: 1701305403}
-    Id: 44
-  - Interactable: {fileID: 1903928350}
-    Id: 45
-  - Interactable: {fileID: 456524261}
-    Id: 46
-  - Interactable: {fileID: 1236176846}
-    Id: 47
-  - Interactable: {fileID: 1258020468}
-    Id: 48
-  - Interactable: {fileID: 1356875075}
-    Id: 49
-  - Interactable: {fileID: 224511739}
-    Id: 50
-  - Interactable: {fileID: 285043407}
-    Id: 51
-  - Interactable: {fileID: 4992199}
-    Id: 52
-  - Interactable: {fileID: 766381642}
-    Id: 53
-  - Interactable: {fileID: 1979522964}
-    Id: 54
-  - Interactable: {fileID: 1108207696}
-    Id: 55
-  - Interactable: {fileID: 501791861}
-    Id: 56
-  - Interactable: {fileID: 305182849}
-    Id: 57
-  - Interactable: {fileID: 1897252341}
-    Id: 58
-  - Interactable: {fileID: 1771882851}
-    Id: 59
-  - Interactable: {fileID: 711397930}
-    Id: 60
-  - Interactable: {fileID: 642449235}
-    Id: 61
-  - Interactable: {fileID: 961816741}
-    Id: 62
-  - Interactable: {fileID: 483126899}
-    Id: 63
-  - Interactable: {fileID: 417503336}
-    Id: 64
-  - Interactable: {fileID: 1984772493}
-    Id: 65
-  - Interactable: {fileID: 977534768}
-    Id: 66
-  - Interactable: {fileID: 1429696210}
-    Id: 67
-  - Interactable: {fileID: 559789046}
-    Id: 68
-  - Interactable: {fileID: 1972819765}
-    Id: 69
-  - Interactable: {fileID: 1881180104}
-    Id: 70
-  - Interactable: {fileID: 1782039828}
-    Id: 71
-  - Interactable: {fileID: 1043232297}
-    Id: 72
-  - Interactable: {fileID: 1176208088}
-    Id: 73
-  - Interactable: {fileID: 438428378}
-    Id: 74
-  - Interactable: {fileID: 1904294291}
-    Id: 75
-  - Interactable: {fileID: 780094440}
-    Id: 76
-  - Interactable: {fileID: 1924185989}
-    Id: 77
-  - Interactable: {fileID: 890835858}
-    Id: 78
-  - Interactable: {fileID: 1220722354}
-    Id: 79
-  - Interactable: {fileID: 1029724663}
-    Id: 80
-  - Interactable: {fileID: 1057232373}
-    Id: 81
-  - Interactable: {fileID: 1546309969}
-    Id: 82
-  - Interactable: {fileID: 1977567803}
-    Id: 83
-  - Interactable: {fileID: 253734502}
-    Id: 84
-  - Interactable: {fileID: 32403700}
-    Id: 85
-  - Interactable: {fileID: 1587094897}
-    Id: 86
-  - Interactable: {fileID: 1954666337}
-    Id: 87
-  - Interactable: {fileID: 343101838}
-    Id: 88
-  - Interactable: {fileID: 1946815964}
-    Id: 89
-  - Interactable: {fileID: 1730550706}
-    Id: 90
-  - Interactable: {fileID: 691632865}
-    Id: 91
-  - Interactable: {fileID: 351356632}
-    Id: 92
-  - Interactable: {fileID: 809174338}
-    Id: 93
-  - Interactable: {fileID: 981607507}
-    Id: 94
-  - Interactable: {fileID: 414681894}
-    Id: 95
-  - Interactable: {fileID: 515851102}
-    Id: 96
-  - Interactable: {fileID: 1238199112}
-    Id: 97
-  - Interactable: {fileID: 1725574469}
-    Id: 98
-  - Interactable: {fileID: 1900334139}
-    Id: 99
-  - Interactable: {fileID: 1354294832}
-    Id: 100
-  - Interactable: {fileID: 1695455302}
-    Id: 101
-  - Interactable: {fileID: 1855523662}
-    Id: 102
-  - Interactable: {fileID: 260211133}
-    Id: 103
-  - Interactable: {fileID: 1385593076}
-    Id: 104
-  - Interactable: {fileID: 2035173977}
-    Id: 105
-  - Interactable: {fileID: 6193913739867866049}
-    Id: 106
-  - Interactable: {fileID: 73943549}
-    Id: 107
-  - Interactable: {fileID: 133951878}
-    Id: 108
-  - Interactable: {fileID: 14103716}
-    Id: 109
-  - Interactable: {fileID: 1398238952}
-    Id: 110
-  - Interactable: {fileID: 2004207865}
-    Id: 111
-  - Interactable: {fileID: 1538502937}
-    Id: 112
-  - Interactable: {fileID: 1117797391}
-    Id: 113
-  - Interactable: {fileID: 913528787}
-    Id: 114
-  - Interactable: {fileID: 1087578763}
-    Id: 115
-  - Interactable: {fileID: 1184381844}
-    Id: 116
-  - Interactable: {fileID: 1121776241}
-    Id: 117
-  - Interactable: {fileID: 1413003959}
-    Id: 118
-  - Interactable: {fileID: 230256375}
-    Id: 119
-  - Interactable: {fileID: 1867726714}
-    Id: 120
-  - Interactable: {fileID: 1352246956}
-    Id: 121
-  - Interactable: {fileID: 1513193012}
-    Id: 122
-  - Interactable: {fileID: 343115996}
-    Id: 123
-  - Interactable: {fileID: 1514286835}
-    Id: 124
-  - Interactable: {fileID: 637959180}
-    Id: 125
-  - Interactable: {fileID: 1226679450}
-    Id: 126
-  - Interactable: {fileID: 1202640390}
-    Id: 127
-  - Interactable: {fileID: 1197977005}
-    Id: 128
-  - Interactable: {fileID: 746028542}
-    Id: 129
-  - Interactable: {fileID: 1684971910}
-    Id: 130
-  - Interactable: {fileID: 112913440}
-    Id: 131
-  - Interactable: {fileID: 1537762768}
-    Id: 132
-  - Interactable: {fileID: 1579248373}
-    Id: 133
-  - Interactable: {fileID: 1491433612}
-    Id: 134
-  - Interactable: {fileID: 1906930765}
-    Id: 135
-  - Interactable: {fileID: 211935769}
-    Id: 136
-  - Interactable: {fileID: 877335337}
-    Id: 137
-  - Interactable: {fileID: 1315742552}
-    Id: 138
-  - Interactable: {fileID: 1583637042}
-    Id: 139
-  - Interactable: {fileID: 1249793420}
-    Id: 140
-  - Interactable: {fileID: 1557238738}
-    Id: 141
-  - Interactable: {fileID: 2115753149}
-    Id: 142
-  - Interactable: {fileID: 714166242}
-    Id: 143
-  - Interactable: {fileID: 1680299667}
-    Id: 144
-  - Interactable: {fileID: 1080836236}
-    Id: 145
-  - Interactable: {fileID: 362297565}
-    Id: 146
-  - Interactable: {fileID: 1259388168}
-    Id: 147
-  - Interactable: {fileID: 61143411}
-    Id: 148
-  - Interactable: {fileID: 834442169}
-    Id: 149
-  - Interactable: {fileID: 2001019517}
-    Id: 150
-  - Interactable: {fileID: 1713109969}
-    Id: 151
-  - Interactable: {fileID: 756131429}
-    Id: 152
-  - Interactable: {fileID: 322975698}
-    Id: 153
-  - Interactable: {fileID: 971099820}
-    Id: 154
-  - Interactable: {fileID: 933312885}
-    Id: 155
-  - Interactable: {fileID: 725223200}
-    Id: 156
-  - Interactable: {fileID: 448155835}
-    Id: 157
-  - Interactable: {fileID: 1058964862}
-    Id: 158
-  - Interactable: {fileID: 439983149}
-    Id: 159
-  - Interactable: {fileID: 1157837284}
-    Id: 160
-  - Interactable: {fileID: 74696452}
-    Id: 161
-  - Interactable: {fileID: 1118674684}
-    Id: 162
-  - Interactable: {fileID: 613103127}
-    Id: 163
-  - Interactable: {fileID: 349252802}
-    Id: 164
-  - Interactable: {fileID: 207090000}
-    Id: 165
-  - Interactable: {fileID: 813163054}
-    Id: 166
-  - Interactable: {fileID: 261126191}
-    Id: 167
-  - Interactable: {fileID: 2081198682}
-    Id: 168
-  - Interactable: {fileID: 35111289}
-    Id: 169
-  - Interactable: {fileID: 298173360}
-    Id: 170
-  - Interactable: {fileID: 876149502}
-    Id: 171
-  - Interactable: {fileID: 1645452999}
-    Id: 172
-  - Interactable: {fileID: 1967964592}
-    Id: 173
-  - Interactable: {fileID: 157648830}
-    Id: 174
-  - Interactable: {fileID: 1104340462}
-    Id: 175
-  - Interactable: {fileID: 105001303}
-    Id: 176
-  - Interactable: {fileID: 1547960864}
-    Id: 177
-  - Interactable: {fileID: 1863642495}
-    Id: 178
-  - Interactable: {fileID: 55084002}
-    Id: 179
-  - Interactable: {fileID: 745466998}
-    Id: 180
-  - Interactable: {fileID: 1646477511}
-    Id: 181
-  - Interactable: {fileID: 2089601758}
-    Id: 182
-  - Interactable: {fileID: 855060424}
-    Id: 183
-  - Interactable: {fileID: 1507876650}
-    Id: 184
-  - Interactable: {fileID: 467509966}
-    Id: 185
-  - Interactable: {fileID: 295741141}
-    Id: 186
-  - Interactable: {fileID: 1475074368}
-    Id: 187
-  - Interactable: {fileID: 1567879582}
-    Id: 188
-  - Interactable: {fileID: 1182372302}
-    Id: 189
-  - Interactable: {fileID: 1868347841}
-    Id: 190
-  - Interactable: {fileID: 1767786982}
-    Id: 191
-  - Interactable: {fileID: 1860477940}
-    Id: 192
-  - Interactable: {fileID: 460268305}
-    Id: 193
-  - Interactable: {fileID: 1477165541}
-    Id: 194
-  - Interactable: {fileID: 1290365572}
-    Id: 195
-  - Interactable: {fileID: 1929101966}
-    Id: 196
-  - Interactable: {fileID: 1553429813}
-    Id: 197
-  - Interactable: {fileID: 79108543}
-    Id: 198
-  - Interactable: {fileID: 262595769}
-    Id: 199
-  - Interactable: {fileID: 1473507454}
-    Id: 200
-  - Interactable: {fileID: 1957490210}
-    Id: 201
-  - Interactable: {fileID: 298910428}
-    Id: 202
-  - Interactable: {fileID: 1537189027}
-    Id: 203
-  - Interactable: {fileID: 986258242}
-    Id: 204
-  - Interactable: {fileID: 1720593648}
-    Id: 205
-  - Interactable: {fileID: 1909010446}
-    Id: 206
-  - Interactable: {fileID: 1888832312}
-    Id: 207
-  - Interactable: {fileID: 1988156744}
-    Id: 208
-  - Interactable: {fileID: 1569700226}
-    Id: 209
-  - Interactable: {fileID: 1155681519}
-    Id: 210
-  - Interactable: {fileID: 1219119864}
-    Id: 211
-  - Interactable: {fileID: 1531862086}
-    Id: 212
-  - Interactable: {fileID: 1111628006}
-    Id: 213
-  - Interactable: {fileID: 1152333613}
-    Id: 214
-  - Interactable: {fileID: 1950445199}
-    Id: 215
-  - Interactable: {fileID: 771794849}
-    Id: 216
-  - Interactable: {fileID: 1318776679}
-    Id: 217
-  - Interactable: {fileID: 81220994}
-    Id: 218
-  - Interactable: {fileID: 1472803877}
-    Id: 219
-  - Interactable: {fileID: 612681437}
-    Id: 220
-  - Interactable: {fileID: 1585212839}
-    Id: 221
-  - Interactable: {fileID: 1212175171}
-    Id: 222
-  - Interactable: {fileID: 1849725583}
-    Id: 223
-  - Interactable: {fileID: 1341385082}
-    Id: 224
-  - Interactable: {fileID: 1040516577}
-    Id: 225
-  - Interactable: {fileID: 242555502}
-    Id: 226
-  - Interactable: {fileID: 206944491}
-    Id: 227
-  - Interactable: {fileID: 1193727031}
-    Id: 228
-  - Interactable: {fileID: 896575007}
-    Id: 229
-  - Interactable: {fileID: 1437262110}
-    Id: 230
-  - Interactable: {fileID: 878705892}
-    Id: 231
-  - Interactable: {fileID: 1160179782}
-    Id: 232
-  - Interactable: {fileID: 1665171283}
-    Id: 233
-  - Interactable: {fileID: 519044990}
-    Id: 234
-  - Interactable: {fileID: 334253210}
-    Id: 235
-  - Interactable: {fileID: 1801040702}
-    Id: 236
-  - Interactable: {fileID: 656099633}
-    Id: 237
-  - Interactable: {fileID: 905387830}
-    Id: 238
-  - Interactable: {fileID: 1236680560}
-    Id: 239
-  - Interactable: {fileID: 1015943196}
-    Id: 240
-  - Interactable: {fileID: 1112147591}
-    Id: 241
-  - Interactable: {fileID: 689616100}
-    Id: 242
-  - Interactable: {fileID: 2019665304}
-    Id: 243
-  - Interactable: {fileID: 371000550}
-    Id: 244
-  - Interactable: {fileID: 551119948}
-    Id: 245
-  - Interactable: {fileID: 294130756}
-    Id: 246
-  - Interactable: {fileID: 949670156}
-    Id: 247
-  - Interactable: {fileID: 700704303}
-    Id: 248
-  - Interactable: {fileID: 963707427}
-    Id: 249
-  - Interactable: {fileID: 1047722290}
-    Id: 250
-  - Interactable: {fileID: 1851781857}
-    Id: 251
-  - Interactable: {fileID: 2053982707}
-    Id: 252
-  - Interactable: {fileID: 226574503}
-    Id: 253
-  - Interactable: {fileID: 1667654499}
-    Id: 254
-  - Interactable: {fileID: 871688797}
-    Id: 255
-  - Interactable: {fileID: 1916844903}
-    Id: 256
-  - Interactable: {fileID: 79517326}
-    Id: 257
-  - Interactable: {fileID: 32122125}
-    Id: 258
-  - Interactable: {fileID: 1520659160}
-    Id: 259
-  - Interactable: {fileID: 733718040}
-    Id: 260
-  - Interactable: {fileID: 1939790239}
-    Id: 261
-  - Interactable: {fileID: 2086989527}
-    Id: 262
-  - Interactable: {fileID: 430770311}
-    Id: 263
-  - Interactable: {fileID: 177888488}
-    Id: 264
-  - Interactable: {fileID: 1197016457}
-    Id: 265
-  - Interactable: {fileID: 1826699708}
-    Id: 266
-  - Interactable: {fileID: 1735297373}
-    Id: 267
-  - Interactable: {fileID: 1253111765}
-    Id: 268
-  - Interactable: {fileID: 340257435}
-    Id: 269
-  - Interactable: {fileID: 62986420}
-    Id: 270
-  - Interactable: {fileID: 659641434}
-    Id: 271
-  - Interactable: {fileID: 790505184}
-    Id: 272
-  - Interactable: {fileID: 1426608932}
-    Id: 273
-  - Interactable: {fileID: 970173672}
-    Id: 274
-  - Interactable: {fileID: 251721961}
-    Id: 275
-  - Interactable: {fileID: 1199022966}
-    Id: 276
-  - Interactable: {fileID: 411997993}
-    Id: 277
-  - Interactable: {fileID: 195536961}
-    Id: 278
-  - Interactable: {fileID: 815731725}
-    Id: 279
-  - Interactable: {fileID: 409532879}
-    Id: 280
-  - Interactable: {fileID: 1637762200}
-    Id: 281
-  - Interactable: {fileID: 2135464310}
-    Id: 282
-  - Interactable: {fileID: 173293950}
-    Id: 283
-  - Interactable: {fileID: 385740378}
-    Id: 284
-  - Interactable: {fileID: 2036130445}
-    Id: 285
-  - Interactable: {fileID: 552247410}
-    Id: 286
-  - Interactable: {fileID: 750129267}
-    Id: 287
-  - Interactable: {fileID: 1902364081}
-    Id: 288
-  - Interactable: {fileID: 1449255387}
-    Id: 289
-  - Interactable: {fileID: 1937765874}
-    Id: 290
-  - Interactable: {fileID: 1347529517}
-    Id: 291
-  - Interactable: {fileID: 1622733757}
-    Id: 292
-  - Interactable: {fileID: 24418791}
-    Id: 293
-  - Interactable: {fileID: 717306252}
-    Id: 294
-  - Interactable: {fileID: 506842522}
-    Id: 295
-  - Interactable: {fileID: 1205133107}
-    Id: 296
-  - Interactable: {fileID: 407272200}
-    Id: 297
-  - Interactable: {fileID: 1287589863}
-    Id: 298
-  - Interactable: {fileID: 552545009}
-    Id: 299
-  - Interactable: {fileID: 585081433}
-    Id: 300
-  - Interactable: {fileID: 808222776}
-    Id: 301
-  - Interactable: {fileID: 1842359702}
-    Id: 302
-  - Interactable: {fileID: 1879858609}
-    Id: 303
-  - Interactable: {fileID: 612204599}
-    Id: 304
-  - Interactable: {fileID: 364540092}
-    Id: 305
-  - Interactable: {fileID: 1780344299}
-    Id: 306
-  - Interactable: {fileID: 98080313}
-    Id: 307
-  - Interactable: {fileID: 1267430004}
-    Id: 308
-  - Interactable: {fileID: 1064686882}
-    Id: 309
-  - Interactable: {fileID: 1249206770}
-    Id: 310
-  - Interactable: {fileID: 427049681}
-    Id: 311
-  - Interactable: {fileID: 855012663}
-    Id: 312
---- !u!4 &2131488182
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131488180}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2134591448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29227,31 +28601,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2070535497}
     m_Modifications:
-    - target: {fileID: 2270014270058199958, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2270014270058199958, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2270014270058199958, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2270014270058199958, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2270014270058199958, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 2740884659534483586, guid: af1581e4f70b8d64aa3116df71098c39,
         type: 3}
       propertyPath: m_Name
@@ -29307,39 +28656,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6793994856476162464, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793994856476162464, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793994856476162464, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793994856476162464, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793994856476162464, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6793994856476162464, guid: af1581e4f70b8d64aa3116df71098c39,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4078646359411066112, guid: af1581e4f70b8d64aa3116df71098c39, type: 3}
-    - {fileID: 3239457746073572290, guid: af1581e4f70b8d64aa3116df71098c39, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31337,8 +30654,7 @@ PrefabInstance:
       value: FishyFun
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6527973138005133962, guid: cc15783ec910c8843aeb870bc7735ce6, type: 3}
-    - {fileID: 5689904583354080328, guid: cc15783ec910c8843aeb870bc7735ce6, type: 3}
+    - {fileID: 6075289431488803351, guid: cc15783ec910c8843aeb870bc7735ce6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31688,36 +31004,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagnetBoards_Demo
       objectReference: {fileID: 0}
-    - target: {fileID: 6154856828052537056, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154856828052537056, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154856828052537056, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154856828052537056, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154856828052537056, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6154856828052537056, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7409366803222155979, guid: d518a16932518c54683617e8721cb9df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31768,39 +31054,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8706966357798023990, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706966357798023990, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706966357798023990, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706966357798023990, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706966357798023990, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706966357798023990, guid: d518a16932518c54683617e8721cb9df,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3727059364071195200, guid: d518a16932518c54683617e8721cb9df, type: 3}
-    - {fileID: 2870959377139405954, guid: d518a16932518c54683617e8721cb9df, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31903,36 +31157,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2070535497}
     m_Modifications:
-    - target: {fileID: 3939975701056899730, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939975701056899730, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939975701056899730, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939975701056899730, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939975701056899730, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939975701056899730, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7532230493321056172, guid: b4bb81961b06b254a90a3028c9a780ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31988,57 +31212,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Air_Hockey_Simple
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5800291159404082738, guid: b4bb81961b06b254a90a3028c9a780ab, type: 3}
-    - {fileID: 4904517837934502128, guid: b4bb81961b06b254a90a3028c9a780ab, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7532230493374467594, guid: b4bb81961b06b254a90a3028c9a780ab,
+    - targetCorrespondingSourceObject: {fileID: 4984648683501537818, guid: b4bb81961b06b254a90a3028c9a780ab,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230492501077060, guid: b4bb81961b06b254a90a3028c9a780ab,
+    - targetCorrespondingSourceObject: {fileID: 2337156641539136313, guid: b4bb81961b06b254a90a3028c9a780ab,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230493098015212, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230492133094924, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230493208978623, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230493628894640, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230492099311091, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230493337789479, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230493394140786, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230492498880120, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230493631917231, guid: b4bb81961b06b254a90a3028c9a780ab,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7532230492271137698, guid: b4bb81961b06b254a90a3028c9a780ab,
+    - targetCorrespondingSourceObject: {fileID: 5747758277695256853, guid: b4bb81961b06b254a90a3028c9a780ab,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -33138,71 +32324,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 57427701}
     m_Modifications:
-    - target: {fileID: 2126911753456958855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126911753456958855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126911753456958855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126911753456958855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126911753456958855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126911753456958855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: InteractionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: interactionProximityRadius
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301307884508951528, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6693098255139060681, guid: d49d2c9ddc3078b4aaa8f9925a710fa1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33258,9 +32379,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuoyancyFun
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8887594289649090855, guid: d49d2c9ddc3078b4aaa8f9925a710fa1, type: 3}
-    - {fileID: 8014592060150142949, guid: d49d2c9ddc3078b4aaa8f9925a710fa1, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33724,5 +32843,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1925044361}
   - {fileID: 1014965132}
-  - {fileID: 2131488182}
-  - {fileID: 127929647}
+  - {fileID: 1086117973}

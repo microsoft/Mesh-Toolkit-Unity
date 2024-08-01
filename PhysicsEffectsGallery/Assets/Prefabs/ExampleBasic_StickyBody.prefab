@@ -726,7 +726,7 @@ Transform:
   - {fileID: 4907524537615442531}
   - {fileID: 4907524537044156615}
   - {fileID: 4907524536388788138}
-  - {fileID: 4204554851323485332}
+  - {fileID: 9171854320450780055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4907524537609277760
@@ -1235,6 +1235,98 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8828277980367924600, guid: 225ec914c5aaa674a9bd845b6658f346, type: 3}
+--- !u!1001 &74990147909446755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4907524537609277761}
+    m_Modifications:
+    - target: {fileID: 937993471795757529, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_Name
+      value: ResetBodyTransformsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081955929693740226, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ButtonPressed","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioSource,
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButtonReleased","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioSource,
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ResetBodyTransforms","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Microsoft.Mesh.Physics.ResetBodyTransforms,
+        Microsoft.Mesh.Physics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081955929693740226, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081955929693740226, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: _data._objectReferences.Array.data[2]
+      value: 
+      objectReference: {fileID: 4907524537609277760}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d3cda6722a2dec43a86a90fb7a55bde, type: 3}
+--- !u!4 &9171854320450780055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9097996703936698356, guid: 1d3cda6722a2dec43a86a90fb7a55bde,
+    type: 3}
+  m_PrefabInstance: {fileID: 74990147909446755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4907524536527385355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1303,6 +1395,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}
       propertyPath: collisionControlTag
@@ -1348,204 +1470,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1749318554716245908, guid: ad2d9efcb1587ee48aeec927b1f49c15,
     type: 3}
   m_PrefabInstance: {fileID: 4907524536527385355}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4907524537330584416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4907524537609277761}
-    m_Modifications:
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749339]
-      value: com.microsoft.mesh.physics.toolbox Microsoft.Mesh.Physics.SharedEventsAction_ResetBodyTransforms
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749340]
-      value: com.microsoft.mesh.physics.toolbox Microsoft.Mesh.Physics.SharedEventsAction_DebugLog
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749341]
-      value: com.microsoft.mesh.physics.toolbox Microsoft.Mesh.Physics.SharedEventsAction_DebugLog
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749340].message
-      value: SharedControlEvents dispatching event "Button Pressed"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749341].message
-      value: SharedControlEvents dispatching event "Button Released"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749340].logLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749341].logLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749339].resetDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749339].resetAction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749339].resetTarget
-      value: 
-      objectReference: {fileID: 4907524537609277760}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749340].showWallclockTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749341].showWallclockTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749340].showLocalSceneTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749341].showLocalSceneTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749340].showSharedSceneTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: managedReferences[5165736944905749341].showSharedSceneTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: customizableEvents.Array.data[0].onEvent.actions.Array.data[0].action
-      value: 5165736944905749339
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: customizableEvents.Array.data[0].onEvent.actions.Array.data[1].action
-      value: 5165736944905749340
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: customizableEvents.Array.data[1].onEvent.actions.Array.data[0].action
-      value: 5165736944905749341
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: customizableEvents.Array.data[0].onEvent.actions.Array.data[1].dispatch
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075223537, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
-      propertyPath: customizableEvents.Array.data[1].onEvent.actions.Array.data[0].dispatch
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 937993471795757529, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_Name
-      value: StaticButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311261964528815490, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SomebodyPressedIt","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ResetBodyTransforms","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Microsoft.Mesh.Physics.ResetBodyTransforms,
-        Microsoft.Mesh.Physics","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311261964528815490, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311261964528815490, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[0]
-      value: 
-      objectReference: {fileID: 4907524537609277760}
-    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
-        type: 2}
-    - target: {fileID: 7004253473662570203, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
-        type: 2}
-    - target: {fileID: 7834836222910368052, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
-        type: 2}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
---- !u!4 &4204554851323485332 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
-    type: 3}
-  m_PrefabInstance: {fileID: 4907524537330584416}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4907524537587766951
 PrefabInstance:
@@ -1614,6 +1538,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}
@@ -1729,6 +1683,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}
       propertyPath: collisionControlTag
@@ -1842,6 +1826,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}
@@ -1957,6 +1971,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}
       propertyPath: collisionControlTag
@@ -2071,6 +2115,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}
       propertyPath: collisionControlTag
@@ -2184,6 +2258,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: interactionProximityRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155239095178301272, guid: ad2d9efcb1587ee48aeec927b1f49c15,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8865572629407663367, guid: ad2d9efcb1587ee48aeec927b1f49c15,
         type: 3}

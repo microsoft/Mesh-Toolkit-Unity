@@ -209,9 +209,12 @@ MonoBehaviour:
   m_Script: {fileID: 761857578, guid: 4215dfc0be7da4a47a6346b7585b79fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  version: 1
+  InteractionProximityRadius: 30
+  interactionProximityRadius: 30
   highlightSettings:
-    WhileHovered: 0
-    WhileSelected: 0
+    Hovered: 1
+    Selected: 1
     HighlightMechanism: 2
     HighlightColor: {r: 0.92, g: 0.92, b: 0.92, a: 1}
     HighlightTransitionDuration: 0.15
@@ -228,54 +231,37 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    OverrideHandRotation: 0
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
+  interactionCooldownTime: 0
   equippableSettings:
+    version: 1
+    ThrowVelocity: 1
+    MinThrowVelocity: 1
+    ActivateType: 2
     InteractionOffset:
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      rotation: {x: 0, y: 0, z: 0}
     EquipTargetPose:
       position: {x: 0.25, y: 0.25, z: 0.25}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
+      rotation: {x: 0, y: 0, z: 0}
     EquipHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    ActivateType: 2
-    ActivateTargetPoses:
-    - Position: {x: 0.25, y: 0.25, z: 0.25}
-      Rotation: {x: 0, y: 0, z: 0}
-      InterpolationTime: 0.5
-      AnimationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+    UseAimAnimationSystem: 0
+    ReleaseTime: 0.21
     Throwable: 0
-    ThrowVelocity: 1
+    MaxThrowVelocity2D: 1
+    ThrowDirectionOffset: {x: 0, y: 0, z: 0}
+    MinThrowVelocityVR: 1
+    MaxThrowVelocityVR: 1
     ArmExtensionOnAim: 1
     AimHandPose:
       HandPoseShape: 4
       HandPoseSize: 1
-    AimHandRotation: {x: 0, y: 0, z: 0, w: 1}
+    AimHandRotation: {x: 0, y: 0, z: 0}
     ThrowHandPose:
       HandPoseShape: 6
       HandPoseSize: 1
@@ -334,20 +320,54 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    InteractionEvents: []
+    ActivateTargetPoses:
+    - Position: {x: 0.25, y: 0.25, z: 0.25}
+      Rotation: {x: 0, y: 0, z: 0}
+      InterpolationTime: 0.5
+      AnimationCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    activateType: 2
+    ShowAimArc: 1
+    AimArcOrigin: {fileID: 0}
+    OverrideAimArcColor: 0
+    AimArcColor: {r: 1, g: 1, b: 1, a: 1}
   equippable: 0
   manipulable: 1
   manipulationSettings:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -363,13 +383,14 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
       enabled: 0
       springStrength: 1
       dampingFactor: 0.2
-  interactionEvents: []
 --- !u!1001 &8375046773970509171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2682,12 +2703,13 @@ PrefabInstance:
     - target: {fileID: 4486009649955810621, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
       propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ResetBodyTransforms","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Microsoft.Mesh.Physics.ResetBodyTransforms,
+        Microsoft.Mesh.Physics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 4486009649955810621, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4486009649955810621, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
@@ -2710,14 +2732,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 10e0eabd44f5c4141a706efa9fccb14e,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 124676056322864448, guid: 938abe01bc89074469c83ca34edc5764, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1333502343666378063, guid: 938abe01bc89074469c83ca34edc5764,
+    - targetCorrespondingSourceObject: {fileID: 2271469283966640553, guid: 938abe01bc89074469c83ca34edc5764,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5222246852682933020}
+      addedObject: {fileID: 2174055801480390704}
   m_SourcePrefab: {fileID: 100100000, guid: 938abe01bc89074469c83ca34edc5764, type: 3}
 --- !u!4 &7402697311231076786 stripped
 Transform:
@@ -2725,19 +2748,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8375046775027289338}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7402697311231076789 stripped
+--- !u!1 &7764141900814265683 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1333502343666378063, guid: 938abe01bc89074469c83ca34edc5764,
+  m_CorrespondingSourceObject: {fileID: 2271469283966640553, guid: 938abe01bc89074469c83ca34edc5764,
     type: 3}
   m_PrefabInstance: {fileID: 8375046775027289338}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5222246852682933020
+--- !u!114 &2174055801480390704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7402697311231076789}
+  m_GameObject: {fileID: 7764141900814265683}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}

@@ -99,12 +99,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Synchronized animated button
+  m_text: 'Visual scripting tutorial: part 3
 
 
-    Use "MeshInteractableBody.isSelected"
-    and "OnStateChanged" to detect when a  client (either local or remote client)
-    pressed on an object. Connect the node to playing an animation and a sound effect.'
+    Synchronized animated button prefab
+
+
+    Use
+    "MeshInteractableBody.isSelected" and "OnStateChanged" to detect when a  client
+    (either local or remote client) pressed on an object. Connect the node to playing
+    an animation and a sound effect. This visual script is reused in all prefab instances
+    in the scene.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
@@ -208,7 +213,7 @@ Transform:
   m_Children:
   - {fileID: 7095385229168822306}
   - {fileID: 7994488375009907105}
-  - {fileID: 6661864991113789488}
+  - {fileID: 87326344218829159}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6598341475381367216
@@ -422,7 +427,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &2463786915441186756
+--- !u!1001 &9184155843260593811
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -430,116 +435,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1794224633686929151}
     m_Modifications:
-    - target: {fileID: 937993471795757529, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 937993471795757529, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_Name
       value: VisualScriptingButton
       objectReference: {fileID: 0}
-    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: m_text
-      value: "Animate\n Button"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77,
-        type: 2}
-    - target: {fileID: 1197092189539145991, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
-        type: 2}
-    - target: {fileID: 3006335121004891222, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: bce5023414386164a8563c6b23691e6d,
-        type: 2}
-    - target: {fileID: 7456194263003464223, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
-        type: 2}
-    - target: {fileID: 8100507146792665646, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ButtonPressed","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioSource,
-        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ButtonReleased","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioSource,
-        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"IsPressed","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[0]
-      value: 
-      objectReference: {fileID: 8746624121234395895, guid: 4367966ab4be41e48a53a068c9a44eb3,
-        type: 3}
-    - target: {fileID: 8507219580896164156, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[1]
-      value: 
-      objectReference: {fileID: 569818418391212277, guid: c1d7d42d2d88006418dd4cb29248d2a2,
-        type: 3}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.011518478
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.66483355
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+    - target: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -548,10 +494,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f0d44f60f276d8f478ffaf70dc10d1ba, type: 3}
---- !u!4 &6661864991113789488 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 09a0551ae93eae144a7eb02d73d0c615, type: 3}
+--- !u!4 &87326344218829159 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9097996703936698356, guid: f0d44f60f276d8f478ffaf70dc10d1ba,
+  m_CorrespondingSourceObject: {fileID: 9097996703936698356, guid: 09a0551ae93eae144a7eb02d73d0c615,
     type: 3}
-  m_PrefabInstance: {fileID: 2463786915441186756}
+  m_PrefabInstance: {fileID: 9184155843260593811}
   m_PrefabAsset: {fileID: 0}

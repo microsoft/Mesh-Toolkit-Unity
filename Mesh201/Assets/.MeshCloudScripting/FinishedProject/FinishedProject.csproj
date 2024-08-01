@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="scene.map" CopyToOutputDirectory="PreserveNewest" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <None Update="mesh.cloudscripting.manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -27,7 +26,7 @@
   </ItemGroup>
 	
   <ItemGroup>
-	<PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.15" />
+	  <PackageReference Include="Azure.AI.OpenAI" />
   </ItemGroup>
 	
   <ItemGroup>
