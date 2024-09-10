@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: InfoButtonWrapperStart
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Show
+      Dialog","summary":"Defines to display an info dialog popup","pan":{"x":-110.3896,"y":-131.652},"zoom":0.8833269,"elements":[{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":-6.0,"y":-192.0},"guid":"5bef1a4f-4168-406d-971f-fb2ce56b7841","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"9"},{"defaultValues":{},"position":{"x":302.0,"y":-164.0},"guid":"c85cfe10-fde3-4028-b1b6-7053b42e72ab","$version":"A","$type":"Unity.VisualScripting.If","$id":"11"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"Information_Button","$type":"System.String"},"object":null},"position":{"x":-590.0,"y":-168.0},"guid":"3caec2b9-91a9-4757-a772-e6a4db63b79f","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"13"},{"member":{"name":"IsSelectedLocally","parameterTypes":null,"targetType":"Microsoft.Mesh.Interactables.MeshInteractableBody","targetTypeName":"Microsoft.Mesh.Interactables.MeshInteractableBody","$version":"A"},"defaultValues":{"target":null},"position":{"x":-302.0,"y":-153.0},"guid":"1ccdf585-d845-4776-ac51-e0c138b266b2","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"15"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"enter","guid":"737fcdb9-fd8f-40ae-b253-c67d45d10c6a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"9"},"sourceKey":"out_0","destinationUnit":{"$ref":"11"},"destinationKey":"condition","guid":"00965bfd-ce84-4df5-9a52-a12d3c5cc42c","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"value","destinationUnit":{"$ref":"15"},"destinationKey":"target","guid":"1534aeb3-bb86-4e0a-bd70-f57bdb35d41c","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"value","destinationUnit":{"$ref":"9"},"destinationKey":"in_0","guid":"f6f03196-b6ed-4cfc-b088-0cd1c16f91f2","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-736.0,"yMin":-294.0,"xMax":776.5858,"yMax":92.11038},"label":"Show
+      Dialog","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"9d8c1fb6-df17-46a3-b3b5-b9a3450b71e1","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-729.0,"yMin":-371.0,"xMax":-483.0,"yMax":-306.0},"title":"","body":"//
+      Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"15dcbab6-2df3-4ef4-8643-7c30adc71655","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}'
+    _objectReferences: []

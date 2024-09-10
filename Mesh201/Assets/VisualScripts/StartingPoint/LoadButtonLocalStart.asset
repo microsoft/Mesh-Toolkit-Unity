@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: LoadButtonLocalStart
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Load
+      HTML","summary":null,"pan":{"x":207.3234,"y":227.0374},"zoom":1.0,"elements":[{"member":{"name":"IsSelectedLocally","parameterTypes":null,"targetType":"Microsoft.Mesh.Interactables.MeshInteractableBody","targetTypeName":"Microsoft.Mesh.Interactables.MeshInteractableBody","$version":"A"},"defaultValues":{"target":null},"position":{"x":-4.0,"y":30.0},"guid":"0121074a-fc1f-4fbf-8ad8-aa53d224d29e","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"9"},{"defaultValues":{},"position":{"x":481.0,"y":32.0},"guid":"3c96aa12-eb3a-4b16-ac09-5b49aa69ec5a","$version":"A","$type":"Unity.VisualScripting.If","$id":"12"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"HTMLAsset","$type":"System.String"},"object":null},"position":{"x":571.0,"y":215.0},"guid":"a3463aad-3f2c-464d-a273-7a18e2460028","$version":"A","$type":"Unity.VisualScripting.GetVariable"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"Button","$type":"System.String"},"object":null},"position":{"x":-195.0,"y":20.0},"guid":"8e58cd51-8580-4d7f-9d95-de969708169f","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"16"},{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":251.0,"y":-2.0},"guid":"3ea579b6-75d4-4f31-90db-8b0c40ebb7cf","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"18"},{"sourceUnit":{"$ref":"18"},"sourceKey":"trigger","destinationUnit":{"$ref":"12"},"destinationKey":"enter","guid":"37149941-d3dd-423a-a625-5ccc8b7848e1","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"9"},"sourceKey":"value","destinationUnit":{"$ref":"18"},"destinationKey":"in_0","guid":"a8093838-e4fb-4de1-94d5-1222384efea2","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"18"},"sourceKey":"out_0","destinationUnit":{"$ref":"12"},"destinationKey":"condition","guid":"8d3b3d3f-ef42-45f0-b1f9-b540dd6cce15","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"16"},"sourceKey":"value","destinationUnit":{"$ref":"9"},"destinationKey":"target","guid":"72379f88-7140-4e08-b602-f5fb1c76ea96","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-281.9999,"yMin":-164.9998,"xMax":1258.0,"yMax":375.0002},"label":"Load
+      HTML Local to each user","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"63471976-d370-4149-b031-a5e11003ae92","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-279.0,"yMin":-259.0,"xMax":-44.0,"yMax":-178.0},"title":"","body":"//
+      Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"7533ab55-6e2e-4695-8749-e24125ec2bde","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}'
+    _objectReferences: []

@@ -279,7 +279,7 @@ Transform:
   m_GameObject: {fileID: 2955816284608040574}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.003, y: 0.04, z: 1.369}
+  m_LocalPosition: {x: 0, y: 0.04, z: 1.2}
   m_LocalScale: {x: 0.15, y: 0.03, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -866,16 +866,16 @@ MonoBehaviour:
   m_Script: {fileID: 1677468679, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityType: 0
-  directionInLocalSpace: 0
-  targetVelocity: {x: 1, y: 0, z: 0}
-  maxAcceleration: 0.25
-  accelerationType: 1
   affectedBodies:
     conditions:
     - enabled: 0
       condition:
         rid: 4133678911885148160
+  velocityType: 0
+  directionInLocalSpace: 0
+  targetVelocity: {x: 1, y: 0, z: 0}
+  maxAcceleration: 0.25
+  accelerationType: 1
   references:
     version: 2
     RefIds:
@@ -914,8 +914,8 @@ Transform:
   m_GameObject: {fileID: 2955816284875960053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.391}
-  m_LocalScale: {x: 2, y: 0.1, z: 0.21624999}
+  m_LocalPosition: {x: 0, y: 0, z: -1.4}
+  m_LocalScale: {x: 2, y: 0.1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2955816284685018493}
@@ -1003,16 +1003,16 @@ MonoBehaviour:
   m_Script: {fileID: 1677468679, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityType: 0
-  directionInLocalSpace: 0
-  targetVelocity: {x: 0, y: 0, z: 1}
-  maxAcceleration: 0.25
-  accelerationType: 1
   affectedBodies:
     conditions:
     - enabled: 0
       condition:
         rid: 4133678911885148160
+  velocityType: 0
+  directionInLocalSpace: 0
+  targetVelocity: {x: 0, y: 0, z: 1}
+  maxAcceleration: 0.25
+  accelerationType: 1
   references:
     version: 2
     RefIds:
@@ -1312,17 +1312,17 @@ MonoBehaviour:
   m_Script: {fileID: -728301306, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  affectedBodies:
+    conditions:
+    - enabled: 1
+      condition:
+        rid: 5165737240579014660
   velocityType: 0
   speedLimits:
     min: 0.5
     max: 2.5
   maxAcceleration: 15
   accelerationType: 1
-  affectedBodies:
-    conditions:
-    - enabled: 1
-      condition:
-        rid: 5165737240579014660
   references:
     version: 2
     RefIds:
@@ -1360,8 +1360,8 @@ Transform:
   m_GameObject: {fileID: 2955816284999902927}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.363}
-  m_LocalScale: {x: 2, y: 0.1, z: 0.26624998}
+  m_LocalPosition: {x: 0, y: 0, z: 1.4}
+  m_LocalScale: {x: 2, y: 0.1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2955816284685018493}
@@ -1449,16 +1449,16 @@ MonoBehaviour:
   m_Script: {fileID: 1677468679, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityType: 0
-  directionInLocalSpace: 0
-  targetVelocity: {x: 0, y: 0, z: -1}
-  maxAcceleration: 0.25
-  accelerationType: 1
   affectedBodies:
     conditions:
     - enabled: 0
       condition:
         rid: 4133678911885148160
+  velocityType: 0
+  directionInLocalSpace: 0
+  targetVelocity: {x: 0, y: 0, z: -1}
+  maxAcceleration: 0.25
+  accelerationType: 1
   references:
     version: 2
     RefIds:
@@ -1586,16 +1586,16 @@ MonoBehaviour:
   m_Script: {fileID: 1677468679, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityType: 0
-  directionInLocalSpace: 0
-  targetVelocity: {x: -1, y: 0, z: 0}
-  maxAcceleration: 0.25
-  accelerationType: 1
   affectedBodies:
     conditions:
     - enabled: 0
       condition:
         rid: 4133678911885148161
+  velocityType: 0
+  directionInLocalSpace: 0
+  targetVelocity: {x: -1, y: 0, z: 0}
+  maxAcceleration: 0.25
+  accelerationType: 1
   references:
     version: 2
     RefIds:
@@ -2729,7 +2729,7 @@ Transform:
   m_GameObject: {fileID: 2955816286271721808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.023, y: 0.04, z: -1.387}
+  m_LocalPosition: {x: 0, y: 0.04, z: -1.2}
   m_LocalScale: {x: 0.15, y: 0.03, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -97,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2661e3fbe3d78364882e6f7b06eaa726, type: 2}
+  - {fileID: 2100000, guid: a74e4928e77a1574188fec9a9d8c0302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -283,11 +283,9 @@ MonoBehaviour:
 
 
     Add-on to the BuoyancyField component that
-    works witha specific verex shared, to create the visual eefect of a wacy water
+    works with a specific vertex shader, to create the visual effect of a wavy water
     surface together with corresponding behavior of objects floating on the water
-    surface.
-
-'
+    surface.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11f9c56004e7f504b9c9045360f9ab77, type: 2}
   m_sharedMaterial: {fileID: 3891620385292590536, guid: 11f9c56004e7f504b9c9045360f9ab77,
@@ -528,7 +526,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2661e3fbe3d78364882e6f7b06eaa726, type: 2}
+  - {fileID: 2100000, guid: a74e4928e77a1574188fec9a9d8c0302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -743,7 +741,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2661e3fbe3d78364882e6f7b06eaa726, type: 2}
+  - {fileID: 2100000, guid: a74e4928e77a1574188fec9a9d8c0302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1007,10 +1005,10 @@ MonoBehaviour:
   m_Script: {fileID: -721968646, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  density: 1000
-  surfaceType: 2
   affectedBodies:
     conditions: []
+  density: 1000
+  surfaceType: 2
   drag: 0.6
   skinFriction: 0.05
   preventDrift: 0

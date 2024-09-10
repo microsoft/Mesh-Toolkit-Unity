@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: TeleportToLocationButtonStart
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Teleport
+      to Location","summary":"Defines how to Teleport when the button is pressed","pan":{"x":-106.9661,"y":-376.2286},"zoom":0.5,"elements":[{"defaultValues":{},"position":{"x":28.0,"y":-293.0},"guid":"bae49b9d-0c6a-4e36-b25b-744b7c1cb000","$version":"A","$type":"Unity.VisualScripting.If","$id":"9"},{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":-178.0,"y":-309.0},"guid":"0c14d34b-25f9-4cc7-9c2b-aca91b717a06","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"11"},{"member":{"name":"IsSelectedLocally","parameterTypes":null,"targetType":"Microsoft.Mesh.Interactables.MeshInteractableBody","targetTypeName":"Microsoft.Mesh.Interactables.MeshInteractableBody","$version":"A"},"defaultValues":{"target":null},"position":{"x":-405.0,"y":-293.0},"guid":"bd4be9a4-857a-4931-b2c8-4a5cc643388c","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"13"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"Button","$type":"System.String"},"object":null},"position":{"x":-666.0,"y":-299.0},"guid":"5bcaa834-d93b-4672-8dac-036afe5cae07","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"16"},{"sourceUnit":{"$ref":"11"},"sourceKey":"trigger","destinationUnit":{"$ref":"9"},"destinationKey":"enter","guid":"52f8106c-d859-4574-9b53-223deafd026a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"11"},"sourceKey":"out_0","destinationUnit":{"$ref":"9"},"destinationKey":"condition","guid":"96360ba7-0db6-48a3-af36-72222df95d69","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"value","destinationUnit":{"$ref":"11"},"destinationKey":"in_0","guid":"55ca2180-fcb1-4fd2-ae48-b763d5e25733","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"16"},"sourceKey":"value","destinationUnit":{"$ref":"13"},"destinationKey":"target","guid":"d88e40d9-af70-422d-b6d7-e2a975872616","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-739.0,"yMin":-436.0,"xMax":898.0364,"yMax":23.0},"label":"Telelport
+      Button Behavior","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"2273e1b6-0ffd-408d-838c-e26740c54a71","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-736.0,"yMin":-515.0,"xMax":-490.0,"yMax":-450.0},"title":"","body":"//
+      Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"cf095f8c-a520-4713-99e1-e8a484beb2a5","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}'
+    _objectReferences: []

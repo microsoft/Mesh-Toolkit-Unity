@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: InfoButtonWrapper
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Show
+      Dialog","summary":"Defines to display an info dialog popup","pan":{"x":-278.7077,"y":-38.94606},"zoom":1.0,"elements":[{"allowPolling":false,"_numValues":1,"coroutine":false,"defaultValues":{},"position":{"x":-218.0,"y":-196.0},"guid":"5bef1a4f-4168-406d-971f-fb2ce56b7841","$version":"A","$type":"Microsoft.Mesh.VisualScripting.StateChangedEventUnit","$id":"9"},{"defaultValues":{},"position":{"x":90.0,"y":-168.0},"guid":"c85cfe10-fde3-4028-b1b6-7053b42e72ab","$version":"A","$type":"Unity.VisualScripting.If","$id":"11"},{"defaultValues":{"text":{"$content":"Did
+      you know that the world''s largest wind turbine has blades longer than a football
+      field?","$type":"System.String"},"buttons":{"$content":"Continue","$type":"Microsoft.Mesh.VisualScripting.IMessageDialog+Button"},"result":null,"target":null},"position":{"x":296.0,"y":-174.0},"guid":"38f89fdf-67aa-4ff3-b5f7-8082a2e7611b","$version":"A","$type":"Microsoft.Mesh.VisualScripting.DialogActionUnit","$id":"13"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"Information_Button","$type":"System.String"},"object":null},"position":{"x":-706.0,"y":-167.0},"guid":"3e334d47-d34a-45c8-8212-17988aa14c4a","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"15"},{"member":{"name":"IsSelectedLocally","parameterTypes":null,"targetType":"Microsoft.Mesh.Interactables.MeshInteractableBody","targetTypeName":"Microsoft.Mesh.Interactables.MeshInteractableBody","$version":"A"},"defaultValues":{"target":null},"position":{"x":-454.0,"y":-155.0},"guid":"9ec0446b-3a2f-4654-8e7f-2578322b6b86","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"17"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"enter","guid":"737fcdb9-fd8f-40ae-b253-c67d45d10c6a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"11"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"13"},"destinationKey":"enter","guid":"bcafad85-7b95-426c-afd2-045885f9fa1c","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"9"},"sourceKey":"out_0","destinationUnit":{"$ref":"11"},"destinationKey":"condition","guid":"00965bfd-ce84-4df5-9a52-a12d3c5cc42c","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"value","destinationUnit":{"$ref":"17"},"destinationKey":"target","guid":"018a93b9-d82b-44ab-8365-1bdc5241f59c","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"value","destinationUnit":{"$ref":"9"},"destinationKey":"in_0","guid":"5710d0d2-6d2e-40a8-828a-0034b3d764f9","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-736.0,"yMin":-294.0,"xMax":643.0,"yMax":92.11038},"label":"Show
+      Dialog","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"9d8c1fb6-df17-46a3-b3b5-b9a3450b71e1","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-728.0,"yMin":-372.0,"xMax":-482.0,"yMax":-307.0},"title":"","body":"//
+      Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"766b8358-f829-4d7f-909f-6d112a705cec","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}'
+    _objectReferences: []

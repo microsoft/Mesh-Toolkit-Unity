@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2014,6 +2013,10 @@ MonoBehaviour:
     Id: 41
   - Interactable: {fileID: 5983079218223014742}
     Id: 84
+  - Interactable: {fileID: 5574142658062428615}
+    Id: 38
+  - Interactable: {fileID: 5574142658062428614}
+    Id: 85
 --- !u!4 &775448096
 Transform:
   m_ObjectHideFlags: 0
@@ -2665,7 +2668,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2661e3fbe3d78364882e6f7b06eaa726, type: 2}
+  - {fileID: 2100000, guid: a74e4928e77a1574188fec9a9d8c0302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3648,6 +3651,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeshEmulatorSetup [NoUpload]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080245276278507618, guid: 618e82aa8ef311d4dbbf984185775523,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080245276278507618, guid: 618e82aa8ef311d4dbbf984185775523,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080245276278507618, guid: 618e82aa8ef311d4dbbf984185775523,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080245276278507618, guid: 618e82aa8ef311d4dbbf984185775523,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
@@ -6111,6 +6134,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 44a4a2def849fec4cbdae6f57d8f7b49, type: 3}
+--- !u!1 &5574142658062428614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2873534293048285131, guid: 44a4a2def849fec4cbdae6f57d8f7b49,
+    type: 3}
+  m_PrefabInstance: {fileID: 5574142658062428613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5574142658062428615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7130453819288659082, guid: 44a4a2def849fec4cbdae6f57d8f7b49,
+    type: 3}
+  m_PrefabInstance: {fileID: 5574142658062428613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5590013891507342624
 PrefabInstance:
   m_ObjectHideFlags: 0

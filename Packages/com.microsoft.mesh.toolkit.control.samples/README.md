@@ -45,5 +45,7 @@ In the Runtime folder you will find the following prefab controls:
 
 - **BackplateBase.prefab** - Use this prefab to plate all of your controls on a backplate with rounded corners and an iridescent surface.
 - **ButtonBase.prefab** - This prefab is the base prefab used for all button variants. The button animates, produces audio feedback when pressed and contains a label. Use `Visual Scripting` to hook application logic to button presses.
+- **ButtonPlated.prefab** - A variant of **ButtonBase.prefab** that already contains a backplate.
 - **InformationButton.prefab** - This is the prefab for a floating world space coin button. The button features proximity detection via the `Avatar Trigger` behavior: When player enters button range, coin stops spinning and is billboarded instead and player is able to click coin. If player is out of range, they are no longer able to click on the button and button returns to spinning. The button interactable behavior is driven by OCL's `Mesh Interactable Properties` and `Visual Scripting`.
+- **InformationPanel.prefab** - Use this prefab to display text on a plated surface. This prefab is appropriate for scenarios in an environment that require text based explanations or instructions.
 - **Earth.prefab** - This prefab for an Earth globe that can be spun and selected. When selected the globe generates a latitude and longitude position and adds a marker. This functionality can be extended and modified with `Visual Scripting`. All actions are shared by all clients by default.

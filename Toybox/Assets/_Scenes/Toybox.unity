@@ -1152,26 +1152,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeshEmulatorSetup [NoUpload]
       objectReference: {fileID: 0}
-    - target: {fileID: 3203516585226644755, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7556072684772600004, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5.000061
-      objectReference: {fileID: 0}
-    - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: UseMeshAvatars
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
-        type: 3}
-      propertyPath: InitialScreenCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9140719676873968649, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6682,12 +6662,12 @@ MonoBehaviour:
   m_Script: {fileID: 1461889326, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDeviationFromContainment: 0.01
   affectedBodies:
     conditions:
     - enabled: 1
       condition:
         rid: 5525358636807487488
+  maxDeviationFromContainment: 0.01
   references:
     version: 2
     RefIds:

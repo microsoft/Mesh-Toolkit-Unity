@@ -135,8 +135,11 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 6
       HandPoseSize: 1
+    OverrideHandRotation: 0
+    HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
+  interactionCooldownTime: 0
   equippableSettings:
     version: 1
     ThrowVelocity: 1
@@ -260,13 +263,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -282,6 +287,8 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
+      HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
     pointSpring:
@@ -301,8 +308,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"WindmillTurbinePropellors","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Animator,
+      UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 8798649241410522458}
 --- !u!114 &5205608328300509978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,15 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Wind
-      Turbine Script","summary":"Triggers spin animation once the the turbine enters
-      the animation trigger","pan":{"x":193.0053,"y":124.7137},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-326.0,"y":-145.0},"guid":"a8bc24a5-8f2c-4512-813a-6484eebb71f8","$version":"A","$type":"Unity.VisualScripting.OnTriggerEnter","$id":"10"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-319.0,"y":256.0},"guid":"b0e88750-a423-4c7e-8f54-8cfb6dabc0e6","$version":"A","$type":"Unity.VisualScripting.OnTriggerExit","$id":"12"},{"member":{"name":"name","parameterTypes":null,"targetType":"UnityEngine.Collider","targetTypeName":"UnityEngine.Collider","$version":"A"},"defaultValues":{"target":null},"position":{"x":-103.0,"y":347.0},"guid":"8e32ca3b-ac1d-4d06-a7e4-236c8b044257","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"14"},{"numeric":false,"defaultValues":{},"position":{"x":86.0,"y":-13.0},"guid":"e4f20b8a-7f34-464c-bf9b-23cbc92100a6","$version":"A","$type":"Unity.VisualScripting.Equal","$id":"17"},{"chainable":false,"parameterNames":["name"],"member":{"name":"SetTrigger","parameterTypes":["System.String"],"targetType":"UnityEngine.Animator","targetTypeName":"UnityEngine.Animator","$version":"A"},"defaultValues":{"target":{"$content":0,"$type":"UnityEngine.Object"},"%name":{"$content":"Stop","$type":"System.String"}},"position":{"x":480.0,"y":254.0},"guid":"94878bc9-d121-488f-b677-734de98a0776","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"19"},{"defaultValues":{},"position":{"x":220.0,"y":-143.0},"guid":"088ec25e-358d-4da0-ad3b-4a52fc0fb127","$version":"A","$type":"Unity.VisualScripting.If","$id":"23"},{"type":"System.String","value":{"$content":"AnimationTrigger","$type":"System.String"},"defaultValues":{},"position":{"x":-114.0,"y":70.0},"guid":"b8817e47-b903-4d6d-b514-552123dfc508","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"25"},{"defaultValues":{},"position":{"x":215.0,"y":256.0},"guid":"980b69dc-d807-469b-8a18-77cb0b649d2c","$version":"A","$type":"Unity.VisualScripting.If","$id":"27"},{"member":{"name":"name","parameterTypes":null,"targetType":"UnityEngine.Collider","targetTypeName":"UnityEngine.Collider","$version":"A"},"defaultValues":{"target":null},"position":{"x":-98.0,"y":-50.0},"guid":"f61e0ad7-3e72-433e-8e7e-f6d2b4d52ba7","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"29"},{"type":"System.String","value":{"$content":"AnimationTrigger","$type":"System.String"},"defaultValues":{},"position":{"x":-119.0,"y":467.0},"guid":"16cc5279-39e1-45c1-8f28-2fcf7d56672e","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"32"},{"chainable":false,"parameterNames":["name"],"member":{"name":"SetTrigger","parameterTypes":["System.String"],"targetType":"UnityEngine.Animator","targetTypeName":"UnityEngine.Animator","$version":"A"},"defaultValues":{"target":{"$content":1,"$type":"UnityEngine.Object"},"%name":{"$content":"Start","$type":"System.String"}},"position":{"x":475.0,"y":-142.0},"guid":"424def8c-8f00-40ab-ad31-99c0924b55f7","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"34"},{"numeric":false,"defaultValues":{},"position":{"x":81.0,"y":384.0},"guid":"7cefa62b-2d5a-46cd-beb3-2cbede3435e1","$version":"A","$type":"Unity.VisualScripting.Equal","$id":"38"},{"sourceUnit":{"$ref":"27"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"19"},"destinationKey":"enter","guid":"df0cf3d6-67f8-4a3b-975b-3b5238e92463","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"23"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"34"},"destinationKey":"enter","guid":"c8e248e8-32ad-4e3c-b3e3-57b2128d43d1","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"trigger","destinationUnit":{"$ref":"27"},"destinationKey":"enter","guid":"b80046d0-c87b-49e8-9068-df55022a19eb","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"23"},"destinationKey":"enter","guid":"10c5a025-57ef-4060-a6b1-fdf8df6bc146","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"38"},"sourceKey":"equal","destinationUnit":{"$ref":"27"},"destinationKey":"condition","guid":"2f0bd517-215c-4619-9eac-e06eee89c0e1","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"collider","destinationUnit":{"$ref":"29"},"destinationKey":"target","guid":"4142b3d8-0c70-490b-8f7c-1719dbde2660","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"29"},"sourceKey":"value","destinationUnit":{"$ref":"17"},"destinationKey":"a","guid":"fd6c8ae0-b5be-4e40-8bd3-7bef86928b34","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"32"},"sourceKey":"output","destinationUnit":{"$ref":"38"},"destinationKey":"b","guid":"31490581-9c9a-4eee-8842-5cab15d69035","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"25"},"sourceKey":"output","destinationUnit":{"$ref":"17"},"destinationKey":"b","guid":"7ccc63c1-3a46-413e-994e-50c8464c91ae","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"equal","destinationUnit":{"$ref":"23"},"destinationKey":"condition","guid":"490f570e-fc49-4780-a9a4-1a47830ea826","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"collider","destinationUnit":{"$ref":"14"},"destinationKey":"target","guid":"32e7b783-dc4b-4d61-af9a-84a88dc29fa9","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"value","destinationUnit":{"$ref":"38"},"destinationKey":"a","guid":"46558b1f-ec77-4b9d-ab8a-a0f24f6bc3e0","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-389.0,"yMin":206.0,"xMax":770.0,"yMax":579.0},"label":"Pause
-      Animation Once WindTurbine Exits The Trigger","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"400be6f5-800a-41b1-b107-780750481e1a","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-378.0,"yMin":-238.0,"xMax":771.0,"yMax":179.0},"label":"Play
-      Animation Once WindTurbine Enters The Trigger","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"2a60f641-f072-4719-8696-60e51971886d","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-405.0,"yMin":-328.0,"xMax":-159.0,"yMax":-263.0},"title":"","body":"//
-      Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"88d538c2-ada6-4cf2-b108-542aa8947720","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}}'
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 8798649241410522458}
-    - {fileID: 8798649241410522458}
+    - {fileID: 11400000, guid: fa3a40c74d004154b8aaae654599fd05, type: 2}
 --- !u!114 &8516269312687499927
 MonoBehaviour:
   m_ObjectHideFlags: 0
