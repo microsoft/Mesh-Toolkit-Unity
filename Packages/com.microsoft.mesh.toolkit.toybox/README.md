@@ -46,4 +46,4 @@ In the Runtime folder you will find the following activities:
 - Ice Breaker :interrobang:
 - Sound Orbs :notes:
 - Radio & Boombox :musical_note:
-- *Bonus: Astronaut :rocket:*
+- Solar System & Astronaut :rocket:

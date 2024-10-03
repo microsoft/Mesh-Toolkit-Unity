@@ -24,6 +24,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5581736961047016261, guid: 1da3f607791005647a97caa7b1927e00,
         type: 3}
+    - target: {fileID: 1753236785799986296, guid: 5418b078aa7abac43a7627e94176f6f1,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_RootOrder
@@ -32,22 +37,22 @@ PrefabInstance:
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.002768
+      value: -15.321
       objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44
+      value: 16.79
       objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.3639898
+      value: 2.873
       objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000028461216
+      value: 0.4864748
       objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
@@ -57,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0.8736946
       objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
@@ -72,7 +77,7 @@ PrefabInstance:
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 121.782
       objectReference: {fileID: 0}
     - target: {fileID: 1856635141145743780, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
@@ -142,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 7692356102552333440, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
       propertyPath: m_Name
-      value: toybox_radio_pressable_prefab
+      value: toybox_radio_pressable_main_prefab
       objectReference: {fileID: 0}
     - target: {fileID: 8212076317343450984, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
@@ -204,7 +209,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -239,7 +244,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

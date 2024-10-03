@@ -20,9 +20,9 @@ For detailed instructions on getting started with development for Microsoft Mesh
      ![A representative view of the ScienceBuilding sample.](README/ScienceBuilding_Hero.png)
     ![An overhead view of the PhysicsEffectsGallery sample.](README/002-physics-gallery.png)
 
-1. [**Toybox**](https://aka.ms/MeshToyboxSample): Add games and other engaging activities to Mesh experiences.
+1. [**Pavilion**](https://aka.ms/MeshPavilionSample): Add games and other engaging activities to Mesh experiences.
 
-    ![A long-range view of the toybox scene in unity showing a building, tent and surrounding lake.](README/toybox_building_02.png)
+    ![A long-range view of the pavilion scene in unity showing a module.](README/sample-pavilion.jpg)
 
 **NOTICE**: The samples in this project are governed by the MIT license as shown in the [LICENSE.txt file](LICENSE.txt). However, the samples functionality is dependent on the Mesh Toolkit, which is governed by a separate license.
 

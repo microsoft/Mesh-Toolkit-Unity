@@ -139,6 +139,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 6
       HandPoseSize: 1
+    OverrideHandRotation: 0
     HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 1
     ConstrainArmWithinSphere: 1
@@ -160,11 +161,11 @@ MonoBehaviour:
     UseAimAnimationSystem: 1
     ReleaseTime: 0.21
     Throwable: 1
-    MaxThrowVelocity2D: 6.5
+    MaxThrowVelocity2D: 8
     ThrowDirectionOffset: {x: 0, y: 0.75, z: 0}
     MinThrowVelocityVR: 0
     MaxThrowVelocityVR: 7.5
-    ArmExtensionOnAim: 0.7
+    ArmExtensionOnAim: 0.75
     AimHandPose:
       HandPoseShape: 3
       HandPoseSize: 0.25
@@ -212,13 +213,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 0
       x: 1
@@ -234,6 +237,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
       HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
@@ -420,13 +424,15 @@ MonoBehaviour:
     forceMode: 0
     scale:
       enabled: 0
-      minScale: 0.3
-      maxScale: 10
+      minScale: {x: 0.3, y: 0.3, z: 0.3}
+      maxScale: {x: 10, y: 10, z: 10}
+      uniformScale: 1
     translation:
       enabled: 1
       x: 1
       y: 1
       z: 1
+      manipulationTranslationLogic: 0
     rotation:
       enabled: 1
       x: 1
@@ -442,6 +448,7 @@ MonoBehaviour:
       CustomHandPose:
         HandPoseShape: 6
         HandPoseSize: 1
+      OverrideHandRotation: 0
       HandRotation: {x: 0, y: 0, z: 0}
       EnableIkTracking: 1
       ConstrainArmWithinSphere: 1
@@ -453,6 +460,7 @@ MonoBehaviour:
     CustomHandPose:
       HandPoseShape: 0
       HandPoseSize: 1
+    OverrideHandRotation: 0
     HandRotation: {x: 0, y: 0, z: 0}
     EnableIkTracking: 0
     ConstrainArmWithinSphere: 1
@@ -547,10 +555,10 @@ MonoBehaviour:
   m_Script: {fileID: 970996483, guid: 1bad8b70bae5790449cff1e21dc270bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityThreshold: 0.001
-  timeThreshold: 0.001
   affectedBodies:
     conditions: []
+  velocityThreshold: 0.001
+  timeThreshold: 0.001
   references:
     version: 2
     RefIds: []
