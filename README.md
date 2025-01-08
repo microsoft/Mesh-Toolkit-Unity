@@ -63,7 +63,7 @@ Many of the tutorials and samples are built using reusable packages. You are enc
 
 | [![Toybox Package](README/package-toybox.jpg)](https://learn.microsoft.com/mesh/develop/getting-started/samples/toybox#add-the-toybox-package-to-an-existing-project) | [![Control Samples Package](README/package-control-samples.jpg)](https://learn.microsoft.com/mesh/develop/getting-started/samples/control-samples) |
 |:--- | :--- |
-| [**Toybox Package**](https://learn.microsoft.com/mesh/develop/getting-started/samples/toybox#add-the-toybox-package-to-an-existing-project): Add games and other engaging activities to your Mesh experiences. | [**Control Samples Package**](https://learn.microsoft.com/mesh/develop/getting-started/samples/control-samples): Provides common in-world user interface controls. |
+| [**Toybox Package**](https://learn.microsoft.com/mesh/develop/enhance-your-environment/toybox): Add games and other engaging activities to your Mesh experiences. | [**Control Samples Package**](https://learn.microsoft.com/mesh/develop/build-your-basic-environment/control-samples): Provides common in-world user interface controls. |
 
 **NOTICE**: The tutorials, samples, and packages in this project are governed by the MIT license as shown in the [LICENSE.txt file](https://github.com/microsoft/Mesh-Toolkit-Unity/blob/main/LICENSE). However, the samples functionality is dependent on the Mesh Toolkit, which is governed by a separate license.
 
